@@ -4,12 +4,13 @@
    vía Capacitor cuando no hay señal — el líder sirve app y sync por su hotspot). */
 const setlists = {
   todas: () => store.get('setlists', []),
-  guardar(l) { store.set('setlists', l); },
+  guardar(l) { store.set('setlists', l); Sync.push(); },
   por(id) { return this.todas().find(s => s.id === id); },
   actualizar(sl) { this.guardar(this.todas().map(s => s.id === sl.id ? sl : s)); },
 };
 
-App.route(/^#\/show$/, view => {
+App.route(/^#\/show$/, async view => {
+  await Sync.pull();
   const lista = setlists.todas();
   view.innerHTML = `
     <h1>Show</h1>

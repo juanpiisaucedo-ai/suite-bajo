@@ -1,8 +1,8 @@
 /* Suite Bajo — service worker: app shell precacheada + lecciones en caché al visitarlas. */
-const CACHE = 'suite-bajo-v9'; // subir la versión en cada release: invalida el caché viejo
+const CACHE = 'suite-bajo-v10'; // subir la versión en cada release: invalida el caché viejo
 const SHELL = [
   '.', 'index.html', 'manifest.json',
-  'css/app.css', 'js/app.js', 'js/entrenar.js', 'js/ensayo.js', 'js/show.js',
+  'css/app.css', 'js/app.js', 'js/sync.js', 'js/vendor/supabase.js', 'js/entrenar.js', 'js/ensayo.js', 'js/show.js',
   'lessons/index.json', 'icons/icon-192.png', 'icons/icon-512.png',
 ];
 

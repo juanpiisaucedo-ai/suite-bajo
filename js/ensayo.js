@@ -3,12 +3,13 @@
 const canciones = {
   todas: () => store.get('canciones', []),
   guardar(lista) { store.set('canciones', lista); },
-  agregar(c) { const l = this.todas(); l.push(c); this.guardar(l); },
+  agregar(c) { const l = this.todas(); l.push(c); this.guardar(l); Sync.push(); },
   por(id) { return this.todas().find(c => c.id === id); },
-  borrar(id) { this.guardar(this.todas().filter(c => c.id !== id)); },
+  borrar(id) { this.guardar(this.todas().filter(c => c.id !== id)); Sync.borrarCancion(id); },
 };
 
-App.route(/^#\/ensayo$/, view => {
+App.route(/^#\/ensayo$/, async view => {
+  await Sync.pull();
   const lista = canciones.todas();
   view.innerHTML = `
     <h1>Ensayo</h1>
@@ -17,6 +18,7 @@ App.route(/^#\/ensayo$/, view => {
       <button class="btn mini ghost" id="lib-export" style="flex:1">⬇ Exportar biblioteca</button>
       <button class="btn mini ghost" id="lib-import" style="flex:1">⬆ Importar</button>
     </div>
+    <div id="sync-row"></div>
     <div id="lib-io" style="display:none;margin-top:10px">
       <textarea id="lib-io-text" placeholder="Pega aquí lo exportado en el otro dispositivo…"></textarea>
       <div style="display:flex;gap:8px">
@@ -44,6 +46,7 @@ App.route(/^#\/ensayo$/, view => {
         ${porArtista[a].sort((x, y) => x.titulo.localeCompare(y.titulo, 'es'))
           .map(c => `<a class="card" href="#/cancion/${c.id}"><h3>${esc(c.titulo)}</h3></a>`).join('')}
       `).join('');
+  Sync.pintarBarra($('#sync-row'), () => App.render());
   $('#add-song').onclick = () => { $('#song-form').style.display = 'block'; $('#sf-titulo').focus(); };
   $('#lib-export').onclick = () => {
     $('#lib-io').style.display = 'block';
