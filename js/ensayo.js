@@ -13,6 +13,18 @@ App.route(/^#\/ensayo$/, view => {
   view.innerHTML = `
     <h1>Ensayo</h1>
     <button class="btn full" id="add-song">+ Agregar canción (pegar tab/acordes)</button>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button class="btn mini ghost" id="lib-export" style="flex:1">⬇ Exportar biblioteca</button>
+      <button class="btn mini ghost" id="lib-import" style="flex:1">⬆ Importar</button>
+    </div>
+    <div id="lib-io" style="display:none;margin-top:10px">
+      <textarea id="lib-io-text" placeholder="Pega aquí lo exportado en el otro dispositivo…"></textarea>
+      <div style="display:flex;gap:8px">
+        <button class="btn mini" id="lib-io-copy" style="flex:1">Copiar todo</button>
+        <button class="btn mini" id="lib-io-apply" style="flex:1">Importar esto</button>
+      </div>
+      <p class="dim small" style="margin-top:6px">Exporta en la compu → cópialo → mándatelo (WhatsApp/Notas) → pégalo aquí en el teléfono → Importar. Une sin duplicar.</p>
+    </div>
     <div id="song-form" style="display:none; margin-top:14px">
       <input type="text" id="sf-titulo" placeholder="Título">
       <input type="text" id="sf-artista" placeholder="Artista (opcional)">
@@ -33,6 +45,31 @@ App.route(/^#\/ensayo$/, view => {
           .map(c => `<a class="card" href="#/cancion/${c.id}"><h3>${esc(c.titulo)}</h3></a>`).join('')}
       `).join('');
   $('#add-song').onclick = () => { $('#song-form').style.display = 'block'; $('#sf-titulo').focus(); };
+  $('#lib-export').onclick = () => {
+    $('#lib-io').style.display = 'block';
+    $('#lib-io-text').value = JSON.stringify(
+      { canciones: canciones.todas(), setlists: store.get('setlists', []) });
+  };
+  $('#lib-import').onclick = () => { $('#lib-io').style.display = 'block'; $('#lib-io-text').value = ''; $('#lib-io-text').focus(); };
+  $('#lib-io-copy').onclick = async () => {
+    $('#lib-io-text').select();
+    try { await navigator.clipboard.writeText($('#lib-io-text').value); $('#lib-io-copy').textContent = '✓ Copiado'; }
+    catch { document.execCommand('copy'); $('#lib-io-copy').textContent = '✓ Copiado'; }
+  };
+  $('#lib-io-apply').onclick = () => {
+    try {
+      const d = JSON.parse($('#lib-io-text').value);
+      const mias = canciones.todas();
+      const ids = new Set(mias.map(c => c.id));
+      (d.canciones || []).forEach(c => { if (c.id && c.titulo && !ids.has(c.id)) mias.push(c); });
+      canciones.guardar(mias);
+      const sls = store.get('setlists', []);
+      const slIds = new Set(sls.map(s => s.id));
+      (d.setlists || []).forEach(s => { if (s.id && !slIds.has(s.id)) sls.push(s); });
+      store.set('setlists', sls);
+      App.render();
+    } catch { alert('Eso no parece un export válido. Copia TODO el texto exportado y pégalo completo.'); }
+  };
   $('#sf-guardar').onclick = () => {
     const titulo = $('#sf-titulo').value.trim();
     const cuerpo = $('#sf-cuerpo').value;
