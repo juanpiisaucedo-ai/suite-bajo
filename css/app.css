@@ -119,9 +119,10 @@ textarea { min-height: 180px; font-family: ui-monospace, Menlo, monospace; }
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px;
 }
 .scroll-ctl { position: fixed; bottom: calc(64px + env(safe-area-inset-bottom)); left: 0; right: 0;
-  display: flex; gap: 10px; align-items: center; padding: 10px 16px;
+  display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; padding: 10px 16px;
   background: var(--panel); border-top: 1px solid var(--line); max-width: 720px; margin: 0 auto; }
-.scroll-ctl input[type=range] { flex: 1; }
+.scroll-ctl input[type=range] { flex: 1 1 100%; order: 2; margin: 0; }
+.scroll-ctl .btn:last-of-type { margin-left: auto; }
 
 /* ---------- show ---------- */
 .setlist-song { display: flex; align-items: center; gap: 8px; }

@@ -208,7 +208,15 @@ App.route(/^#\/vivo\/(\w+)$/, async (view, cod) => {
       else if (k === ' ' || k === 'Enter') { e.preventDefault(); toggle(); }
     };
   };
-  const onRow = row => { if (row.idx !== lastIdx) { lastIdx = row.idx; pinta(row); } };
+  /* los avisos realtime pueden llegar SIN la columna canciones (TOAST):
+     conservamos el último paquete completo y solo movemos la posición */
+  let cache = r.show;
+  const onRow = row => {
+    const full = { ...cache, ...row };
+    if (!Array.isArray(row.canciones) || !row.canciones.length) full.canciones = cache.canciones;
+    cache = full;
+    if (full.idx !== lastIdx) { lastIdx = full.idx; pinta(full); }
+  };
   onRow(r.show);
   ShowVivo.seguir(codigo, onRow);
   window._cleanup = () => { para(); ShowVivo.dejarDeSeguir(); };
