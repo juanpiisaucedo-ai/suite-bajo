@@ -1228,6 +1228,12 @@
     "label": "A5 (drone)",
     "style": "rock",
     "bpm": 80,
-    "description": "Power chord neutro: permutaciones en posición V sin estorbo armónico."
+    "description": "Power chord neutro: tu gimnasio de permutaciones con batería.",
+    "levels": [
+      "Nivel 1 (el tab): 1-2-3-4 cruzando cuerdas, con la batería de metrónomo.",
+      "Nivel 2: la permutación del día (tabla de las 24).",
+      "Nivel 3: en corcheas, aplicando PORA vuelta por vuelta."
+    ],
+    "tab_image": "assets/lesson_technique_routine_01_backing_tab.png"
   }
 }

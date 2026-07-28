@@ -1002,9 +1002,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_seventh_chords_01_backing.m4a",
-    "label": "Dm7–G7–Cmaj7 ×2",
+    "label": "Dm7–G7–Cmaj7 ×2 (swing)",
     "style": "shuffle",
     "bpm": 80,
-    "description": "El ii-V-I con swing: camina los arpegios de 7ª."
+    "description": "El ii-V-I con shuffle: fundamentales primero, arpegios después.",
+    "levels": [
+      "Nivel 1 (el tab): redondas la 1ª vuelta; fundamental+5ª la 2ª.",
+      "Nivel 2: el arpegio de 7ª completo por acorde (como el ejercicio 1).",
+      "Nivel 3: walking en negras conectando con aproximaciones."
+    ],
+    "tab_image": "assets/lesson_seventh_chords_01_backing_tab.png"
   }
 }

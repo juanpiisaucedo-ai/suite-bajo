@@ -1098,6 +1098,12 @@
     "label": "C–Am–F–G ×2",
     "style": "rock",
     "bpm": 80,
-    "description": "La vuelta I-vi-IV-V del ejercicio: arpegios encima."
+    "description": "La vuelta de la lección con banda: arpegio 1-3-5-3 por acorde.",
+    "levels": [
+      "Nivel 1 (el tab): arpegio 1-3-5-3 en negras por acorde.",
+      "Nivel 2: solo fundamental en el 1 y 5ª en el 3 (groove de balada).",
+      "Nivel 3: arpegios en corcheas, subiendo y bajando completo."
+    ],
+    "tab_image": "assets/lesson_triads_applied_01_backing_tab.png"
   }
 }

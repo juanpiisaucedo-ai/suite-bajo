@@ -1233,9 +1233,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_cycle_of_fifths_01_backing.m4a",
-    "label": "El ciclo completo (12)",
+    "label": "El ciclo completo (12 tonalidades)",
     "style": "rock",
     "bpm": 80,
-    "description": "Un compás por tonalidad, por 4ªs: la rutina de las 12."
+    "description": "Un compás por tonalidad, por 4ªs: la rutina de las 12 con banda.",
+    "levels": [
+      "Nivel 1 (el tab): la fundamental de cada tonalidad, diciendo su nombre.",
+      "Nivel 2: 1-3-5-8 en negras por compás (el ejercicio 2 con banda).",
+      "Nivel 3: la escala mayor completa de cada tonalidad en corcheas."
+    ],
+    "tab_image": "assets/lesson_cycle_of_fifths_01_backing_tab.png"
   }
 }

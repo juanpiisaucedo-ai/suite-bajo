@@ -1048,6 +1048,12 @@
     "label": "C–Am–Dm7–G7–C–F–G–C",
     "style": "rock",
     "bpm": 80,
-    "description": "La progresión del walking: fundamental, pilares, aproximación."
+    "description": "La progresión del walking: la receta completa en acción.",
+    "levels": [
+      "Nivel 1 (el tab): fundamental (blanca+negra) + aproximación en el beat 4.",
+      "Nivel 2: cambia cada aproximación de tipo (crom ↔ escala ↔ dominante).",
+      "Nivel 3: walking completo en negras (ejercicio 3) sin ver el tab."
+    ],
+    "tab_image": "assets/lesson_bassline_building_01_backing_tab.png"
   }
 }

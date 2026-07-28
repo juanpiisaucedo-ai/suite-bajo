@@ -1012,6 +1012,12 @@
     "label": "C·C·F·F·G·G·C·C",
     "style": "rock",
     "bpm": 80,
-    "description": "Practica intervalos e inversiones desde cada fundamental."
+    "description": "Fundamental y 3ª mayor de cada acorde: el intervalo que define el color.",
+    "levels": [
+      "Nivel 1 (el tab): fundamental + 3ªM en blancas (C-E, F-A, G-B).",
+      "Nivel 2: fundamental + 5ª justa (cuerda siguiente, +2 trastes).",
+      "Nivel 3: fundamental + octava, y de bajada la inversión: canta el intervalo."
+    ],
+    "tab_image": "assets/lesson_intervals_inversions_01_backing_tab.png"
   }
 }

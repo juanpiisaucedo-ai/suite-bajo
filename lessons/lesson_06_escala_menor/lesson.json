@@ -1117,9 +1117,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_minor_scale_01_backing.m4a",
-    "label": "Am–G–F–E7 ×2",
+    "label": "Am–G–F–E7 ×2 (andaluza)",
     "style": "rock",
     "bpm": 80,
-    "description": "La cadencia andaluza: menor natural en acción."
+    "description": "La cadencia andaluza: fundamental y octava mientras baja la armonía.",
+    "levels": [
+      "Nivel 1 (el tab): fundamental + octava en blancas — siente la bajada A-G-F-E.",
+      "Nivel 2: agrega la 5ª entre medio (1-8-5-8 en negras).",
+      "Nivel 3: camina la menor natural de La conectando los cuatro acordes."
+    ],
+    "tab_image": "assets/lesson_minor_scale_01_backing_tab.png"
   }
 }

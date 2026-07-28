@@ -1102,6 +1102,12 @@
     "label": "A (vamp)",
     "style": "rock",
     "bpm": 80,
-    "description": "Un solo acorde: toda tu atención al ritmo con la batería."
+    "description": "Un solo acorde: aplica las figuras de la lección con la batería de fondo.",
+    "levels": [
+      "Nivel 1 (el tab): negras → blancas → corcheas → puntillo, sobre la batería.",
+      "Nivel 2: el mismo recorrido pero muteando exacto cada final de figura.",
+      "Nivel 3: inventa un compás de cada figura sin ver el tab."
+    ],
+    "tab_image": "assets/lesson_rhythm_reading_01_backing_tab.png"
   }
 }

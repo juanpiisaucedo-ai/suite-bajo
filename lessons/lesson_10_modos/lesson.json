@@ -1157,9 +1157,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_modes_01_backing.m4a",
-    "label": "Dm7 (dórico) → G7 (mixo)",
+    "label": "Dm7 (dórico) → G7 (mixolidio)",
     "style": "funk",
     "bpm": 80,
-    "description": "Cuatro compases por vamp: haz brillar la nota característica."
+    "description": "Cuatro compases por vamp: la fundamental primero, el modo después.",
+    "levels": [
+      "Nivel 1 (el tab): fundamental + pilares; nota la 6M (Si) y la b7 (Fa) al final.",
+      "Nivel 2: el vamp del ejercicio 3 tal cual.",
+      "Nivel 3: improvisa SOLO con notas del modo, haciendo brillar la característica."
+    ],
+    "tab_image": "assets/lesson_modes_01_backing_tab.png"
   }
 }

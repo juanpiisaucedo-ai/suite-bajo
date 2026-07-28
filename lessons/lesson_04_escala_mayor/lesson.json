@@ -1236,6 +1236,12 @@
     "label": "C–F–C–G…",
     "style": "rock",
     "bpm": 80,
-    "description": "La escala de Do sobre armonía real: busca el grado que suena."
+    "description": "Los pilares 1 y 5 de cada acorde — el esqueleto de toda línea.",
+    "levels": [
+      "Nivel 1 (el tab): fundamental y 5ª en blancas por acorde.",
+      "Nivel 2: camina la escala de Do en negras SIN parar por los 8 compases.",
+      "Nivel 3: llega al cambio de acorde cayendo en SU fundamental exacta."
+    ],
+    "tab_image": "assets/lesson_major_scale_01_backing_tab.png"
   }
 }

@@ -1575,6 +1575,12 @@
     "label": "A7 (vamp funk)",
     "style": "funk",
     "bpm": 80,
-    "description": "Octavas T-P y dead notes sobre el beat."
+    "description": "Octavas T-P con dead notes sobre el beat — el patrón madre con banda.",
+    "levels": [
+      "Nivel 1 (el tab): T-x-P-x en corcheas, pulgar rebotando.",
+      "Nivel 2: mete hammer-ons 5h7 entre las octavas.",
+      "Nivel 3: el groove slap completo del ejercicio 3."
+    ],
+    "tab_image": "assets/lesson_articulations_slap_01_backing_tab.png"
   }
 }

@@ -1382,9 +1382,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_pentatonics_blues_01_backing.m4a",
-    "label": "Blues de 12 en La",
+    "label": "Blues de 12 en La (shuffle)",
     "style": "shuffle",
     "bpm": 80,
-    "description": "El blues completo con shuffle: pentatónica y línea 1-3-5-6."
+    "description": "El blues completo: sigue la forma con fundamentales, luego suéltate.",
+    "levels": [
+      "Nivel 1 (el tab): la fundamental de cada compás — apréndete la FORMA.",
+      "Nivel 2: la línea 1-3-5-6 del ejercicio 3, con el shuffle de la batería.",
+      "Nivel 3: pentatónica de La libre en los compases de A7 (¡tu primer solo!)."
+    ],
+    "tab_image": "assets/lesson_pentatonics_blues_01_backing_tab.png"
   }
 }

@@ -911,9 +911,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_fretboard_basics_01_backing.m4a",
-    "label": "C–F–G–C",
+    "label": "C–F–G–C ×2",
     "style": "rock",
     "bpm": 80,
-    "description": "Toca las anclas y fundamentales sobre la vuelta."
+    "description": "Tu primer palomazo: toca la fundamental de cada acorde cuando cambie.",
+    "levels": [
+      "Nivel 1 (el tab): la fundamental de cada acorde en redonda — Do, Fa, Sol.",
+      "Nivel 2: lo mismo en negras (4 por compás), diciendo el nombre en voz alta.",
+      "Nivel 3: fundamental + su octava (dos cuerdas y dos trastes arriba)."
+    ],
+    "tab_image": "assets/lesson_fretboard_basics_01_backing_tab.png"
   }
 }

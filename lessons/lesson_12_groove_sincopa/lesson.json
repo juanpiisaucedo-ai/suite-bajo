@@ -1480,9 +1480,15 @@
   },
   "backing": {
     "audio_ref": "assets/lesson_groove_syncopation_01_backing.m4a",
-    "label": "A7 (vamp funk)",
+    "label": "A7 (vamp funk 16ths)",
     "style": "funk",
     "bpm": 80,
-    "description": "Batería de 16ths: engancha tu groove al bombo."
+    "description": "Tu groove de la lección contra una batería de verdad: pégate al bombo.",
+    "levels": [
+      "Nivel 1 (el tab): el groove base de la lección, en loop con la batería.",
+      "Nivel 2: sustituye los silencios por dead notes (x).",
+      "Nivel 3: el tumbao del ejercicio 2 — y luego el tuyo propio."
+    ],
+    "tab_image": "assets/lesson_groove_syncopation_01_backing_tab.png"
   }
 }
