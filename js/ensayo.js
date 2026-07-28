@@ -19,12 +19,19 @@ App.route(/^#\/ensayo$/, view => {
       <textarea id="sf-cuerpo" placeholder="Pega aquí la letra con acordes o el tab…"></textarea>
       <button class="btn full" id="sf-guardar">Guardar</button>
     </div>
-    <div style="margin-top:14px">
-      ${lista.length === 0 ? '<p class="dim">Tu biblioteca está vacía. Agrega la primera canción para el ensayo.</p>'
-      : lista.map(c => `<a class="card" href="#/cancion/${c.id}">
-          <div class="row"><h3>${esc(c.titulo)}</h3><span class="badge">${esc(c.artista || '')}</span></div>
-        </a>`).join('')}
-    </div>`;
+    <div style="margin-top:14px" id="song-list"></div>`;
+  const porArtista = {};
+  lista.forEach(c => {
+    const a = (c.artista || '').trim() || 'Sin artista';
+    (porArtista[a] = porArtista[a] || []).push(c);
+  });
+  $('#song-list').innerHTML = lista.length === 0
+    ? '<p class="dim">Tu biblioteca está vacía. Agrega la primera canción para el ensayo.</p>'
+    : Object.keys(porArtista).sort((x, y) => x.localeCompare(y, 'es')).map(a => `
+        <h2>${esc(a)} <span class="dim small">· ${porArtista[a].length}</span></h2>
+        ${porArtista[a].sort((x, y) => x.titulo.localeCompare(y.titulo, 'es'))
+          .map(c => `<a class="card" href="#/cancion/${c.id}"><h3>${esc(c.titulo)}</h3></a>`).join('')}
+      `).join('');
   $('#add-song').onclick = () => { $('#song-form').style.display = 'block'; $('#sf-titulo').focus(); };
   $('#sf-guardar').onclick = () => {
     const titulo = $('#sf-titulo').value.trim();
