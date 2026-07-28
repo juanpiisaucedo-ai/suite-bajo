@@ -71,22 +71,36 @@ function pintarEnVivo(view, sl) {
   const lib = canciones.todas();
   const lista = sl.songIds.map(sid => lib.find(c => c.id === sid)).filter(Boolean);
   let i = Math.min(sl.enVivo || 0, lista.length - 1);
+  let timer = null;
+  const paraScroll = () => { if (timer) { clearInterval(timer); timer = null; } };
   const pinta = () => {
+    paraScroll();
     const actual = lista[i], sig = lista[i + 1];
     sl.enVivo = i; setlists.actualizar(sl);
     view.innerHTML = `
-      <a class="dim small" href="#/setlist/${sl.id}">← Salir del modo en vivo</a>
-      <div class="dim small" style="text-align:center;margin-top:8px">${i + 1} / ${lista.length}</div>
-      <div class="live-title">${esc(actual.titulo)}</div>
-      <div class="live-next">${sig ? `Sigue: ${esc(sig.titulo)}` : 'Última del set 🏁'}</div>
-      <div style="display:flex;gap:10px;margin-top:26px">
-        <button class="btn ghost" style="flex:1" id="lv-prev" ${i === 0 ? 'disabled' : ''}>← Anterior</button>
-        <button class="btn" style="flex:2" id="lv-next" ${sig ? '' : 'disabled'}>Siguiente →</button>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+        <a class="dim small" href="#/setlist/${sl.id}">← Salir</a>
+        <span class="dim small">${i + 1}/${lista.length}</span>
+        <span class="dim small">${sig ? `Sigue: ${esc(sig.titulo)}` : 'Última 🏁'}</span>
       </div>
-      <button class="btn full ghost" style="margin-top:10px" id="lv-open">Ver letra / tab</button>`;
+      <h1 style="margin:6px 0 8px">${esc(actual.titulo)}</h1>
+      <div class="song-body" style="font-size:${store.get('song_fs', 15)}px">${esc(actual.cuerpo)}</div>
+      <div style="height:70px"></div>
+      <div class="scroll-ctl">
+        <button class="btn mini ghost" id="lv-prev" ${i === 0 ? 'disabled' : ''}>⏮</button>
+        <button class="btn mini" id="lv-play">▶ Auto</button>
+        <input type="range" id="lv-speed" min="10" max="120" value="${store.get('scroll_v', 40)}">
+        <button class="btn" id="lv-next" ${sig ? '' : 'disabled'} style="padding:8px 18px">${sig ? 'Sigue ⏭' : 'Fin'}</button>
+      </div>`;
+    $('#view').scrollTop = 0;
     $('#lv-prev').onclick = () => { i--; pinta(); };
-    $('#lv-next').onclick = () => { i++; pinta(); };
-    $('#lv-open').onclick = () => { location.hash = `#/cancion/${actual.id}`; };
+    $('#lv-next').onclick = () => { if (sig) { i++; pinta(); } };
+    $('#lv-play').onclick = () => {
+      if (timer) { paraScroll(); $('#lv-play').textContent = '▶ Auto'; return; }
+      $('#lv-play').textContent = '⏸';
+      timer = setInterval(() => $('#view').scrollBy(0, 1), 1000 / (+$('#lv-speed').value / 10));
+    };
+    $('#lv-speed').onchange = () => store.set('scroll_v', +$('#lv-speed').value);
   };
   pinta();
 }

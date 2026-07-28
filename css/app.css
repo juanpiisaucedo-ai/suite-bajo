@@ -109,7 +109,7 @@ p { margin: 0 0 12px; }
 .q-score { text-align: center; font-size: 20px; font-weight: 800; margin: 16px 0; }
 
 /* ---------- ensayo ---------- */
-textarea, input[type=text] {
+textarea, input[type=text], input[type=password], input[type=email] {
   width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
   color: var(--txt); font-size: 15px; padding: 10px 12px; margin-bottom: 10px;
 }

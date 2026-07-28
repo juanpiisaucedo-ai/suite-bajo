@@ -92,13 +92,21 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
       <button class="btn mini ghost" id="song-del">🗑</button>
     </div>
     ${c.artista ? `<div class="dim" style="margin-bottom:10px">${esc(c.artista)}</div>` : ''}
-    <div class="notice">Transposición por tap: fase 2 (junto con acordes detectados).</div>
-    <div class="song-body" id="song-body">${esc(c.cuerpo)}</div>
+    <div class="song-body" id="song-body" style="font-size:${store.get('song_fs', 15)}px">${esc(c.cuerpo)}</div>
     <div style="height:70px"></div>
     <div class="scroll-ctl">
-      <button class="btn mini" id="sc-play">▶ Autoscroll</button>
+      <button class="btn mini ghost" id="fs-menos">A−</button>
+      <button class="btn mini ghost" id="fs-mas">A+</button>
+      <button class="btn mini" id="sc-play">▶ Auto</button>
       <input type="range" id="sc-speed" min="10" max="120" value="40" title="Velocidad">
     </div>`;
+  const ajustaFS = d => {
+    const fs = Math.min(19, Math.max(11, store.get('song_fs', 15) + d));
+    store.set('song_fs', fs);
+    $('#song-body').style.fontSize = fs + 'px';
+  };
+  $('#fs-menos').onclick = () => ajustaFS(-1);
+  $('#fs-mas').onclick = () => ajustaFS(1);
   $('#song-back').onclick = e => {
     e.preventDefault();
     if (history.length > 1) history.back(); else location.hash = '#/ensayo';
