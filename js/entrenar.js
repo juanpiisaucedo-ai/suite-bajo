@@ -43,6 +43,15 @@ function sembrarSRS(folder, doc) {
     if (!srs[q.qid]) { srs[q.qid] = { box: 1, due: ymdMas(1) }; nuevos++; }
   }
   if (nuevos) store.set('srs', srs);
+  store.set(`seeded_${folder}`, true);
+}
+/* migración: lecciones superadas antes del repaso espaciado entran al ciclo */
+async function sembrarSuperadasViejas(lecciones) {
+  for (const l of lecciones) {
+    if (superada(l.number) && !store.get(`seeded_${l.folder}`, false)) {
+      sembrarSRS(l.folder, await cargarLeccion(l.folder));
+    }
+  }
 }
 const repasoPendientes = () =>
   Object.values(store.get('srs', {})).filter(e => e.due <= hoyYMD()).length;
@@ -119,6 +128,7 @@ function pintarPregunta(cont, q, encabezado, alTerminar) {
 /* ==================== lista de lecciones ==================== */
 App.route(/^#\/entrenar$/, async view => {
   const lecciones = await cargarIndice();
+  await sembrarSuperadasViejas(lecciones);
   const hechas = lecciones.filter(l => superada(l.number)).length;
   const nRepaso = repasoPendientes();
   view.innerHTML = `
