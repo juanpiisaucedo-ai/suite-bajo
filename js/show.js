@@ -103,7 +103,7 @@ function pintarEnVivo(view, sl) {
         <button class="btn mini ghost" id="lv-prev" ${i === 0 ? 'disabled' : ''}>⏮</button>
         <button class="btn mini" id="lv-play">▶</button>
         <input type="range" id="lv-speed" min="10" max="120" value="${store.get('scroll_v', 40)}">
-        <button class="btn" id="lv-next" ${sig ? '' : 'disabled'} style="padding:8px 18px">${sig ? '⏭' : 'Fin'}</button>
+        <button class="btn" id="lv-next" style="padding:8px 18px">${sig ? '⏭' : '🏁 Fin'}</button>
       </div>`;
     $('#view').scrollTop = 0;
     window._cleanup = paraScroll; // al salir de la vista, muere el autoscroll
@@ -133,7 +133,7 @@ function pintarEnVivo(view, sl) {
       transmitiendo = true; pinta();
     };
     $('#lv-prev').onclick = () => irA(i - 1);
-    $('#lv-next').onclick = () => { if (sig) irA(i + 1); };
+    $('#lv-next').onclick = () => { if (sig) irA(i + 1); else { paraScroll(); App.render(); } };
     $('#lv-play').onclick = toggle;
     view.querySelector('.song-body').onclick = toggle; // tap en la letra = play/pausa
     $('#lv-speed').onchange = () => store.set('scroll_v', +$('#lv-speed').value);
