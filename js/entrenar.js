@@ -242,7 +242,14 @@ function pintarQuiz(panel, doc, num, info) {
 /* ---------- ejercicios ---------- */
 function pintarEjercicio(panel, doc, base) {
   const lista = doc.exercises || (doc.exercise ? [doc.exercise] : []);
+  const bk = doc.backing;
   panel.innerHTML = `<div class="ejercicio">
+    ${bk ? `
+      <h2>🥁 Backing track — ${esc(bk.label)}</h2>
+      <p>${esc(bk.description)} <span class="dim">Batería y acordes sin bajo: el bajo eres tú. Déjala en loop.</span></p>
+      <div class="dim small">♩ = ${bk.bpm} BPM · estilo ${esc(bk.style)}</div>
+      <audio controls loop preload="none" src="${base}/${bk.audio_ref}"></audio>
+    ` : ''}
     ${lista.map((ex, i) => `
       <h2>${i + 1}. ${esc(ex.title || 'Ejercicio')}</h2>
       <p>${esc(ex.description)}</p>

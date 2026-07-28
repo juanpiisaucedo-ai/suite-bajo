@@ -999,5 +999,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_seventh_chords_01_backing.m4a",
+    "label": "Dm7–G7–Cmaj7 ×2",
+    "style": "shuffle",
+    "bpm": 80,
+    "description": "El ii-V-I con swing: camina los arpegios de 7ª."
   }
 }

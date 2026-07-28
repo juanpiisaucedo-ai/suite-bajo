@@ -1096,5 +1096,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_rhythm_reading_01_backing.m4a",
+    "label": "A (vamp)",
+    "style": "rock",
+    "bpm": 80,
+    "description": "Un solo acorde: toda tu atención al ritmo con la batería."
   }
 }

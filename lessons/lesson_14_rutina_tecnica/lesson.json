@@ -1222,5 +1222,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_technique_routine_01_backing.m4a",
+    "label": "A5 (drone)",
+    "style": "rock",
+    "bpm": 80,
+    "description": "Power chord neutro: permutaciones en posición V sin estorbo armónico."
   }
 }

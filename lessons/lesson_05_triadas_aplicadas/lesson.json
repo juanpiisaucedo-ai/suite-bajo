@@ -1092,5 +1092,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_triads_applied_01_backing.m4a",
+    "label": "C–Am–F–G ×2",
+    "style": "rock",
+    "bpm": 80,
+    "description": "La vuelta I-vi-IV-V del ejercicio: arpegios encima."
   }
 }

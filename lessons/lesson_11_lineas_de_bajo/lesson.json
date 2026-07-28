@@ -1042,5 +1042,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_bassline_building_01_backing.m4a",
+    "label": "C–Am–Dm7–G7–C–F–G–C",
+    "style": "rock",
+    "bpm": 80,
+    "description": "La progresión del walking: fundamental, pilares, aproximación."
   }
 }

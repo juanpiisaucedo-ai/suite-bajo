@@ -1114,5 +1114,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_minor_scale_01_backing.m4a",
+    "label": "Am–G–F–E7 ×2",
+    "style": "rock",
+    "bpm": 80,
+    "description": "La cadencia andaluza: menor natural en acción."
   }
 }

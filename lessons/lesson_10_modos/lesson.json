@@ -1154,5 +1154,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_modes_01_backing.m4a",
+    "label": "Dm7 (dórico) → G7 (mixo)",
+    "style": "funk",
+    "bpm": 80,
+    "description": "Cuatro compases por vamp: haz brillar la nota característica."
   }
 }

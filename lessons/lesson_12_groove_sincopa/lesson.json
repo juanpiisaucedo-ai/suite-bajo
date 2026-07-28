@@ -1477,5 +1477,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_groove_syncopation_01_backing.m4a",
+    "label": "A7 (vamp funk)",
+    "style": "funk",
+    "bpm": 80,
+    "description": "Batería de 16ths: engancha tu groove al bombo."
   }
 }

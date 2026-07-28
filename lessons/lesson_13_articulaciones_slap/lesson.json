@@ -1569,5 +1569,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_articulations_slap_01_backing.m4a",
+    "label": "A7 (vamp funk)",
+    "style": "funk",
+    "bpm": 80,
+    "description": "Octavas T-P y dead notes sobre el beat."
   }
 }

@@ -1006,5 +1006,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_intervals_inversions_01_backing.m4a",
+    "label": "C·C·F·F·G·G·C·C",
+    "style": "rock",
+    "bpm": 80,
+    "description": "Practica intervalos e inversiones desde cada fundamental."
   }
 }

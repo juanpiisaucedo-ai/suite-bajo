@@ -1230,5 +1230,12 @@
       "timing": 0.3
     },
     "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_major_scale_01_backing.m4a",
+    "label": "C–F–C–G…",
+    "style": "rock",
+    "bpm": 80,
+    "description": "La escala de Do sobre armonía real: busca el grado que suena."
   }
 }
