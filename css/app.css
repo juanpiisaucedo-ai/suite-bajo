@@ -130,6 +130,12 @@ textarea { min-height: 180px; font-family: ui-monospace, Menlo, monospace; }
   background: var(--panel-2); border: 1px dashed var(--line); border-radius: 12px;
   padding: 12px 14px; font-size: 14px; color: var(--txt-dim); margin: 14px 0;
 }
+.live-head {
+  position: sticky; top: -16px; z-index: 5;
+  background: var(--bg); margin: -16px -16px 10px; padding: 14px 16px 8px;
+  border-bottom: 1px solid var(--line);
+}
+.live-head h1 { font-size: 19px; margin: 4px 0 0; }
 .live-title { font-size: 34px; font-weight: 800; text-align: center; margin: 30px 0 6px; }
 .live-next { text-align: center; color: var(--txt-dim); font-size: 16px; }
 .progressbar { height: 8px; border-radius: 99px; background: var(--panel-2); overflow: hidden; margin: 6px 0 16px; }

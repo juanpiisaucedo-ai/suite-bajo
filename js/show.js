@@ -78,12 +78,14 @@ function pintarEnVivo(view, sl) {
     const actual = lista[i], sig = lista[i + 1];
     sl.enVivo = i; setlists.actualizar(sl);
     view.innerHTML = `
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
-        <a class="dim small" href="#/setlist/${sl.id}">← Salir</a>
-        <span class="dim small">${i + 1}/${lista.length}</span>
-        <span class="dim small">${sig ? `Sigue: ${esc(sig.titulo)}` : 'Última 🏁'}</span>
+      <div class="live-head">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
+          <a class="dim small" href="#/setlist/${sl.id}">← Salir</a>
+          <span class="dim small">${i + 1}/${lista.length}</span>
+          <span class="dim small">${sig ? `Sigue: ${esc(sig.titulo)}` : 'Última 🏁'}</span>
+        </div>
+        <h1>${esc(actual.titulo)}</h1>
       </div>
-      <h1 style="margin:6px 0 8px">${esc(actual.titulo)}</h1>
       <div class="song-body" style="font-size:${store.get('song_fs', 15)}px">${esc(actual.cuerpo)}</div>
       <div style="height:70px"></div>
       <div class="scroll-ctl">
