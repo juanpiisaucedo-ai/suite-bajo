@@ -46,7 +46,7 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
   const c = canciones.por(id);
   if (!c) { location.hash = '#/ensayo'; return; }
   view.innerHTML = `
-    <a class="dim small" href="#/ensayo">← Biblioteca</a>
+    <a class="dim small" href="#/ensayo" id="song-back">← Regresar</a>
     <div class="row" style="display:flex;justify-content:space-between;align-items:center;gap:10px">
       <h1 style="margin:6px 0">${esc(c.titulo)}</h1>
       <button class="btn mini ghost" id="song-del">🗑</button>
@@ -59,6 +59,10 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
       <button class="btn mini" id="sc-play">▶ Autoscroll</button>
       <input type="range" id="sc-speed" min="10" max="120" value="40" title="Velocidad">
     </div>`;
+  $('#song-back').onclick = e => {
+    e.preventDefault();
+    if (history.length > 1) history.back(); else location.hash = '#/ensayo';
+  };
   $('#song-del').onclick = () => { if (confirm('¿Borrar esta canción?')) { canciones.borrar(id); location.hash = '#/ensayo'; } };
   let timer = null;
   $('#sc-play').onclick = () => {
