@@ -80,7 +80,7 @@ function pintarEnVivo(view, sl) {
     view.innerHTML = `
       <div class="live-head">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px">
-          <a class="dim small" href="#/setlist/${sl.id}">← Salir</a>
+          <a class="dim small" href="#/setlist/${sl.id}" id="lv-exit">← Salir</a>
           <span class="dim small">${i + 1}/${lista.length}</span>
           <span class="dim small">${sig ? `Sigue: ${esc(sig.titulo)}` : 'Última 🏁'}</span>
         </div>
@@ -97,6 +97,8 @@ function pintarEnVivo(view, sl) {
         <button class="btn" id="lv-next" ${sig ? '' : 'disabled'} style="padding:8px 18px">${sig ? '⏭' : 'Fin'}</button>
       </div>`;
     $('#view').scrollTop = 0;
+    window._cleanup = paraScroll; // al salir de la vista, muere el autoscroll
+    $('#lv-exit').onclick = e => { e.preventDefault(); paraScroll(); App.render(); };
     const toggle = () => {
       if (timer) { paraScroll(); $('#lv-play').textContent = '▶'; }
       else {
@@ -105,7 +107,7 @@ function pintarEnVivo(view, sl) {
       }
     };
     const ajustaFS = d => {
-      const fs = Math.min(19, Math.max(11, store.get('song_fs', 15) + d));
+      const fs = Math.min(22, Math.max(9, store.get('song_fs', 15) + d));
       store.set('song_fs', fs);
       view.querySelector('.song-body').style.fontSize = fs + 'px';
     };

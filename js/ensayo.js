@@ -101,7 +101,7 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
       <input type="range" id="sc-speed" min="10" max="120" value="40" title="Velocidad">
     </div>`;
   const ajustaFS = d => {
-    const fs = Math.min(19, Math.max(11, store.get('song_fs', 15) + d));
+    const fs = Math.min(22, Math.max(9, store.get('song_fs', 15) + d));
     store.set('song_fs', fs);
     $('#song-body').style.fontSize = fs + 'px';
   };
@@ -120,6 +120,7 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
   };
   $('#sc-play').onclick = toggle;
   $('#song-body').onclick = toggle; // tap en la letra = play/pausa
+  window._cleanup = () => { if (timer) clearInterval(timer); };
   window.onkeydown = e => { // pedal bluetooth
     const k = e.key;
     if (['ArrowDown', 'PageDown'].includes(k)) { e.preventDefault(); $('#view').scrollBy({ top: innerHeight * 0.4, behavior: 'smooth' }); }
