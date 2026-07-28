@@ -14,9 +14,9 @@ App.route(/^#\/show$/, async view => {
   const lista = setlists.todas();
   view.innerHTML = `
     <h1>Show</h1>
-    <div class="notice">🔗 Sync en vivo con la banda: <b>fase 2</b>. Con internet va por Supabase
-    Realtime (KB por show); sin señal, el teléfono líder servirá la app y el sync por su hotspot
-    (Capacitor). El esqueleto de setlists ya funciona offline.</div>
+    <div class="notice">📡 <b>Sync en vivo</b>: entra a tu setlist → Modo en vivo → "Transmitir a la
+    banda" y comparte el código de 4 letras. Tus compañeros le pican a "🎧 Unirme" — verán tu
+    canción en su teléfono, cambiando sola cuando tú avances. Gasta KB, no MB.</div>
     <button class="btn full" id="sl-new">+ Nuevo setlist</button>
     <button class="btn full ghost" id="sl-join" style="margin-top:8px">🎧 Unirme a un show (código)</button>
     <div style="margin-top:14px">
