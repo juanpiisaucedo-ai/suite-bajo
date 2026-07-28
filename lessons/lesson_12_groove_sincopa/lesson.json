@@ -1,0 +1,1481 @@
+{
+  "lesson_id": "groove_syncopation_01",
+  "meta": {
+    "title": "Groove y síncopa",
+    "number": 12,
+    "difficulty": "Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B2 p76-77 · HL B3 p106-111",
+    "tags": [
+      "groove",
+      "syncopation",
+      "eighth-notes",
+      "pocket"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "Qué es groove (definición operativa)",
+        "content": "Groove no es un misterio: es REPETICIÓN + PRECISIÓN + ESPACIO.\n\n· Repetición: un patrón corto (1-2 compases) que se repite casi igual — el oyente baila porque puede predecir.\n· Precisión: cada ataque cae exactamente donde va, especialmente respecto al bombo de la batería (tu socio: bajo y bombo son un solo instrumento).\n· Espacio: los huecos son parte del patrón. El silencio del beat 2 de un groove ES el groove.\n\nPor eso un groove de 4 notas bien puestas vale más que un solo de 400. Esta lección entrena la parte difícil: poner las notas ENTRE los pulsos.",
+        "tldr": "Groove = repetición + precisión (con el bombo) + espacio. Los huecos SON parte del patrón.",
+        "checkpoint": {
+          "question": "El socio rítmico #1 del bajo es…",
+          "options": [
+            "El bombo de la batería",
+            "La guitarra",
+            "La voz"
+          ],
+          "answer": 0,
+          "explain": "Bajo + bombo = un solo instrumento."
+        }
+      },
+      {
+        "title": "El \"y\": la síncopa de corchea",
+        "content": "Divide cada pulso en dos mitades: \"1 y 2 y 3 y 4 y\". Las mitades fuertes (los números) las toca cualquiera; el sabor vive en los \"y\" — los offbeats.\n\nSÍNCOPA = atacar en un \"y\" y NO volver a atacar en el número siguiente (lo sostienes o lo dejas en silencio). El acento se muda del lugar esperado al inesperado, y el cuerpo lo siente como empuje. El truco para dominarla: contar en voz alta \"1 y 2 y…\" mientras tocas, y saber SIEMPRE en qué sílaba vas. Si te pierdes contando, el groove se pierde contigo.",
+        "image": "assets/lesson_groove_syncopation_01_grid.png",
+        "tldr": "Síncopa = atacar el \"y\" sin re-atacar el pulso. Cuenta «1 y 2 y» en voz alta SIEMPRE.",
+        "checkpoint": {
+          "question": "Síncopa es…",
+          "options": [
+            "Atacar el \"y\" sin re-atacar el pulso",
+            "Tocar más rápido",
+            "Tocar más fuerte"
+          ],
+          "answer": 0,
+          "explain": "El acento se muda al lugar inesperado — eso empuja."
+        }
+      },
+      {
+        "title": "La anticipación: el groove latino y del funk",
+        "content": "El caso especial más importante de síncopa es la ANTICIPACIÓN: tocar en el \"y de 4\" (o \"y de 2\") la nota que \"debería\" caer en el beat siguiente. El acorde llega media corchea antes de tiempo — la música se siente urgente, viva.\n\nEs el corazón del tumbao de la salsa, del reggaetón, del funk y de media música mexicana moderna. En el ejercicio, el compás 5 anticipa: la última nota del patrón cae en el \"y de 4\" y se liga al compás siguiente. Practícalo hasta que caiga solo — es probablemente el recurso rítmico más rentable que existe para un bajista.",
+        "tldr": "Anticipación = la nota del compás siguiente llega en el \"y de 4\". Tumbao, funk, reggaetón.",
+        "checkpoint": {
+          "question": "El anticipo clásico cae en…",
+          "options": [
+            "El \"y de 4\"",
+            "El beat 1",
+            "El beat 3"
+          ],
+          "answer": 0,
+          "explain": "El acorde llega media corchea antes: urgencia."
+        }
+      },
+      {
+        "title": "Dead notes y el arte de mutear",
+        "content": "El groove fino tiene tres estados de cuerda, no dos: nota, silencio… y DEAD NOTE (nota muerta, escrita ✗): percutir la cuerda con la mano izquierda apoyada sin pisar — suena el golpe, no la altura. Es el \"chk\" que hace respirar al funk.\n\nY la herramienta invisible: MUTEO. La mano derecha apaga la cuerda que acaba de sonar (palm mute o con el pulgar), la izquierda afloja para cortar. Un bajista pro pasa más tiempo apagando cuerdas que pisándolas — así se logra que un patrón sincopado suene limpio y no un lodo de notas encimadas.",
+        "tldr": "Tres estados de cuerda: nota, silencio y dead note (x). Mutear es media chamba del bajista.",
+        "checkpoint": {
+          "question": "Un dead note suena a…",
+          "options": [
+            "Golpe sin altura (\"chk\")",
+            "Nota muy grave",
+            "Un error"
+          ],
+          "answer": 0,
+          "explain": "La izquierda apoya sin pisar: percusión pura."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "Los tres ingredientes operativos del groove son…",
+      "options": [
+        "Velocidad, volumen, distorsión",
+        "Repetición, precisión, espacio",
+        "Escalas, modos, arpegios"
+      ],
+      "answer": 1,
+      "explain": "Patrón corto repetido, ataques exactos (con el bombo), y silencios con propósito."
+    },
+    {
+      "question": "Síncopa es…",
+      "options": [
+        "Tocar muy rápido",
+        "Atacar en el \"y\" sin re-atacar el pulso siguiente",
+        "Tocar solo en los números"
+      ],
+      "answer": 1,
+      "explain": "El acento se muda al offbeat: ataque en el \"y\", sostén o silencio en el número."
+    },
+    {
+      "question": "\"Anticipación\" significa tocar…",
+      "options": [
+        "La nota del beat siguiente, media corchea antes",
+        "Más fuerte el beat 1",
+        "Después del beat"
+      ],
+      "answer": 0,
+      "explain": "Típicamente en el \"y de 4\": el cambio llega antes de tiempo (tumbao, funk)."
+    },
+    {
+      "question": "Un dead note (✗) es…",
+      "options": [
+        "Un error",
+        "Golpe percusivo sin altura (cuerda apagada)",
+        "Una nota muy grave"
+      ],
+      "answer": 1,
+      "explain": "La izquierda apoya sin pisar: suena el ataque, no la nota. El \"chk\" del funk."
+    },
+    {
+      "question": "¿Cuál es el socio rítmico #1 del bajista?",
+      "options": [
+        "La guitarra",
+        "El bombo de la batería",
+        "La voz"
+      ],
+      "answer": 1,
+      "explain": "Bajo + bombo = un instrumento. Tus ataques se pegan a los suyos."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha el patrón. ¿Recto o sincopado?",
+      "options": [
+        "Recto (en los beats)",
+        "Sincopado (hay \"y\")"
+      ],
+      "answer": 0,
+      "explain": "Cuatro ataques, cuatro beats: recto.",
+      "audio_ref": "assets/lesson_groove_syncopation_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y este?",
+      "options": [
+        "Recto (en los beats)",
+        "Sincopado (hay \"y\")"
+      ],
+      "answer": 1,
+      "explain": "El segundo ataque cayó en el \"y de 2\": síncopa.",
+      "audio_ref": "assets/lesson_groove_syncopation_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_groove_syncopation_01_1",
+      "title": "Ejercicio base",
+      "description": "Un groove real en La con síncopa: el patrón base (compases 1-4, ataques en 1, y-de-2, 3, y-de-3, 4), la versión con anticipación (5), y un fill de bajada para rematar (7). Cuenta \"1 y 2 y 3 y 4 y\" EN VOZ ALTA — sin contar no hay síncopa, hay suerte.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_groove_syncopation_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_groove_syncopation_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "El silencio del beat 2 del groove…",
+        "options": [
+          "Es parte del patrón",
+          "Fue un descanso",
+          "Es un error"
+        ],
+        "answer": 0,
+        "explain": "El espacio ES groove: se ejecuta muteando."
+      }
+    },
+    {
+      "id": "ex_groove_syncopation_01_2",
+      "title": "El tumbao (la anticipación latina)",
+      "description": "El patrón madre de la salsa y la cumbia moderna: nota larga en el 1, golpe en el \"y de 2\", silencio, y ANTICIPO del compás siguiente en el \"y de 4\". Cuenta \"1-y-2-Y-3-y-4-Y\" acentuando los Y.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_groove_syncopation_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_groove_syncopation_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "En el tumbao, la nota del \"y de 4\"…",
+        "options": [
+          "Anticipa el compás siguiente",
+          "Cierra el compás",
+          "Es un dead note"
+        ],
+        "answer": 0,
+        "explain": "Llega media corchea antes: la urgencia latina."
+      }
+    },
+    {
+      "id": "ex_groove_syncopation_01_3",
+      "title": "Reto: semicorcheas de funk",
+      "description": "El grid se parte en 16: semicorcheas (dur 0.25) con dead notes. Lento y quirúrgico — el funk a 80 BPM limpio vale más que sucio a 110. La mano derecha alterna i-m SIEMPRE, también en los deads.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_groove_syncopation_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_groove_syncopation_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.25,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.25,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.25,
+            "dur_beats": 0.25,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.25,
+            "dur_beats": 0.25,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 3.25,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 3.25,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.25,
+            "dur_beats": 0.25,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 3.25,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.25,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.25,
+            "dur_beats": 0.25,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.25,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 1.75,
+            "dur_beats": 0.25,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.25,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.25,
+            "dur_beats": 0.25,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.25,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.75,
+            "dur_beats": 0.25,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "Las semicorcheas se cuentan…",
+        "options": [
+          "1-e-y-a, 2-e-y-a…",
+          "1-y-2-y…",
+          "1-2-3-4"
+        ],
+        "answer": 0,
+        "explain": "Cuatro por pulso."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

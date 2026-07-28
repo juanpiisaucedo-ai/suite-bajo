@@ -1,0 +1,114 @@
+[
+ {
+  "number": 1,
+  "id": "fretboard_basics_01",
+  "folder": "lesson_01_bajo_y_diapason",
+  "title": "Conoce tu bajo y el diapasón",
+  "difficulty": "Beginner",
+  "minutes": 20
+ },
+ {
+  "number": 2,
+  "id": "rhythm_reading_01",
+  "folder": "lesson_02_lectura_ritmica",
+  "title": "Lectura rítmica básica",
+  "difficulty": "Beginner",
+  "minutes": 20
+ },
+ {
+  "number": 3,
+  "id": "intervals_inversions_01",
+  "folder": "lesson_03_intervalos_inversiones",
+  "title": "Intervalos e Inversiones",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 4,
+  "id": "major_scale_01",
+  "folder": "lesson_04_escala_mayor",
+  "title": "La escala mayor y su forma movible",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 5,
+  "id": "triads_applied_01",
+  "folder": "lesson_05_triadas_aplicadas",
+  "title": "Triadas y sus arpegios",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 6,
+  "id": "minor_scale_01",
+  "folder": "lesson_06_escala_menor",
+  "title": "La escala menor y las relativas",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 7,
+  "id": "seventh_chords_01",
+  "folder": "lesson_07_acordes_septima",
+  "title": "Acordes de 7ª y el ii-V-I",
+  "difficulty": "Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 8,
+  "id": "pentatonics_blues_01",
+  "folder": "lesson_08_pentatonicas_blues",
+  "title": "Pentatónicas y el blues",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 9,
+  "id": "cycle_of_fifths_01",
+  "folder": "lesson_09_ciclo_quintas",
+  "title": "El ciclo de quintas como herramienta",
+  "difficulty": "Intermediate",
+  "minutes": 20
+ },
+ {
+  "number": 10,
+  "id": "modes_01",
+  "folder": "lesson_10_modos",
+  "title": "Los modos de la escala mayor",
+  "difficulty": "Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 11,
+  "id": "bassline_building_01",
+  "folder": "lesson_11_lineas_de_bajo",
+  "title": "Construcción de líneas I: aproximaciones",
+  "difficulty": "Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 12,
+  "id": "groove_syncopation_01",
+  "folder": "lesson_12_groove_sincopa",
+  "title": "Groove y síncopa",
+  "difficulty": "Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 13,
+  "id": "articulations_slap_01",
+  "folder": "lesson_13_articulaciones_slap",
+  "title": "Articulaciones e intro al slap",
+  "difficulty": "Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 14,
+  "id": "technique_routine_01",
+  "folder": "lesson_14_rutina_tecnica",
+  "title": "Rutina de técnica: el gimnasio del bajista",
+  "difficulty": "All levels",
+  "minutes": 15
+ }
+]

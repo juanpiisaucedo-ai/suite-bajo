@@ -1,0 +1,1118 @@
+{
+  "lesson_id": "minor_scale_01",
+  "meta": {
+    "title": "La escala menor y las relativas",
+    "number": 6,
+    "difficulty": "Beginner-Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Cap cap.7 p102-106 · HL B2 p82-85",
+    "tags": [
+      "minor-scale",
+      "relative-minor",
+      "parallel-minor"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "La menor natural: fórmula y color",
+        "content": "La escala menor natural (natural minor) usa la receta T–S–T–T–S–T–T (trastes: 2–1–2–2–1–2–2). Desde La salen puras naturales: La Si Do Re Mi Fa Sol La.\n\nComparada con la mayor, tiene tres notas un semitono abajo: b3, b6 y b7 — y esa es TODA la diferencia entre \"feliz\" y \"melancólico\". El grado clave vuelve a ser la 3ª: menor = b3.\n\n(Existen variantes — armónica y melódica — que ajustan el 6 y el 7; quédate con la natural por ahora: es la base y la más usada en rock y pop.)",
+        "image": "assets/lesson_minor_scale_01_forma.png",
+        "tldr": "Menor natural = la mayor con b3, b6 y b7. La b3 pone lo \"melancólico\".",
+        "checkpoint": {
+          "question": "¿Qué grados bajan respecto a la escala mayor?",
+          "options": [
+            "b3, b6 y b7",
+            "b2, b5 y b7",
+            "b3, b4 y b5"
+          ],
+          "answer": 0,
+          "explain": "Tres semitonos abajo — el resto no se mueve."
+        }
+      },
+      {
+        "title": "Relativas: dos hogares, las mismas notas",
+        "content": "Cada tonalidad mayor tiene una gemela menor que usa EXACTAMENTE las mismas notas: su relativa menor (relative minor), que vive en el 6º grado. Do mayor ↔ La menor: mismas siete notas, distinto \"hogar\".\n\nEn el diapasón la encuentras al instante: la relativa menor está 3 trastes ABAJO de la tónica mayor (misma cuerda). C en traste 3 de A → Am en traste... la misma posición que el traste 0/5: La. Al revés: la relativa mayor está 3 trastes ARRIBA.\n\n¿Cómo saber cuál manda si las notas son las mismas? Por el REPOSO: la nota donde la música descansa es la tónica. El ejercicio te lo hará sentir.",
+        "tldr": "RELATIVA: mismas notas, otro hogar (Am↔C). En el mástil: 3 trastes abajo.",
+        "checkpoint": {
+          "question": "La relativa menor de Sol mayor es…",
+          "options": [
+            "Mi menor",
+            "Sol menor",
+            "Re menor"
+          ],
+          "answer": 0,
+          "explain": "El 6º grado de Sol es Mi. Mismas notas, otro hogar."
+        }
+      },
+      {
+        "title": "Paralelas: mismo hogar, distinto color",
+        "content": "No confundas relativa con PARALELA. La menor paralela (parallel minor) comparte la TÓNICA, no las notas: Do mayor vs Do menor. Misma fundamental, pero b3, b6 y b7 cambian el clima por completo.\n\nPara el bajista esto es práctico: la forma movible de la menor es la forma de la mayor con esos tres grados corridos un traste atrás. Si dominas ambas formas desde la misma fundamental, puedes cambiar el color de una canción sin mover la mano de posición.",
+        "tldr": "PARALELA: misma tónica, otras notas (C vs Cm). Cambia el clima, no el centro.",
+        "checkpoint": {
+          "question": "Do mayor y DO MENOR comparten…",
+          "options": [
+            "Las mismas notas",
+            "La misma tónica",
+            "Nada"
+          ],
+          "answer": 1,
+          "explain": "Paralelas = misma tónica. Relativas = mismas notas."
+        }
+      },
+      {
+        "title": "La forma menor en posición (caja de 4 trastes)",
+        "content": "La menor natural cabe completa en una caja de 4 trastes — sin desplazamientos. Desde la fundamental en cuerda E (dedo 1):\n\n· cuerda E: 1 (traste base), 2 (+2), b3 (+3)\n· cuerda A: 4 (base), 5 (+2), b6 (+3)\n· cuerda D: b7 (base), 8 (+2)\n\nDedos: 1-3-4 · 1-3-4 · 1-3. Esta caja es hermana de la pentatónica menor que verás en L8 (la pentatónica es esta forma quitando 2 y b6). Apréndela bien: es probablemente la forma más usada del rock.",
+        "image": "assets/lesson_minor_scale_01_forma.png",
+        "tldr": "La caja menor cabe en 4 trastes: dedos 1-3-4 · 1-3-4 · 1-3. Hermana de la pentatónica.",
+        "checkpoint": {
+          "question": "¿Cuántos trastes abarca la caja de la menor natural?",
+          "options": [
+            "3",
+            "4",
+            "6"
+          ],
+          "answer": 1,
+          "explain": "Cabe completa en 4 trastes, sin mover la mano."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Qué grados distinguen a la menor natural de la mayor?",
+      "options": [
+        "b2, b5, b7",
+        "b3, b6, b7",
+        "b3, b4, b5"
+      ],
+      "answer": 1,
+      "explain": "Tres notas un semitono abajo: b3 (el color), b6 y b7."
+    },
+    {
+      "question": "La relativa menor de Do mayor es…",
+      "options": [
+        "Do menor",
+        "La menor",
+        "Mi menor"
+      ],
+      "answer": 1,
+      "explain": "Vive en el 6º grado: mismas notas, otro hogar. En el diapasón: 3 trastes abajo."
+    },
+    {
+      "question": "¿Qué comparten Do mayor y DO MENOR (paralelas)?",
+      "options": [
+        "Las mismas notas",
+        "La misma tónica",
+        "Nada"
+      ],
+      "answer": 1,
+      "explain": "Paralela = misma tónica, distintas notas. Relativa = mismas notas, distinta tónica."
+    },
+    {
+      "question": "Si La menor y Do mayor tienen las mismas notas, ¿qué define cuál \"manda\"?",
+      "options": [
+        "La velocidad",
+        "Dónde reposa la música (la tónica)",
+        "El volumen del bajo"
+      ],
+      "answer": 1,
+      "explain": "El centro de reposo. Si todo resuelve a La y suena oscuro: estás en Am."
+    },
+    {
+      "question": "En la caja de la menor natural desde cuerda E, el grado b3 está…",
+      "options": [
+        "3 trastes arriba de la tónica, misma cuerda",
+        "1 traste atrás, cuerda siguiente",
+        "2 trastes arriba, cuerda siguiente"
+      ],
+      "answer": 0,
+      "explain": "b3 = 3 semitonos = mismo cuerda +3 trastes (dedo 4 si la tónica va con el 1)."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha la escala completa. ¿Menor natural o mayor?",
+      "options": [
+        "Menor natural",
+        "Mayor"
+      ],
+      "answer": 0,
+      "explain": "b3 desde el tercer sonido: menor.",
+      "audio_ref": "assets/lesson_minor_scale_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y esta?",
+      "options": [
+        "Menor natural",
+        "Mayor"
+      ],
+      "answer": 1,
+      "explain": "3ª mayor y 7ª sensible: mayor.",
+      "audio_ref": "assets/lesson_minor_scale_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_minor_scale_01_1",
+      "title": "Ejercicio base",
+      "description": "La menor natural en la caja de posición V, y de postre la comparación con su relativa mayor: mismas notas, otro punto de reposo. Siente cómo los compases 1-4 \"descansan\" en La y los 5-6 en Do — nadie cambió de notas, solo de hogar.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_minor_scale_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_minor_scale_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "La caja de Am que tocaste abarca…",
+        "options": [
+          "4 trastes",
+          "7 trastes",
+          "12 trastes"
+        ],
+        "answer": 0,
+        "explain": "Posición V sin mover la mano: 1-3-4·1-3-4·1-3."
+      }
+    },
+    {
+      "id": "ex_minor_scale_01_2",
+      "title": "La caja viaja: Mi menor y Re menor",
+      "description": "La misma caja de 4 trastes desde la cuerda A: Mi menor en posición VII y Re menor en posición V. Corcheas en los compases 5-6 — la caja ya debe salir sola.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_minor_scale_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_minor_scale_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "A",
+            "fret": 10
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "D",
+            "fret": 10
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "D",
+            "fret": 10
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "A",
+            "fret": 10
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "A",
+            "fret": 10
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          }
+        ]
+      },
+      "check": {
+        "question": "Em y Dm los tocaste con…",
+        "options": [
+          "La misma caja, movida de posición",
+          "Cajas distintas",
+          "Cuerdas al aire"
+        ],
+        "answer": 0,
+        "explain": "La forma es una; la fundamental le pone nombre."
+      }
+    },
+    {
+      "id": "ex_minor_scale_01_3",
+      "title": "Reto: mayor vs menor paralela (Do vs Dom)",
+      "description": "Misma tónica, distinto clima: Do mayor y Do menor espalda con espalda. El compás 7 alterna solo las terceras (Mi vs Mib) — el semitono que cambia TODO. Escucha antes de tocar, toca y vuelve a escuchar.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_minor_scale_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_minor_scale_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "G",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "D",
+            "fret": 1
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "D",
+            "fret": 1
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "De C a Cm, los trastes que bajaste fueron…",
+        "options": [
+          "b3, b6 y b7",
+          "Todos",
+          "Solo la 5ª"
+        ],
+        "answer": 0,
+        "explain": "Paralela: 3 dedos se recorren, el resto igual."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

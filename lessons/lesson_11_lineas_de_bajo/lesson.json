@@ -1,0 +1,1046 @@
+{
+  "lesson_id": "bassline_building_01",
+  "meta": {
+    "title": "Construcción de líneas I: aproximaciones",
+    "number": 11,
+    "difficulty": "Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B3 p126-135 · Cap cap.5 (funciones)",
+    "tags": [
+      "basslines",
+      "approach-notes",
+      "walking",
+      "root-five"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "El oficio: fundamental primero",
+        "content": "El trabajo #1 del bajo es simple de enunciar: tocar la FUNDAMENTAL del acorde en turno, en el tiempo fuerte, con buen sonido. Todo lo demás es decoración de ese esqueleto.\n\nNivel 1 del oficio: solo fundamentales, una por compás (o por cambio de acorde). Suena simple — y sostiene canciones enteras. Nivel 2: fundamental + octava (mismo nombre, +12 semitonos: dos cuerdas y dos trastes arriba). El brinco de octava agrega energía sin agregar UNA sola nota nueva a la armonía. Con esos dos niveles ya eres contratable; lo que sigue te hace memorable.",
+        "tldr": "Trabajo #1: la FUNDAMENTAL, en el beat fuerte, con buen sonido. Lo demás es decoración.",
+        "checkpoint": {
+          "question": "¿Qué va SIEMPRE en el beat 1?",
+          "options": [
+            "La fundamental",
+            "La aproximación",
+            "La 3ª"
+          ],
+          "answer": 0,
+          "explain": "El beat 1 define la armonía; los adornos van después."
+        }
+      },
+      {
+        "title": "El triángulo fundamental-5ª-octava",
+        "content": "La 5ª justa es la nota más \"gratis\" de la música: suena bien sobre acordes mayores Y menores (ambos la comparten, L5), así que puedes usarla casi sin pensar.\n\nEn el diapasón forma un triángulo perfecto con la fundamental y la octava: 5ª = cuerda siguiente +2 trastes; octava = dos cuerdas +2 trastes. Además tiene una propiedad secreta: la 5ª también vive ABAJO de la fundamental (misma posición de traste, cuerda anterior) — el clásico \"bombeo\" fundamental-5ª grave de la música norteña, el country y la cumbia sale de ahí.\n\nR–5–8 es el vocabulario base de la línea de bajo. El resto son caminos entre estos pilares.",
+        "tldr": "La 5ª sirve en mayores Y menores. R-5-8 es el triángulo base del diapasón.",
+        "checkpoint": {
+          "question": "¿Por qué la 5ª es la nota más \"gratis\"?",
+          "options": [
+            "Mayores y menores la comparten",
+            "Es la más grave",
+            "Es la más fácil de pisar"
+          ],
+          "answer": 0,
+          "explain": "El acorde mayor y el menor solo difieren en la 3ª."
+        }
+      },
+      {
+        "title": "Notas de aproximación: llegar con intención",
+        "content": "Una nota de aproximación (approach note) se toca JUSTO ANTES del cambio de acorde (típicamente en el beat 4) y apunta a la fundamental que viene. Tres tipos:\n\n· CROMÁTICA: un semitono abajo o arriba del destino. La más fuerte — funciona aunque la nota no pertenezca a la tonalidad.\n· DE ESCALA: la nota de la escala vecina al destino (un tono arriba o abajo).\n· DOMINANTE: la 5ª del acorde destino — el mini V→I (L7) en versión de una nota.\n\nEl efecto: la línea deja de saltar entre islas y empieza a CAMINAR. Quien escucha siente que cada acorde \"llega\" en lugar de aparecer.",
+        "image": "assets/lesson_bassline_building_01_aproximaciones.png",
+        "tldr": "Aproximación en el beat 4: cromática (±1 semitono), de escala (±1 tono) o dominante (la 5ª del destino).",
+        "checkpoint": {
+          "question": "La aproximación dominante a Do es…",
+          "options": [
+            "Sol",
+            "Si",
+            "Re"
+          ],
+          "answer": 0,
+          "explain": "La 5ª del destino: el mini V→I de una nota."
+        }
+      },
+      {
+        "title": "La receta del compás",
+        "content": "Fórmula de trabajo para 4/4, un acorde por compás:\n\n· Beat 1: FUNDAMENTAL (no negociable — es donde vive la armonía).\n· Beats 2-3: pilares y color: 5ª, octava, 3ª si quieres marcar mayor/menor.\n· Beat 4: APROXIMACIÓN al siguiente acorde.\n\nEsa receta — fundamental, relleno, aproximación — es literalmente cómo se construye el walking bass del jazz, las líneas de soul y la tambora de banda. El ejercicio la aplica a C→Am→F→G: cada compás termina apuntando al siguiente. Cuando la receta se vuelva reflejo, empezarás a romperla con criterio — pero primero, el reflejo.",
+        "tldr": "La receta del compás: 1 fundamental · 2-3 pilares · 4 aproximación. Así se camina.",
+        "checkpoint": {
+          "question": "¿En qué beat vive la aproximación?",
+          "options": [
+            "El 4",
+            "El 1",
+            "El 2"
+          ],
+          "answer": 0,
+          "explain": "Justo antes del cambio: prepara la llegada."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Qué va SIEMPRE en el beat 1 del compás?",
+      "options": [
+        "La aproximación",
+        "La fundamental del acorde",
+        "La blue note"
+      ],
+      "answer": 1,
+      "explain": "El beat 1 define la armonía. Los adornos van después."
+    },
+    {
+      "question": "¿Por qué la 5ª es la nota más \"segura\" tras la fundamental?",
+      "options": [
+        "Es la más grave",
+        "Mayores y menores la comparten",
+        "Nunca se toca"
+      ],
+      "answer": 1,
+      "explain": "El acorde mayor y el menor difieren en la 3ª; la 5ª justa es terreno común."
+    },
+    {
+      "question": "Una aproximación cromática a La puede ser…",
+      "options": [
+        "Sol# o Sib",
+        "Sol o Si",
+        "Mi"
+      ],
+      "answer": 0,
+      "explain": "Un semitono abajo (G#) o arriba (Bb) del destino."
+    },
+    {
+      "question": "La aproximación \"dominante\" a un acorde de Do es…",
+      "options": [
+        "Si",
+        "Re",
+        "Sol"
+      ],
+      "answer": 2,
+      "explain": "La 5ª del destino: G→C, el V→I de una sola nota."
+    },
+    {
+      "question": "¿En qué beat vive típicamente la aproximación?",
+      "options": [
+        "En el 1",
+        "En el 3",
+        "En el 4"
+      ],
+      "answer": 2,
+      "explain": "Justo antes del cambio: prepara la llegada del beat 1 siguiente."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha la llegada a La. ¿Fue por semitono (cromática) o por tono (de escala)?",
+      "options": [
+        "Semitono (cromática)",
+        "Tono (de escala)"
+      ],
+      "answer": 0,
+      "explain": "Sol#→La: el jalón cromático, el más fuerte.",
+      "audio_ref": "assets/lesson_bassline_building_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y esta llegada?",
+      "options": [
+        "Semitono (cromática)",
+        "Tono (de escala)"
+      ],
+      "answer": 1,
+      "explain": "Sol→La: un tono completo, la vecina de la escala.",
+      "audio_ref": "assets/lesson_bassline_building_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_bassline_building_01_1",
+      "title": "Ejercicio base",
+      "description": "La receta completa sobre C→Am→F→G: fundamental en el 1, pilares en el 2-3, y aproximación en el beat 4 (cromáticas y de escala — están marcadas). Escucha cómo cada compás EMPUJA al siguiente: eso es caminar, no saltar.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_bassline_building_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_bassline_building_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 30,
+            "name": "F#1",
+            "string": "E",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 30,
+            "name": "F#1",
+            "string": "E",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "El Sib del beat 4 (compás 1) apuntaba a…",
+        "options": [
+          "La (el Am que venía)",
+          "Fa",
+          "Sol"
+        ],
+        "answer": 0,
+        "explain": "Cromática descendente al destino."
+      }
+    },
+    {
+      "id": "ex_bassline_building_01_2",
+      "title": "Solo aproximación dominante",
+      "description": "La misma vuelta C→Am→F→G pero aproximando SIEMPRE con la dominante (la 5ª del acorde destino): Mi antes de La, Do antes de Fa, Re antes de Sol. El mini V→I en cada esquina.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_bassline_building_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_bassline_building_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "Aproximar con la 5ª del acorde destino se llama…",
+        "options": [
+          "Dominante",
+          "Cromática",
+          "De escala"
+        ],
+        "answer": 0,
+        "explain": "El V→I de una sola nota."
+      }
+    },
+    {
+      "id": "ex_bassline_building_01_3",
+      "title": "Reto: walking de 8 compases",
+      "description": "Un walking bass real: C→Am→Dm→G7→C→F→G→C en negras constantes, mezclando las tres aproximaciones. Cada beat 4 apunta al siguiente acorde. Léelo, tócalo… y luego intenta variarlo sin perder las llegadas.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_bassline_building_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_bassline_building_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 30,
+            "name": "F#1",
+            "string": "E",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "En el walking, el beat 1 de cada compás fue SIEMPRE…",
+        "options": [
+          "La fundamental",
+          "La aproximación",
+          "La 3ª"
+        ],
+        "answer": 0,
+        "explain": "El beat 1 define la armonía."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

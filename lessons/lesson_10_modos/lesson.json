@@ -1,0 +1,1158 @@
+{
+  "lesson_id": "modes_01",
+  "meta": {
+    "title": "Los modos de la escala mayor",
+    "number": 10,
+    "difficulty": "Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Cap cap.9 p114-119",
+    "tags": [
+      "modes",
+      "dorian",
+      "mixolydian",
+      "modal"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "La idea (más simple de lo que cuentan)",
+        "content": "Toca las notas de Do mayor… pero empezando y DESCANSANDO en Re. Mismas siete notas, otro hogar — y de pronto suena distinto: ni mayor ni menor natural, sino otra cosa. Eso es un MODO.\n\nComo la escala mayor tiene 7 notas, tiene 7 modos posibles, uno por grado: Jónico (desde el 1), Dórico (2), Frigio (3), Lidio (4), Mixolidio (5), Eólico (6) y Locrio (7). Dos ya los conoces con otro nombre: el Jónico ES la escala mayor y el Eólico ES la menor natural (¡las relativas de L6 eran modos disfrazados!).",
+        "image": "assets/lesson_modes_01_tabla.png",
+        "tldr": "Modo = las mismas 7 notas con otro centro de reposo. Jónico = mayor; Eólico = menor natural.",
+        "checkpoint": {
+          "question": "El modo eólico es otro nombre de…",
+          "options": [
+            "La menor natural",
+            "La escala mayor",
+            "La pentatónica"
+          ],
+          "answer": 0,
+          "explain": "Y el jónico es la mayor: dos modos ya los conocías."
+        }
+      },
+      {
+        "title": "Cada modo tiene UNA nota que lo delata",
+        "content": "La forma pro de pensar los modos no es \"Do mayor desde Re\", sino comparar cada modo contra la mayor o menor de su MISMA tónica y encontrar su nota característica:\n\n· Dórico = menor con 6ª MAYOR (esa 6 le da luz al modo menor).\n· Frigio = menor con b2 (el sabor español/flamenco).\n· Lidio = mayor con #4 (flotante, de película).\n· Mixolidio = mayor con b7 (el modo del acorde dominante y del rock).\n· Locrio = menor con b2 Y b5 (inestable: casi no se usa como hogar).\n\nCuando toques un modo, haz brillar su nota característica: sin ella, nadie nota el modo.",
+        "image": "assets/lesson_modes_01_tabla.png",
+        "tldr": "Cada modo tiene UNA nota que lo delata: dórico 6M · frigio b2 · lidio #4 · mixolidio b7.",
+        "checkpoint": {
+          "question": "¿Qué nota delata al mixolidio?",
+          "options": [
+            "La b7",
+            "La #4",
+            "La b2"
+          ],
+          "answer": 0,
+          "explain": "Mayor con b7: la escala natural del acorde dominante."
+        }
+      },
+      {
+        "title": "¿Cuándo pensar en modos? (modal vs tonal)",
+        "content": "En una canción TONAL (la mayoría), los acordes se mueven y resuelven al I: ahí piensa en grados y acordes (L5, L7), no en modos.\n\nPiensa modal cuando la armonía se ESTACIONA: un solo acorde (o dos) por muchos compases — funk en un Dm7 eterno, rock en un riff de E7, jam sobre un drone. Ahí el modo es el menú de notas del paisaje: Dm7 estacionado → Re dórico; E7 estacionado → Mi mixolidio.\n\nRegla de bolsillo del bajista: acorde m7 que no va a ningún lado = dórico; acorde 7 que no resuelve = mixolidio. Con esos dos cubres el 90 % de los casos reales.",
+        "tldr": "¿Acordes que se mueven? Piensa tonal. ¿Un acorde estacionado? Piensa modal.",
+        "checkpoint": {
+          "question": "¿Cuándo conviene pensar en modos?",
+          "options": [
+            "Cuando la armonía se estaciona",
+            "Siempre",
+            "Solo en los solos"
+          ],
+          "answer": 0,
+          "explain": "Vamp de un acorde = paisaje modal."
+        }
+      },
+      {
+        "title": "Dórico y mixolidio en el diapasón",
+        "content": "Los dos modos \"de chamba\" salen de formas que ya tienes:\n\n· DÓRICO = la caja menor de L6 subiendo la b6 un traste (queda 6 mayor). Desde la fundamental en cuerda A: 1-2-b3 · 4-5-6 · b7-8 — todo en 4 trastes.\n· MIXOLIDIO = la forma mayor de L4 bajando la 7 un traste (queda b7). Desde cuerda E: 1-2-3 en la primera cuerda del patrón… (misma digitación, un dedo cambia).\n\nEl ejercicio recorre Re dórico y Sol mixolidio — que además son vecinos del ii-V de Do (L7): Re dórico sobre Dm7 y Sol mixolidio sobre G7. Los modos y los acordes son la misma cosa vista de dos ángulos.",
+        "tldr": "Dórico = caja menor con 6M. Mixolidio = forma mayor con b7. Tus dos modos de chamba.",
+        "checkpoint": {
+          "question": "Sobre un Dm7 que no va a ningún lado, el menú natural es…",
+          "options": [
+            "Re dórico",
+            "Re frigio",
+            "Re mayor"
+          ],
+          "answer": 0,
+          "explain": "m7 estacionado = dórico: la regla de bolsillo."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "El modo Eólico es otro nombre de…",
+      "options": [
+        "La escala mayor",
+        "La menor natural",
+        "La pentatónica"
+      ],
+      "answer": 1,
+      "explain": "Jónico = mayor; Eólico = menor natural. Los otros 5 son los \"nuevos\"."
+    },
+    {
+      "question": "¿Qué nota hace DÓRICO a un modo menor?",
+      "options": [
+        "La b2",
+        "La 6ª mayor",
+        "La #4"
+      ],
+      "answer": 1,
+      "explain": "Dórico = menor con 6M. Esa sexta le da la luz (piensa funk/Santana)."
+    },
+    {
+      "question": "El mixolidio es la escala natural del acorde…",
+      "options": [
+        "maj7",
+        "m7b5",
+        "dominante 7"
+      ],
+      "answer": 2,
+      "explain": "Mayor con b7 = las notas de un acorde 7. G mixolidio ↔ G7."
+    },
+    {
+      "question": "¿Cuándo conviene pensar en modos?",
+      "options": [
+        "Siempre",
+        "Cuando la armonía se estaciona en un acorde",
+        "Solo en jazz"
+      ],
+      "answer": 1,
+      "explain": "Armonía estática = paisaje modal. Armonía en movimiento = piensa tonal."
+    },
+    {
+      "question": "Sobre un Dm7 que dura toda la canción, el menú natural es…",
+      "options": [
+        "Re frigio",
+        "Re dórico",
+        "Re lidio"
+      ],
+      "answer": 1,
+      "explain": "m7 estacionado = dórico (regla de bolsillo del bajista)."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha la escala menor. ¿Dórico (6ª mayor) o eólico (b6)?",
+      "options": [
+        "Dórico",
+        "Eólico (natural)"
+      ],
+      "answer": 0,
+      "explain": "El sexto sonido brilló: esa 6M es la luz del dórico.",
+      "audio_ref": "assets/lesson_modes_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y esta?",
+      "options": [
+        "Dórico",
+        "Eólico (natural)"
+      ],
+      "answer": 1,
+      "explain": "b6: la menor natural de siempre.",
+      "audio_ref": "assets/lesson_modes_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_modes_01_1",
+      "title": "Ejercicio base",
+      "description": "Re dórico (compases 1-4) y Sol mixolidio (5-6): los dos modos de trabajo del bajista, que además son el ii y el V de Do. Remata con el arpegio de Dm7 — escucha cómo el modo y el acorde son lo mismo. Haz sonar la nota característica: el Si (6M) en dórico, el Fa (b7) en mixolidio.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_modes_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_modes_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "A",
+            "fret": 10
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En Re dórico, la nota que lo hace dórico (D traste 9) es…",
+        "options": [
+          "Si (la 6ª mayor)",
+          "Fa",
+          "Do"
+        ],
+        "answer": 0,
+        "explain": "Menor con 6M: esa es la luz del dórico."
+      }
+    },
+    {
+      "id": "ex_modes_01_2",
+      "title": "Los modos de color: frigio y lidio",
+      "description": "Mi frigio en posición abierta (siente el b2 español en Mi→Fa) y Fa lidio subiendo por las cuerdas graves (el #4 flotante). El compás 7 aísla el gesto frigio Mi-Fa-Mi.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_modes_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_modes_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "El gesto Mi-Fa-Mi del compás 7 delata al modo…",
+        "options": [
+          "Frigio",
+          "Lidio",
+          "Dórico"
+        ],
+        "answer": 0,
+        "explain": "La b2 pegada a la tónica: sabor español."
+      }
+    },
+    {
+      "id": "ex_modes_01_3",
+      "title": "Reto: vamps — el modo en acción",
+      "description": "Dos compases de vamp dórico sobre Dm y dos de vamp mixolidio sobre G — con SILENCIOS y haciendo brillar la nota característica (Si en el dórico, Fa en el mixolidio). Esto ya no es escala: es música modal.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_modes_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_modes_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En el vamp de Sol mixolidio, la b7 que acentuaste fue…",
+        "options": [
+          "Fa",
+          "Si",
+          "Sol#"
+        ],
+        "answer": 0,
+        "explain": "Mayor con b7 = las notas de G7."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

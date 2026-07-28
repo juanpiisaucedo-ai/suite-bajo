@@ -1,0 +1,1234 @@
+{
+  "lesson_id": "major_scale_01",
+  "meta": {
+    "title": "La escala mayor y su forma movible",
+    "number": 4,
+    "difficulty": "Beginner-Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Cap cap.4 p60-65 · HL B2 p66-73",
+    "tags": [
+      "major-scale",
+      "scale-degrees",
+      "fingering"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "La fórmula: T–T–S–T–T–T–S",
+        "content": "La escala mayor (major scale) son 7 notas construidas con una receta fija de distancias: Tono–Tono–Semitono–Tono–Tono–Tono–Semitono (whole–whole–half–whole–whole–whole–half). En trastes: 2–2–1–2–2–2–1.\n\nAplícala desde Do y salen puras notas naturales: Do Re Mi Fa Sol La Si Do. Aplícala desde CUALQUIER otra nota y obtienes su escala mayor — por eso algunas tonalidades necesitan sostenidos o bemoles: para conservar la receta.\n\nEsta escala es la vara con la que se mide todo lo demás: acordes, intervalos y los modos se describen comparándolos contra ella.",
+        "tldr": "T-T-S-T-T-T-S (en trastes: 2-2-1-2-2-2-1): la receta única de TODA escala mayor.",
+        "checkpoint": {
+          "question": "¿Entre qué grados caen los semitonos de la escala mayor?",
+          "options": [
+            "3-4 y 7-8",
+            "2-3 y 6-7",
+            "1-2 y 4-5"
+          ],
+          "answer": 0,
+          "explain": "La receta T-T-S-T-T-T-S pone los semitonos en 3→4 y 7→8."
+        }
+      },
+      {
+        "title": "Grados: los papeles de cada nota",
+        "content": "Cada nota de la escala tiene un número (grado) y un papel:\n\n1 = tónica (el hogar) · 2 = supertónica · 3 = mediante (define lo MAYOR) · 4 = subdominante · 5 = dominante (el pilar del bajo) · 6 = superdominante · 7 = sensible (pide resolver al 1) · 8 = otra vez la tónica.\n\nPiensa en grados, no en nombres de notas: \"1-3-5\" o \"caminar del 1 al 4\" significa lo mismo en TODAS las tonalidades. Los bajistas que se mueven rápido por tonalidades piensan en números.",
+        "tldr": "Piensa en grados (1-7), no en nombres de nota: \"1-3-5\" vale en las 12 tonalidades.",
+        "checkpoint": {
+          "question": "¿Qué grado \"pide\" resolver a la tónica?",
+          "options": [
+            "El 5º",
+            "El 7º (sensible)",
+            "El 4º"
+          ],
+          "answer": 1,
+          "explain": "Está a un semitono del 8: empuja hacia casa."
+        }
+      },
+      {
+        "title": "La forma en el diapasón (patrón movible)",
+        "content": "Gracias a la afinación en 4ªs, la escala mayor tiene una forma fija de una octava que puedes plantar donde sea. Desde una fundamental en la cuerda A (o E):\n\n· grados 1–2 en la cuerda de la fundamental (trastes +0 y +2)\n· grados 3–4–5–6 en la siguiente cuerda (trastes −1, +0, +2, +4… es decir: 3 está un traste ATRÁS de la fundamental)\n· grados 7–8 en la siguiente (trastes +1 y +2)\n\nDigitación sugerida sin abrir la mano: 2–4 · 1–2–4 · 1–3–4 con un pequeño desplazamiento. Estudia el diagrama: la meta es ver la ESCALERA completa antes de tocar la primera nota.",
+        "image": "assets/lesson_major_scale_01_forma.png",
+        "tldr": "Una forma movible de una octava: grados 1-2 / 3-4-5-6 / 7-8 repartidos en 3 cuerdas.",
+        "checkpoint": {
+          "question": "Mueves la forma a otra fundamental. ¿Qué cambia?",
+          "options": [
+            "La digitación",
+            "Solo el nombre de las notas",
+            "Las distancias"
+          ],
+          "answer": 1,
+          "explain": "Misma geometría, mismos dedos: cambia el nombre, no la forma."
+        }
+      },
+      {
+        "title": "Cómo practicarla (y para qué)",
+        "content": "Tres niveles de práctica, siempre con metrónomo y diciendo los grados en voz alta:\n\n1) Subir y bajar la octava completa (el ejercicio de esta lección).\n2) Mover la MISMA forma a otra fundamental (Sol en traste 3 de E, Re en traste 5 de A…): si sabes una, sabes doce.\n3) Saltar por grados: 1-3, 2-4, 3-5… (terceras) — así se construyen las líneas reales.\n\nLa escala no es música todavía: es el alfabeto. Las lecciones de triadas (L5) y líneas de bajo (L11) la convierten en frases.",
+        "tldr": "El camino: subir-bajar → moverla de tonalidad → saltarla en terceras.",
+        "checkpoint": {
+          "question": "Tras dominar la escala subiendo y bajando, sigue…",
+          "options": [
+            "Pura velocidad",
+            "Moverla de tono y saltarla en 3ªs",
+            "Otra escala"
+          ],
+          "answer": 1,
+          "explain": "Los saltos en terceras son la materia prima de las líneas reales."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Cuál es la fórmula de la escala mayor en tonos (T) y semitonos (S)?",
+      "options": [
+        "T-T-S-T-T-T-S",
+        "T-S-T-T-S-T-T",
+        "S-T-T-S-T-T-T"
+      ],
+      "answer": 0,
+      "explain": "Tono-Tono-Semitono-Tono-Tono-Tono-Semitono. En trastes: 2-2-1-2-2-2-1."
+    },
+    {
+      "question": "¿Qué grado define el sonido \"mayor\" de la escala?",
+      "options": [
+        "El 3º",
+        "El 5º",
+        "El 7º"
+      ],
+      "answer": 0,
+      "explain": "La 3ª mayor (4 semitonos desde la tónica) es la que da el color mayor."
+    },
+    {
+      "question": "En la forma movible desde la cuerda A, el grado 3 está…",
+      "options": [
+        "En la misma cuerda, 4 trastes arriba",
+        "En la siguiente cuerda, 1 traste atrás",
+        "En la siguiente cuerda, mismo traste"
+      ],
+      "answer": 1,
+      "explain": "3ª mayor = cuerda siguiente, un traste atrás (lección de intervalos)."
+    },
+    {
+      "question": "¿Qué grado se llama \"sensible\" y por qué?",
+      "options": [
+        "El 4º, porque suena suave",
+        "El 7º, porque pide resolver a la tónica",
+        "El 2º, porque está junto al 1"
+      ],
+      "answer": 1,
+      "explain": "El 7º está a un semitono del 8 y \"empuja\" hacia la tónica."
+    },
+    {
+      "question": "Tocas la forma mayor desde el traste 3 de la cuerda E. ¿Qué escala es?",
+      "options": [
+        "Do mayor",
+        "Sol mayor",
+        "Fa mayor"
+      ],
+      "answer": 1,
+      "explain": "Traste 3 de E = Sol. La forma es la misma; la fundamental le da el nombre."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha la escala. ¿Mayor o menor?",
+      "options": [
+        "Mayor",
+        "Menor"
+      ],
+      "answer": 0,
+      "explain": "3ª mayor desde la tónica: brillante.",
+      "audio_ref": "assets/lesson_major_scale_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y esta?",
+      "options": [
+        "Mayor",
+        "Menor"
+      ],
+      "answer": 1,
+      "explain": "b3, b6 y b7: el clima se apaga — menor natural.",
+      "audio_ref": "assets/lesson_major_scale_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_major_scale_01_1",
+      "title": "Ejercicio base",
+      "description": "Do mayor en una octava con la forma movible: sube y baja en negras, luego en corcheas, y remata con el esqueleto 1-3-5-8 (¡el arpegio ya se asoma!). Di los GRADOS en voz alta (1, 2, 3…), no los nombres de nota.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_major_scale_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_major_scale_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "El grado 3 de Do mayor cayó en…",
+        "options": [
+          "Cuerda D, traste 2 (Mi)",
+          "Cuerda A, traste 5",
+          "Cuerda G, traste 4"
+        ],
+        "answer": 0,
+        "explain": "3ª mayor: cuerda siguiente, un traste atrás."
+      }
+    },
+    {
+      "id": "ex_major_scale_01_2",
+      "title": "La forma viaja: Sol y Re mayor",
+      "description": "La MISMA forma de la lección, plantada en Sol (traste 3 de E) y en Re (traste 5 de A). Si la digitación es idéntica, lo estás haciendo bien: esa es la gracia de las formas movibles.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_major_scale_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_major_scale_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 49,
+            "name": "C#3",
+            "string": "G",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "Al mover la forma a Sol, el F# salió…",
+        "options": [
+          "Solo, por la geometría de la forma",
+          "Porque lo buscaste nota por nota",
+          "No hay F# en Sol"
+        ],
+        "answer": 0,
+        "explain": "La forma movible pone las alteraciones sola."
+      }
+    },
+    {
+      "id": "ex_major_scale_01_3",
+      "title": "Reto: terceras diatónicas (el generador de líneas)",
+      "description": "La escala en saltos de 3ª (1-3, 2-4, 3-5…) y de 5ª: así se practican las escalas cuando ya caminas — es la materia prima de los fills reales. En corcheas, sin perder el pulso.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_major_scale_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_major_scale_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "1-3, 2-4, 3-5… ¿qué practicaste?",
+        "options": [
+          "Saltos de 3ª diatónicos",
+          "Arpegios de triada",
+          "Cromatismo"
+        ],
+        "answer": 0,
+        "explain": "Terceras: la materia prima de fills y líneas."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

@@ -1,0 +1,1226 @@
+{
+  "lesson_id": "technique_routine_01",
+  "meta": {
+    "title": "Rutina de técnica: el gimnasio del bajista",
+    "number": 14,
+    "difficulty": "All levels",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Bass Fitness (las 10 secciones) · Cap cap.12 p132-158",
+    "tags": [
+      "technique",
+      "permutations",
+      "warm-up",
+      "practice"
+    ],
+    "estimated_minutes": 15,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "Por qué un gimnasio (y sus reglas)",
+        "content": "La técnica no se entrena tocando canciones — se entrena con ejercicios aburridos y perfectos, 10-15 minutos al día, ANTES de la música. Como el gimnasio: nadie aplaude las sentadillas, pero sostienen todo lo demás.\n\nLas reglas innegociables:\n1) SIEMPRE con metrónomo. 2) Empieza al tempo donde salga PERFECTO (aunque sea 50 BPM) y sube de 4 en 4. 3) La limpieza manda: un error = bajas el tempo. 4) Máximo 15 minutos: esto es vitamina, no comida. 5) Dolor = STOP inmediato (molestia muscular leve es normal; dolor punzante o entumecimiento, jamás).",
+        "tldr": "10-15 min diarios con metrónomo. La limpieza manda: un error = bajas el tempo. Dolor = stop.",
+        "checkpoint": {
+          "question": "Sientes dolor punzante en la muñeca. ¿Qué haces?",
+          "options": [
+            "Parar de inmediato",
+            "Aguantar, es normal",
+            "Tocar más suave"
+          ],
+          "answer": 0,
+          "explain": "Molestia de estiramiento sí; dolor punzante o entumecimiento, jamás."
+        }
+      },
+      {
+        "title": "La permutación 1-2-3-4: el ejercicio infinito",
+        "content": "El ejercicio madre de la técnica de mano izquierda: cuatro dedos, cuatro trastes consecutivos (una \"caja\"), un dedo por traste — y tocas los 4 en algún ORDEN, cruzando las 4 cuerdas.\n\nEl orden 1-2-3-4 es solo el primero: hay 24 permutaciones posibles (1-2-4-3, 1-3-2-4, 2-1-3-4… hasta 4-3-2-1), y cada una obliga a tus dedos a independizarse de una manera distinta. Las que empiezan con 3 y 4 duelen — esas son las que más pagan.\n\nRutina: UNA permutación nueva por día (las 24 dan para un mes), subiendo y bajando las cuerdas, en dos posiciones distintas del mástil.",
+        "image": "assets/lesson_technique_routine_01_permutaciones.png",
+        "tldr": "1-2-3-4 tiene 24 órdenes posibles. Una permutación al día = un mes de gimnasio.",
+        "checkpoint": {
+          "question": "¿Cuántas permutaciones existen de 1-2-3-4?",
+          "options": [
+            "24",
+            "12",
+            "16"
+          ],
+          "answer": 0,
+          "explain": "4! = 24. Las que empiezan con 3 y 4 son las que más pagan."
+        }
+      },
+      {
+        "title": "La mano derecha también entrena",
+        "content": "Mientras la izquierda hace permutaciones, la derecha tiene sus propias reglas:\n\n· ALTERNANCIA estricta índice-medio (i-m-i-m): nunca dos veces seguidas el mismo dedo, ni siquiera al cambiar de cuerda (el error clásico).\n· APOYO: cada dedo, tras atacar, aterriza en la cuerda de arriba (apoyando) — eso apaga la cuerda grave gratis.\n· El PULGAR viaja: descansa en la pastilla solo al tocar la cuerda E; al subir de cuerda, el pulgar se muda a apoyarse en la cuerda E, luego en la A (muteo ambulante).\n\nUn truco de diagnóstico: graba 30 segundos de tu ejercicio. La cámara no miente sobre tensión en hombros y muñeca.",
+        "tldr": "Derecha: alternancia i-m estricta (también al cruzar cuerdas) y el pulgar viaja muteando.",
+        "checkpoint": {
+          "question": "El vicio #1 de la mano derecha es…",
+          "options": [
+            "Repetir dedo al cruzar de cuerda",
+            "Alternar demasiado",
+            "Usar el pulgar"
+          ],
+          "answer": 0,
+          "explain": "i-m-i-m SIEMPRE, especialmente en los cruces."
+        }
+      },
+      {
+        "title": "PORA: practicar con atención rotativa",
+        "content": "El problema de los ejercicios repetitivos es que la mente se va. La solución (idea estrella del capítulo de técnica de Ariane Cap): rotar el foco de atención en ciclos cortos.\n\nMisma permutación, 4 vueltas, un foco por vuelta:\n· Vuelta 1: AFINACIÓN — ¿cada dedo pisa justo detrás del traste?\n· Vuelta 2: RITMO — ¿cada nota cae exacta con el click?\n· Vuelta 3: RELAJACIÓN — hombros abajo, muñeca recta, respira.\n· Vuelta 4: SONIDO — ¿todas las notas suenan igual de fuerte y llenas?\n\nQuince minutos así valen por una hora en piloto automático. Es la diferencia entre repetir y ENTRENAR.",
+        "tldr": "PORA: 4 vueltas, un foco por vuelta — afinación, ritmo, relajación, sonido.",
+        "checkpoint": {
+          "question": "PORA significa rotar…",
+          "options": [
+            "El foco de atención",
+            "Los dedos",
+            "El tempo"
+          ],
+          "answer": 0,
+          "explain": "Afinación → ritmo → relajación → sonido: 15 min así valen por una hora."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Cuántas permutaciones existen del patrón 1-2-3-4?",
+      "options": [
+        "12",
+        "24",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "4! = 24 órdenes posibles. Una por día = un mes de rutina."
+    },
+    {
+      "question": "¿A qué tempo se empieza un ejercicio de técnica?",
+      "options": [
+        "Al más rápido posible",
+        "Donde salga perfecto, y subir de 4 en 4",
+        "Siempre a 120"
+      ],
+      "answer": 1,
+      "explain": "La limpieza manda; la velocidad es consecuencia, no meta."
+    },
+    {
+      "question": "La regla de la mano derecha es…",
+      "options": [
+        "Usar solo el índice",
+        "Alternar índice-medio SIEMPRE, incluso al cambiar de cuerda",
+        "Usar púa"
+      ],
+      "answer": 1,
+      "explain": "i-m-i-m estricto: repetir dedo al cruzar cuerdas es el vicio #1."
+    },
+    {
+      "question": "PORA significa practicar…",
+      "options": [
+        "Más horas",
+        "Rotando el foco: afinación→ritmo→relajación→sonido",
+        "Sin metrónomo"
+      ],
+      "answer": 1,
+      "explain": "Un foco por vuelta: la atención entrenada vale más que la repetición."
+    },
+    {
+      "question": "Sientes dolor punzante en la muñeca al practicar. ¿Qué haces?",
+      "options": [
+        "Aguantar, es normal",
+        "Parar de inmediato",
+        "Tocar más suave"
+      ],
+      "answer": 1,
+      "explain": "Dolor punzante o entumecimiento = stop. La técnica se construye sin lesiones."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha las 4 negras. ¿Parejas o desparejas?",
+      "options": [
+        "Parejas",
+        "Desparejas"
+      ],
+      "answer": 0,
+      "explain": "Cada ataque cayó exacto en su beat.",
+      "audio_ref": "assets/lesson_technique_routine_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y estas?",
+      "options": [
+        "Parejas",
+        "Desparejas"
+      ],
+      "answer": 1,
+      "explain": "¿Oíste los tropiezos? Así suena practicar más rápido de lo que se puede.",
+      "audio_ref": "assets/lesson_technique_routine_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_technique_routine_01_1",
+      "title": "Ejercicio base",
+      "description": "La rutina modelo: permutación 1-2-3-4 en posición V cruzando las 4 cuerdas en negras (compases 1-4), el regreso en corcheas (5-6), y la variación 1-3-2-4 (7) como probadita del día 2. Derecha: i-m estricto. Aplica PORA: cada repetición del ejercicio completo, un foco distinto.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_technique_routine_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_technique_routine_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 49,
+            "name": "C#3",
+            "string": "G",
+            "fret": 6
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 49,
+            "name": "C#3",
+            "string": "G",
+            "fret": 6
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En posición V, el dedo 3 pisó el traste…",
+        "options": [
+          "7",
+          "6",
+          "8"
+        ],
+        "answer": 0,
+        "explain": "Un dedo por traste: 1=5, 2=6, 3=7, 4=8."
+      }
+    },
+    {
+      "id": "ex_technique_routine_01_2",
+      "title": "Permutaciones del día 2 al 4",
+      "description": "Tres permutaciones nuevas: 1-2-4-3, 1-4-2-3 y 2-1-3-4, en E y A (negras) y el remate en D y G (corcheas). Una por día — hoy solo DEGÚSTALAS. PORA en cada pasada.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_technique_routine_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_technique_routine_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 49,
+            "name": "C#3",
+            "string": "G",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "La permutación 1-4-2-3 cuesta más por…",
+        "options": [
+          "El salto directo 1→4",
+          "La velocidad",
+          "El ritmo"
+        ],
+        "answer": 0,
+        "explain": "El estiramiento índice→meñique sin escalas."
+      }
+    },
+    {
+      "id": "ex_technique_routine_01_3",
+      "title": "Reto: cruce de cuerdas (el gimnasio completo)",
+      "description": "Un dedo por cuerda EN DIAGONAL: 1 en E5, 2 en A6, 3 en D7, 4 en G8 — y todas sus variantes. Es el ejercicio de independencia más rudo de Bass Fitness. La derecha alterna i-m religiosamente al cruzar.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_technique_routine_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_technique_routine_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En la diagonal, cada cuerda usó…",
+        "options": [
+          "Un dedo distinto",
+          "El mismo dedo",
+          "Solo 1 y 4"
+        ],
+        "answer": 0,
+        "explain": "1-2-3-4 repartidos: independencia pura."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

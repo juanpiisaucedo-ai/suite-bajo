@@ -1,0 +1,912 @@
+{
+  "lesson_id": "fretboard_basics_01",
+  "meta": {
+    "title": "Conoce tu bajo y el diapasón",
+    "number": 1,
+    "difficulty": "Beginner",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B1 p6-16 · Cap cap.1-2 p4-16 · BF secc.1",
+    "tags": [
+      "fretboard",
+      "notes",
+      "tuning",
+      "posture"
+    ],
+    "estimated_minutes": 20,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "Las 4 cuerdas y la afinación en cuartas",
+        "content": "Tu bajo se afina Mi-La-Re-Sol (E-A-D-G), de la cuerda más gruesa (grave) a la más delgada (aguda). La distancia entre cada par de cuerdas vecinas es SIEMPRE la misma: una 4ª justa (perfect 4th). Esa regularidad es un regalo: cualquier figura que aprendas (escala, arpegio, groove) conserva su forma al moverla de cuerdas.\n\nEn esta app usamos el cifrado americano: C=Do, D=Re, E=Mi, F=Fa, G=Sol, A=La, B=Si. Apréndetelo ya — es el idioma de los acordes en todo el mundo (y el que usan las otras lecciones).",
+        "tldr": "E–A–D–G de grave a aguda; entre cuerdas vecinas SIEMPRE hay una 4ª justa.",
+        "checkpoint": {
+          "question": "¿Qué intervalo hay entre dos cuerdas vecinas del bajo?",
+          "options": [
+            "3ª mayor",
+            "4ª justa",
+            "5ª justa"
+          ],
+          "answer": 1,
+          "explain": "Afinación en 4ªs: por eso toda forma que aprendas es movible."
+        }
+      },
+      {
+        "title": "Semitonos y trastes: la regla de oro",
+        "content": "Un traste = un semitono (half step), la distancia mínima entre dos notas. Doce semitonos completan una octava: por eso el traste 12 repite la nota de la cuerda al aire, una octava arriba.\n\nEntre las notas naturales hay 2 semitonos, EXCEPTO en dos pares que están a solo 1: Mi→Fa (E→F) y Si→Do (B→C). Con esa única excepción puedes deducir cualquier nota del diapasón: en la cuerda E, por ejemplo: F en el traste 1, G en el 3, A en el 5, B en el 7, C en el 8, D en el 10, E en el 12.",
+        "image": "assets/lesson_fretboard_basics_01_notas_naturales.png",
+        "tldr": "Un traste = un semitono. Solo Mi→Fa y Si→Do están a un semitono; el resto de naturales, a dos.",
+        "checkpoint": {
+          "question": "¿Cuántos trastes separan Mi de Fa (E→F)?",
+          "options": [
+            "Uno",
+            "Dos",
+            "Tres"
+          ],
+          "answer": 0,
+          "explain": "E→F y B→C: los únicos pares naturales a 1 semitono."
+        }
+      },
+      {
+        "title": "Los puntos del diapasón son tus anclas",
+        "content": "Los marcadores en los trastes 3, 5, 7, 9 y 12 no son adorno: son un mapa. Memoriza las notas que caen en ellos en las cuerdas E y A y tendrás una red de \"anclas\" desde la cual deducir todo lo demás en un segundo.\n\nCuerda E: G(3) · A(5) · B(7) · C#(9) · E(12). Cuerda A: C(3) · D(5) · E(7) · F#(9) · A(12). Fíjate en dos coincidencias útiles: el traste 5 de una cuerda es la MISMA nota que la siguiente cuerda al aire, y el traste 12 repite la cuerda al aire una octava arriba.",
+        "image": "assets/lesson_fretboard_basics_01_notas_naturales.png",
+        "tldr": "Los puntos del mástil (3·5·7·9·12) son tus anclas: memoriza sus notas en E y A.",
+        "checkpoint": {
+          "question": "En la cuerda E, el traste 5 es…",
+          "options": [
+            "Sol (G)",
+            "La (A)",
+            "Si (B)"
+          ],
+          "answer": 1,
+          "explain": "G(3)·A(5)·B(7). Además el traste 5 = la siguiente cuerda al aire."
+        }
+      },
+      {
+        "title": "La mano izquierda: un dedo por traste",
+        "content": "Coloca la mano con el pulgar detrás del mástil (a la altura del dedo medio, no asomando por arriba), y asigna un dedo a cada traste: índice=1, medio=2, anular=3, meñique=4. A esto se le llama posición: \"posición II\" significa el índice en el traste 2.\n\nRegla de eficiencia: los dedos se quedan CERCA del diapasón aunque no estén pisando, y pisas justo detrás del traste (no encima, no lejos) con la punta del dedo. Si te duele la muñeca, baja el bajo o sube el mástil: el dolor no es parte del método.",
+        "tldr": "Un dedo por traste: 1=índice … 4=meñique. El pulgar detrás del mástil, sin dolor.",
+        "checkpoint": {
+          "question": "\"Posición II\" significa…",
+          "options": [
+            "Dedo 1 en el traste 2",
+            "Dedo 2 en el traste 1",
+            "Tocar dos cuerdas"
+          ],
+          "answer": 0,
+          "explain": "La posición se nombra por dónde está el índice."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Cómo se afinan las 4 cuerdas del bajo, de grave a aguda?",
+      "options": [
+        "E–A–D–G",
+        "G–D–A–E",
+        "E–B–G–D"
+      ],
+      "answer": 0,
+      "explain": "Mi-La-Re-Sol (E-A-D-G). Entre cada par hay una 4ª justa."
+    },
+    {
+      "question": "¿Qué nota vive en el traste 5 de la cuerda E?",
+      "options": [
+        "Sol (G)",
+        "La (A)",
+        "Si (B)"
+      ],
+      "answer": 1,
+      "explain": "E: G(3), A(5), B(7). Además el traste 5 = la siguiente cuerda al aire."
+    },
+    {
+      "question": "¿Entre qué notas naturales hay UN solo semitono?",
+      "options": [
+        "Entre todas",
+        "Mi→Fa y Si→Do",
+        "Do→Re y Fa→Sol"
+      ],
+      "answer": 1,
+      "explain": "E→F y B→C son los únicos pares naturales a 1 semitono; el resto está a 2."
+    },
+    {
+      "question": "El traste 12 de cualquier cuerda suena…",
+      "options": [
+        "La 5ª de la cuerda al aire",
+        "La misma nota, una octava arriba",
+        "Depende de la cuerda"
+      ],
+      "answer": 1,
+      "explain": "12 semitonos = una octava. Por eso el traste 12 lleva doble marcador."
+    },
+    {
+      "question": "En el sistema un-dedo-por-traste, el dedo 4 es…",
+      "options": [
+        "El índice",
+        "El anular",
+        "El meñique"
+      ],
+      "answer": 2,
+      "explain": "1=índice, 2=medio, 3=anular, 4=meñique. \"Posición\" = traste donde está el 1."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha las dos notas. ¿Misma nota o una octava?",
+      "options": [
+        "Misma nota",
+        "Octava"
+      ],
+      "answer": 1,
+      "explain": "La segunda repite el nombre pero 12 semitonos arriba: octava.",
+      "audio_ref": "assets/lesson_fretboard_basics_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y ahora?",
+      "options": [
+        "Misma nota",
+        "Octava"
+      ],
+      "answer": 0,
+      "explain": "Unísono: la misma altura exacta.",
+      "audio_ref": "assets/lesson_fretboard_basics_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_fretboard_basics_01_1",
+      "title": "Ejercicio base",
+      "description": "Recorre las anclas del diapasón diciendo cada nota EN VOZ ALTA al tocarla (ese es el verdadero ejercicio). Sube por los marcadores de la cuerda E, remata en su octava (traste 12), repite en la cuerda A, y baja por el mismo camino hasta el Mi grave al aire.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fretboard_basics_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_fretboard_basics_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 40,
+            "name": "E2",
+            "string": "E",
+            "fret": 12
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 45,
+            "name": "A2",
+            "string": "A",
+            "fret": 12
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "Tocaste G-A-B-C# subiendo la cuerda E. ¿En qué trastes?",
+        "options": [
+          "3-5-7-9",
+          "1-3-5-7",
+          "5-7-9-12"
+        ],
+        "answer": 0,
+        "explain": "Las anclas de los marcadores."
+      }
+    },
+    {
+      "id": "ex_fretboard_basics_01_2",
+      "title": "El truco del traste 5 (afinación y octavas)",
+      "description": "Cada cuerda al aire vive también en el traste 5 de la cuerda anterior (así se afina un bajo). Compases 1-3: pares de unísonos — deben sonar IDÉNTICOS. Compases 5-7: octavas de las anclas (dos cuerdas y dos trastes arriba).",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fretboard_basics_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_fretboard_basics_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 28,
+            "name": "E1",
+            "string": "E",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "¿Por qué sonaron igual La al aire y E traste 5?",
+        "options": [
+          "Son la misma nota (unísono)",
+          "Son una octava",
+          "Casualidad"
+        ],
+        "answer": 0,
+        "explain": "Cuerda siguiente al aire = traste 5 de la anterior: así se afina."
+      }
+    },
+    {
+      "id": "ex_fretboard_basics_01_3",
+      "title": "Reto: di la nota antes de tocarla",
+      "description": "Recorrido mezclado por las anclas de E y A. La regla: DI el nombre de la nota en voz alta ANTES de que suene. Si dudas más de un beat, vuelve a la lección. Este es el examen del diapasón.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fretboard_basics_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_fretboard_basics_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "A",
+            "fret": 12
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "E",
+            "fret": 10
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 40,
+            "name": "E2",
+            "string": "E",
+            "fret": 12
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "E",
+            "fret": 10
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "El traste 8 de la cuerda E (lo dedujiste en el reto) es…",
+        "options": [
+          "Do (C)",
+          "Si (B)",
+          "Re (D)"
+        ],
+        "answer": 0,
+        "explain": "B en 7 → un semitono arriba: C en 8."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

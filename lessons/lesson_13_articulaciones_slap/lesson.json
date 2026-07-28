@@ -1,0 +1,1573 @@
+{
+  "lesson_id": "articulations_slap_01",
+  "meta": {
+    "title": "Articulaciones e intro al slap",
+    "number": 13,
+    "difficulty": "Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B3 p100, 119-123, 136-143",
+    "tags": [
+      "articulation",
+      "hammer-on",
+      "slide",
+      "slap",
+      "dead-notes"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "Articulación: CÓMO suena cada nota",
+        "content": "Dos bajistas tocan las mismas notas y uno suena vivo y el otro plano: la diferencia es la articulación — el cómo de cada nota.\n\n· STACCATO (un punto sobre la nota): corta, separada; apaga en cuanto suena.\n· LEGATO: notas conectadas sin hueco.\n· DEAD NOTE (✗): el golpe sin altura que ya usaste en L12.\n\nRegla de práctica: todo patrón que domines, tócalo una vez todo staccato y una vez todo legato. Mismo material, dos músicas distintas — y tu mano derecha aprende a decidir, no solo a atacar.",
+        "image": "assets/lesson_articulations_slap_01_simbolos.png",
+        "tldr": "Mismas notas, otra articulación = otra música. Staccato corta, legato conecta, la x percute.",
+        "checkpoint": {
+          "question": "Staccato significa…",
+          "options": [
+            "Nota corta y separada",
+            "Nota fuerte",
+            "Nota grave"
+          ],
+          "answer": 0,
+          "explain": "Se apaga en cuanto suena — lo contrario del legato."
+        }
+      },
+      {
+        "title": "Ligados: hammer-on y pull-off",
+        "content": "Los ligados producen notas con la PURA mano izquierda — la derecha ataca una vez y la izquierda genera las siguientes:\n\n· HAMMER-ON (h): martillas un dedo sobre un traste más agudo de la cuerda que ya suena (5h7: suena el 5, martillas el 7).\n· PULL-OFF (p): al revés — el dedo que pisa \"jala\" la cuerda al soltarse y deja sonar un traste más grave que ya tenías preparado (7p5).\n\nEl resultado es más suave y más rápido que atacar cada nota. Practícalos lento: la segunda nota debe sonar TAN fuerte como la primera (el error típico es que el ligado se oiga a la mitad de volumen).",
+        "image": "assets/lesson_articulations_slap_01_simbolos.png",
+        "tldr": "Hammer-on martilla hacia arriba; pull-off jala hacia abajo. La derecha ataca SOLO la primera.",
+        "checkpoint": {
+          "question": "En \"5h7\", la mano derecha ataca…",
+          "options": [
+            "Solo la primera nota",
+            "Las dos",
+            "Ninguna"
+          ],
+          "answer": 0,
+          "explain": "La segunda la produce la izquierda al martillar."
+        }
+      },
+      {
+        "title": "Slides: viajar por la cuerda",
+        "content": "El SLIDE (/ subiendo, \\ bajando) conecta dos notas deslizando el dedo por la cuerda sin dejar de presionar: atacas la primera y el dedo VIAJA hasta la segunda manteniendo el sonido.\n\nDos usos:\n· Slide medido: de una nota real a otra (5/7: del traste 5 al 7).\n· Slide expresivo: entrada \"desde abajo\" a una nota (arrancas dos-tres trastes atrás y llegas). Es la manera clásica de darle drama a la llegada de una fundamental importante.\n\nCuida el destino: el viaje es libre, la LLEGADA debe caer exacta en el tiempo.",
+        "tldr": "En el slide el viaje es libre; la LLEGADA cae exacta en el beat.",
+        "checkpoint": {
+          "question": "Lo sagrado del slide es…",
+          "options": [
+            "Que la llegada caiga a tiempo",
+            "La velocidad del viaje",
+            "El ruido de la cuerda"
+          ],
+          "answer": 0,
+          "explain": "El viaje es expresión; la llegada es ritmo."
+        }
+      },
+      {
+        "title": "Slap: el pulgar percusivo (nivel 1)",
+        "content": "El slap convierte el bajo en tambor con notas:\n\n· T (thumb/slap): el PULGAR golpea la cuerda contra el diapasón — rebota como baqueta, no se queda. Funciona mejor en las cuerdas E y A.\n· P (pop): el índice se engancha bajo una cuerda aguda (D o G) y la JALA para que truene contra los trastes.\n\nEl patrón madre es octavas: T en la fundamental (cuerda grave) + P en su octava (cuerda aguda) — exactamente el brinco de octava de L11, ahora percusivo. Añade dead notes entre medio (T sobre cuerdas apagadas) y ya tienes el vocabulario básico del funk. Empieza LENTO: el slap limpio a 80 BPM impresiona más que el sucio a 140.",
+        "tldr": "Slap: el pulgar (T) rebota en E/A; el pop (P) jala D/G. Patrón madre: octavas T-P.",
+        "checkpoint": {
+          "question": "El pop (P) se ejecuta en…",
+          "options": [
+            "Las cuerdas D y G",
+            "Las cuerdas E y A",
+            "Cualquiera"
+          ],
+          "answer": 0,
+          "explain": "El índice jala las agudas; el pulgar percute las graves."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "Staccato significa…",
+      "options": [
+        "Más fuerte",
+        "Nota corta y separada",
+        "Más grave"
+      ],
+      "answer": 1,
+      "explain": "Se apaga en cuanto suena. Lo contrario del legato."
+    },
+    {
+      "question": "En \"5h7\", ¿qué hace la mano derecha?",
+      "options": [
+        "Ataca las dos notas",
+        "Ataca solo la primera",
+        "Nada"
+      ],
+      "answer": 1,
+      "explain": "Ataca el 5; el 7 lo produce la izquierda martillando (hammer-on)."
+    },
+    {
+      "question": "El pull-off produce…",
+      "options": [
+        "Una nota más aguda",
+        "Una nota más grave que ya estaba preparada",
+        "Un acorde"
+      ],
+      "answer": 1,
+      "explain": "El dedo se suelta jalando la cuerda y suena el traste inferior pisado."
+    },
+    {
+      "question": "En slap, la T y la P son…",
+      "options": [
+        "Pulgar en graves y jalón del índice en agudas",
+        "Dos púas",
+        "Términos de batería"
+      ],
+      "answer": 0,
+      "explain": "Thumb percute E/A; el pop jala D/G contra los trastes."
+    },
+    {
+      "question": "El patrón madre del slap es…",
+      "options": [
+        "Escalas rápidas",
+        "Octavas: T en la fundamental, P en la octava",
+        "Acordes de 7ª"
+      ],
+      "answer": 1,
+      "explain": "El brinco de octava percusivo, con dead notes de relleno."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha las 4 notas. ¿Staccato o legato?",
+      "options": [
+        "Staccato (cortas)",
+        "Legato (conectadas)"
+      ],
+      "answer": 0,
+      "explain": "Cada nota se corta de inmediato: staccato.",
+      "audio_ref": "assets/lesson_articulations_slap_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y ahora?",
+      "options": [
+        "Staccato (cortas)",
+        "Legato (conectadas)"
+      ],
+      "answer": 1,
+      "explain": "Cada nota dura hasta la siguiente: legato.",
+      "audio_ref": "assets/lesson_articulations_slap_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_articulations_slap_01_1",
+      "title": "Ejercicio base",
+      "description": "El patrón madre del slap en octavas con dead notes: T–✗–P–✗ sobre La (compases 1-2), Re (3-4) y Mi (5-6) — ¡es un I-IV-V! El compás 7 combina las tres octavas. El pulgar REBOTA (no se queda en la cuerda) y los ✗ son golpes de pulgar sobre cuerdas apagadas.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_articulations_slap_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_articulations_slap_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En T-✗-P, la ✗ fue…",
+        "options": [
+          "Dead note con el pulgar",
+          "Nota grave",
+          "Silencio"
+        ],
+        "answer": 0,
+        "explain": "Golpe sin altura sobre cuerdas apagadas."
+      }
+    },
+    {
+      "id": "ex_articulations_slap_01_2",
+      "title": "Ligados: hammer-on y pull-off",
+      "description": "El ejercicio que faltaba: pares ligados 5h7 (martilla) y 7p5 (jala al soltar) en tres cuerdas, y slides medidos 3/5. OJO: el audio ataca todas las notas como referencia de timing — tú ataca SOLO la primera de cada par.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_articulations_slap_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_articulations_slap_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "En 5h7, el 7 lo produjo…",
+        "options": [
+          "La izquierda al martillar",
+          "La derecha al atacar",
+          "La púa"
+        ],
+        "answer": 0,
+        "explain": "Ligado: un ataque, dos notas."
+      }
+    },
+    {
+      "id": "ex_articulations_slap_01_3",
+      "title": "Reto: groove slap completo",
+      "description": "Todo junto: T y P en corcheas con deads, cruzando entre La y Re, y un fill final. Este es el patrón que impresiona en el ensayo — pero solo si va CON el click, no adelante de él.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_articulations_slap_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_articulations_slap_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "dead": true
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "check": {
+        "question": "El pop (P) lo hiciste en las cuerdas…",
+        "options": [
+          "D y G",
+          "E y A",
+          "Todas"
+        ],
+        "answer": 0,
+        "explain": "El índice jala las agudas; el pulgar percute las graves."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

@@ -1,0 +1,1100 @@
+{
+  "lesson_id": "rhythm_reading_01",
+  "meta": {
+    "title": "Lectura rítmica básica",
+    "number": 2,
+    "difficulty": "Beginner",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B1 p33-45 (figuras, silencios, ligaduras)",
+    "tags": [
+      "rhythm",
+      "reading",
+      "note-values",
+      "metronome"
+    ],
+    "estimated_minutes": 20,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "El pulso y el compás",
+        "content": "La música se organiza sobre un PULSO constante (los clicks del metrónomo). Su velocidad se mide en BPM (beats por minuto): 80 BPM = 80 pulsos por minuto.\n\nLos pulsos se agrupan en COMPASES. El compás 4/4 — el de casi toda la música popular — agrupa de 4 en 4: el número de arriba dice cuántos pulsos por compás, el de abajo qué figura vale un pulso (4 = la negra). El pulso 1 de cada compás lleva el acento natural: síéntelo aunque no lo toques más fuerte.",
+        "tldr": "El pulso es el click; el 4/4 los agrupa de 4 en 4 y el 1 lleva el acento.",
+        "checkpoint": {
+          "question": "A 80 BPM, un compás de 4/4 dura…",
+          "options": [
+            "2 segundos",
+            "3 segundos",
+            "4 segundos"
+          ],
+          "answer": 1,
+          "explain": "60/80 = 0.75 s por pulso × 4 = 3 segundos."
+        }
+      },
+      {
+        "title": "Las figuras: cuánto dura cada nota",
+        "content": "Cuatro figuras cubren el 90 % de las líneas de bajo:\n\n· Redonda (whole note) = 4 tiempos — llena el compás.\n· Blanca (half note) = 2 tiempos.\n· Negra (quarter note) = 1 tiempo — camina con el pulso.\n· Corchea (eighth note) = 1/2 tiempo — dos por pulso; se cuentan \"1 y 2 y 3 y 4 y\".\n\nCada figura vale exactamente el doble que la siguiente. Cuenta SIEMPRE en voz alta al practicar: la boca enseña a las manos.",
+        "image": "assets/lesson_rhythm_reading_01_figuras.png",
+        "tldr": "Redonda 4 · blanca 2 · negra 1 · corchea ½. Cada figura vale el doble que la siguiente.",
+        "checkpoint": {
+          "question": "¿Cuántas corcheas llenan un compás de 4/4?",
+          "options": [
+            "4",
+            "8",
+            "16"
+          ],
+          "answer": 1,
+          "explain": "Dos por pulso: se cuentan «1 y 2 y 3 y 4 y»."
+        }
+      },
+      {
+        "title": "Silencios: notas que no suenan",
+        "content": "Cada figura tiene su silencio (rest) equivalente: silencio de redonda (4), de blanca (2), de negra (1), de corchea (1/2). Un silencio NO es \"no hacer nada\": es detener la cuerda exactamente a tiempo — en el bajo, normalmente apoyando los dedos de la mano derecha o aflojando la izquierda.\n\nEl groove vive tanto en los silencios como en las notas: una línea sin huecos no respira. Trata los silencios con el mismo respeto rítmico que las notas.",
+        "tldr": "El silencio se EJECUTA: parar la cuerda a tiempo también es tocar.",
+        "checkpoint": {
+          "question": "Un silencio de negra en el bajo significa…",
+          "options": [
+            "Descansar la mano",
+            "Cortar el sonido exactamente 1 tiempo",
+            "Bajar el volumen"
+          ],
+          "answer": 1,
+          "explain": "Mutear a tiempo es parte del groove."
+        }
+      },
+      {
+        "title": "Puntillo y ligadura: estirar el tiempo",
+        "content": "Dos símbolos alargan las figuras:\n\n· El PUNTILLO (dot) suma la mitad del valor: blanca con puntillo = 2+1 = 3 tiempos; negra con puntillo = 1½.\n· La LIGADURA (tie) une dos figuras en una sola nota sostenida: negra ligada a corchea = 1½ tiempos sin re-atacar.\n\nCon esto ya puedes leer el ritmo de casi cualquier línea. En la lección de groove (L12) usaremos estas herramientas para la síncopa: atacar en los \"y\" y sostener sobre los pulsos.",
+        "tldr": "Puntillo = +50% del valor. Ligadura = un solo ataque que suma dos figuras.",
+        "checkpoint": {
+          "question": "Una negra con puntillo vale…",
+          "options": [
+            "1 tiempo y medio",
+            "2 tiempos",
+            "3/4 de tiempo"
+          ],
+          "answer": 0,
+          "explain": "El puntillo suma la mitad: 1 + ½."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "A 80 BPM, ¿cuánto dura un compás de 4/4?",
+      "options": [
+        "2 segundos",
+        "3 segundos",
+        "4 segundos"
+      ],
+      "answer": 1,
+      "explain": "Cada pulso dura 60/80 = 0.75 s; 4 pulsos = 3 segundos."
+    },
+    {
+      "question": "¿Cuántas corcheas caben en un compás de 4/4?",
+      "options": [
+        "4",
+        "8",
+        "16"
+      ],
+      "answer": 1,
+      "explain": "Dos por pulso × 4 pulsos = 8. Se cuentan \"1 y 2 y 3 y 4 y\"."
+    },
+    {
+      "question": "Una blanca con puntillo vale…",
+      "options": [
+        "2 tiempos y medio",
+        "3 tiempos",
+        "4 tiempos"
+      ],
+      "answer": 1,
+      "explain": "El puntillo suma la MITAD del valor: 2 + 1 = 3."
+    },
+    {
+      "question": "¿Qué hace una ligadura (tie) entre dos notas iguales?",
+      "options": [
+        "Las toca más fuerte",
+        "Las une en una sola nota sostenida",
+        "Las separa con silencio"
+      ],
+      "answer": 1,
+      "explain": "Se ataca una vez y se sostiene la suma de las dos figuras."
+    },
+    {
+      "question": "Un silencio en el bajo significa…",
+      "options": [
+        "Descansar la mano",
+        "Detener la cuerda exactamente a tiempo",
+        "Tocar más suave"
+      ],
+      "answer": 1,
+      "explain": "El silencio se EJECUTA: mutear a tiempo es parte del groove."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "¿Qué figuras escuchaste?",
+      "options": [
+        "Negras (1 por pulso)",
+        "Corcheas (2 por pulso)"
+      ],
+      "answer": 0,
+      "explain": "Una nota por click del metrónomo: negras.",
+      "audio_ref": "assets/lesson_rhythm_reading_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y ahora?",
+      "options": [
+        "Negras (1 por pulso)",
+        "Corcheas (2 por pulso)"
+      ],
+      "answer": 1,
+      "explain": "Dos por pulso: corcheas, «1 y 2 y».",
+      "audio_ref": "assets/lesson_rhythm_reading_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_rhythm_reading_01_1",
+      "title": "Ejercicio base",
+      "description": "Todo el ejercicio en una sola nota (La al aire) para que el 100 % de tu atención esté en el ritmo. Cuenta en voz alta \"1-2-3-4\" (y \"1 y 2 y…\" en los compases de corcheas). La nota es libre: concéntrate en atacar EXACTO con el click.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_rhythm_reading_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_rhythm_reading_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 3,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "La blanca con puntillo del compás 7 sumó…",
+        "options": [
+          "3 tiempos",
+          "2 tiempos",
+          "1.5 tiempos"
+        ],
+        "answer": 0,
+        "explain": "2 + la mitad (1) = 3."
+      }
+    },
+    {
+      "id": "ex_rhythm_reading_01_2",
+      "title": "Silencios que se ejecutan",
+      "description": "Ahora el reto es PARAR la cuerda a tiempo. Alterna notas y silencios — el compás 5 es puro contratiempo (tocas solo en los \"y\"). Cuenta en voz alta SIEMPRE.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_rhythm_reading_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_rhythm_reading_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 1.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "En el compás de puro contratiempo atacaste solo en…",
+        "options": [
+          "Los \"y\"",
+          "Los números",
+          "El beat 1"
+        ],
+        "answer": 0,
+        "explain": "Silencio en el pulso, nota en el offbeat."
+      }
+    },
+    {
+      "id": "ex_rhythm_reading_01_3",
+      "title": "Ritmo aplicado: raíz y octava",
+      "description": "Los mismos ritmos pero alternando La grave (cuerda al aire) y su octava (D7). La mano derecha ya trabaja de verdad: alterna índice-medio y cruza cuerdas sin repetir dedo.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_rhythm_reading_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_rhythm_reading_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "rest": true
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          }
+        ]
+      },
+      "check": {
+        "question": "La octava de La (al aire) la tocaste en…",
+        "options": [
+          "Cuerda D, traste 7",
+          "Cuerda G, traste 5",
+          "Cuerda A, traste 12"
+        ],
+        "answer": 0,
+        "explain": "Dos cuerdas +2 trastes desde A0… o A12: usaste D7."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}

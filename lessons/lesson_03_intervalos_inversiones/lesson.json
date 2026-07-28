@@ -1,0 +1,1010 @@
+{
+  "lesson_id": "intervals_inversions_01",
+  "meta": {
+    "title": "Intervalos e Inversiones",
+    "number": 3,
+    "difficulty": "Beginner-Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Cap cap.3 p17-59 · HL B1 p27, B3 p126-131",
+    "tags": [
+      "intervals",
+      "inversions",
+      "triads",
+      "fretboard-map"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "¿Qué es un intervalo?",
+        "content": "Un intervalo es la distancia entre dos notas. En el bajo, la unidad mínima es el semitono (half step), y equivale exactamente a UN traste: subir un traste en la misma cuerda = subir un semitono. Los intervalos pueden sonar de forma melódica (una nota después de la otra, como en una línea de bajo) o armónica (las dos notas a la vez).\n\nCada intervalo se mide en semitonos, del 0 (unísono) al 12 (octava):\n\n· Unísono (unison) = 0 · 2ª menor (minor 2nd) = 1 · 2ª mayor (major 2nd) = 2 · 3ª menor (minor 3rd) = 3 · 3ª mayor (major 3rd) = 4 · 4ª justa (perfect 4th) = 5 · Tritono (tritone) = 6 · 5ª justa (perfect 5th) = 7 · 6ª menor (minor 6th) = 8 · 6ª mayor (major 6th) = 9 · 7ª menor (minor 7th) = 10 · 7ª mayor (major 7th) = 11 · Octava (octave) = 12.\n\nMemorizar esta tabla ES memorizar el diapasón: todo lo que toques (acordes, escalas, grooves) son combinaciones de estos 13 sonidos.",
+        "image": "assets/lesson_intervals_inversions_01_mapa_intervalos.png",
+        "tldr": "Intervalo = distancia entre dos notas, medida en semitonos (0 a 12). Un traste = un semitono.",
+        "checkpoint": {
+          "question": "¿Cuántos semitonos tiene la 5ª justa?",
+          "options": [
+            "5",
+            "7",
+            "12"
+          ],
+          "answer": 1,
+          "explain": "5ª justa = 7 semitonos (la esquina del power chord)."
+        }
+      },
+      {
+        "title": "Cantidad y calidad — cómo nombrar cualquier intervalo",
+        "content": "El nombre de un intervalo tiene dos partes:\n\n1) CANTIDAD (el número: 2ª, 3ª, 5ª…): cuenta los NOMBRES de nota del primero al último, incluyendo ambos, e ignorando alteraciones. De Do a Mi: Do(1)–Re(2)–Mi(3) → es una 3ª, sin importar si llevan sostenidos o bemoles.\n\n2) CALIDAD (mayor, menor, justa…): cuenta los SEMITONOS exactos, ya con alteraciones. Do→Mi = 4 semitonos → 3ª MAYOR. Do#→Mi = 3 semitonos → 3ª MENOR.\n\nReglas de familia: las 2ª, 3ª, 6ª y 7ª vienen en mayor y menor. Los unísonos, 4ª, 5ª y octavas son JUSTAS (perfect): no existe una \"5ª mayor\" ni una \"octava menor\". El tritono es el caso especial: 6 semitonos, entre la 4ª y la 5ª (por eso también se le llama 4ª aumentada o 5ª disminuida).",
+        "tldr": "CANTIDAD: cuenta letras. CALIDAD: cuenta semitonos. Do→Mi = 3ª (letras) mayor (4 st).",
+        "checkpoint": {
+          "question": "Do#→Mi tiene 3 semitonos. ¿Qué intervalo es?",
+          "options": [
+            "3ª menor",
+            "3ª mayor",
+            "2ª mayor"
+          ],
+          "answer": 0,
+          "explain": "Letras: Do–Re–Mi = 3ª. Semitonos: 3 = menor."
+        }
+      },
+      {
+        "title": "El mapa en el diapasón — la ventaja del bajista",
+        "content": "Como el bajo se afina en 4ª justas, las FORMAS de los intervalos son iguales en todo el diapasón: apréndete la forma una vez y te sirve desde cualquier fundamental (root). Las formas clave desde una fundamental en las cuerdas E o A:\n\n· 4ª justa = misma posición de traste, una cuerda más aguda.\n· 5ª justa = una cuerda más aguda, dos trastes hacia arriba (la esquina del power chord).\n· Octava = dos cuerdas más agudas, dos trastes hacia arriba.\n· 3ª mayor = una cuerda más aguda, un traste hacia atrás.\n· 3ª menor = una cuerda más aguda, dos trastes hacia atrás (o misma cuerda +3 trastes).\n· Tritono = una cuerda más aguda, un traste hacia arriba.\n\nEstudia el diagrama del mapa: es la misma información de la tabla de semitonos, pero convertida en geometría. Tu meta es VER los intervalos en el diapasón sin contar trastes.",
+        "image": "assets/lesson_intervals_inversions_01_mapa_intervalos.png",
+        "tldr": "El bajo en 4ªs hace las formas movibles: apréndete la geometría, no cada caso.",
+        "checkpoint": {
+          "question": "Una octava arriba, en el diapasón, es…",
+          "options": [
+            "Dos cuerdas +2 trastes",
+            "Una cuerda, mismo traste",
+            "Misma cuerda +5 trastes"
+          ],
+          "answer": 0,
+          "explain": "La forma de octava: 2 cuerdas más agudas, 2 trastes arriba."
+        }
+      },
+      {
+        "title": "Inversiones — voltear el intervalo",
+        "content": "Invertir un intervalo es tomar la nota grave y subirla una octava (o bajar la aguda una octava): la relación grave/agudo se voltea. Do→Mi es una 3ª mayor (4 semitonos); si el Do sube una octava, queda Mi→Do: una 6ª menor (8 semitonos).\n\nDos reglas hacen las inversiones automáticas:\n\n1) CANTIDAD: intervalo + inversión = 9. (3ª ↔ 6ª, 2ª ↔ 7ª, 4ª ↔ 5ª, unísono ↔ octava). Suma 9 y no 8 porque la nota del medio se cuenta dos veces.\n\n2) CALIDAD: mayor ↔ menor, justa ↔ justa, disminuida ↔ aumentada. Por eso la inversión de una 3ª MAYOR es una 6ª MENOR, y la inversión de una 4ª justa es una 5ª justa.\n\nPista auditiva: un intervalo y su inversión comparten \"carácter\": los pares 3ª/6ª suenan dulces, los pares 2ª/7ª suenan tensos y piden resolver, y las 4ª/5ª suenan abiertas. Entrenar los pares juntos acelera el oído.",
+        "image": "assets/lesson_intervals_inversions_01_inversiones.png",
+        "tldr": "Invertir = subir la grave una octava. Cantidades suman 9; mayor↔menor; la justa queda justa.",
+        "checkpoint": {
+          "question": "La inversión de una 6ª menor es…",
+          "options": [
+            "3ª mayor",
+            "3ª menor",
+            "6ª mayor"
+          ],
+          "answer": 0,
+          "explain": "6+3=9 y menor→mayor."
+        }
+      },
+      {
+        "title": "Inversiones de triadas — el porqué práctico",
+        "content": "Una triada tiene tres notas: fundamental (root), 3ª y 5ª. Se puede tocar con cualquiera de las tres en el bajo — y ahí nace el término que verás en acordes tipo C/E (\"Do con Mi en el bajo\"):\n\n· Posición fundamental: la fundamental abajo (C–E–G).\n· 1ª inversión (first inversion): la 3ª abajo (E–G–C). En Do mayor, el bajo toca MI.\n· 2ª inversión (second inversion): la 5ª abajo (G–C–E). En Do mayor, el bajo toca SOL.\n\nPara el bajista esto es pan de cada día: cuando la partitura pide C/E, tu trabajo es tocar Mi. Dominar las formas de las inversiones te deja conectar acordes con líneas suaves (bajando o subiendo por las notas del acorde) en lugar de saltar siempre de fundamental en fundamental. El ejercicio de esta lección recorre la triada de Do mayor en sus tres posiciones, subiendo y bajando.",
+        "tldr": "1ª inversión = la 3ª en el bajo. C/E significa: toca Mi.",
+        "checkpoint": {
+          "question": "Ves \"C/E\" en el chart. ¿Qué nota tocas?",
+          "options": [
+            "Do",
+            "Mi",
+            "Sol"
+          ],
+          "answer": 1,
+          "explain": "Lo de después de la diagonal es TU nota: la 3ª en el bajo."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Cuántos semitonos tiene una 3ª mayor (major 3rd)?",
+      "options": [
+        "3 semitonos",
+        "4 semitonos",
+        "5 semitonos"
+      ],
+      "answer": 1,
+      "explain": "3ª mayor = 4 semitonos; con 3 semitonos sería 3ª menor."
+    },
+    {
+      "question": "¿Qué nota toca el bajo en la 1ª inversión (first inversion) de Do mayor?",
+      "options": [
+        "Do (la fundamental)",
+        "Mi (la 3ª)",
+        "Sol (la 5ª)"
+      ],
+      "answer": 1,
+      "explain": "1ª inversión = la 3ª en el bajo. Es el acorde C/E."
+    },
+    {
+      "question": "¿Cuál es la inversión de una 4ª justa (perfect 4th)?",
+      "options": [
+        "5ª justa",
+        "5ª menor",
+        "6ª mayor"
+      ],
+      "answer": 0,
+      "explain": "Cantidades: 4+5=9. Calidad: justa se queda justa."
+    },
+    {
+      "question": "La cantidad de un intervalo y la de su inversión siempre suman…",
+      "options": [
+        "8",
+        "9",
+        "12"
+      ],
+      "answer": 1,
+      "explain": "Suman 9 (la nota del medio se cuenta dos veces). Los SEMITONOS de ambos suman 12."
+    },
+    {
+      "question": "En el diapasón del bajo, una 4ª justa hacia arriba desde cualquier nota es…",
+      "options": [
+        "Misma cuerda, 5 trastes arriba… solamente",
+        "Una cuerda más aguda, mismo traste",
+        "Dos cuerdas más agudas, mismo traste"
+      ],
+      "answer": 1,
+      "explain": "El bajo se afina en 4ªs: cuerda siguiente, mismo traste. (Misma cuerda +5 también funciona, pero no es la única forma.)"
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha el intervalo. ¿3ª mayor o menor?",
+      "options": [
+        "3ª mayor",
+        "3ª menor"
+      ],
+      "answer": 0,
+      "explain": "4 semitonos: brillante = mayor.",
+      "audio_ref": "assets/lesson_intervals_inversions_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y este?",
+      "options": [
+        "3ª mayor",
+        "3ª menor"
+      ],
+      "answer": 1,
+      "explain": "3 semitonos: oscuro = menor.",
+      "audio_ref": "assets/lesson_intervals_inversions_01_ear2.m4a"
+    },
+    {
+      "question": "¿5ª justa o tritono?",
+      "options": [
+        "5ª justa",
+        "Tritono"
+      ],
+      "answer": 1,
+      "explain": "6 semitonos: inestable, \"bluesy\" — el tritono.",
+      "audio_ref": "assets/lesson_intervals_inversions_01_ear3.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_intervals_inversions_01_1",
+      "title": "Ejercicio base",
+      "description": "Triada de Do mayor en sus tres posiciones: sube fundamental → 1ª inversión → 2ª inversión hasta la octava, y baja por el mismo camino. Di en voz alta el papel de cada nota (fundamental / 3ª / 5ª) mientras tocas.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_intervals_inversions_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_intervals_inversions_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 55,
+            "name": "G3",
+            "string": "G",
+            "fret": 12
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 55,
+            "name": "G3",
+            "string": "G",
+            "fret": 12
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 52,
+            "name": "E3",
+            "string": "G",
+            "fret": 9
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "En la 1ª inversión (compás 2), la nota más grave fue…",
+        "options": [
+          "Mi (la 3ª)",
+          "Do (la fundamental)",
+          "Sol (la 5ª)"
+        ],
+        "answer": 0,
+        "explain": "1ª inversión = 3ª en el bajo (C/E)."
+      }
+    },
+    {
+      "id": "ex_intervals_inversions_01_2",
+      "title": "Todos los intervalos desde Do",
+      "description": "La fundamental y cada intervalo, en pares: Do-intervalo, Do-intervalo. Compases 1-4: los de la escala mayor. Compases 5-7: los menores y el tritono. DI el nombre del intervalo en cada par.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_intervals_inversions_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_intervals_inversions_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "G",
+            "fret": 4
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "A",
+            "fret": 4
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "D",
+            "fret": 1
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 44,
+            "name": "G#2",
+            "string": "D",
+            "fret": 6
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "G",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "El tritono desde Do lo pisaste en…",
+        "options": [
+          "Cuerda D, traste 4",
+          "Cuerda D, traste 5",
+          "Cuerda A, traste 4"
+        ],
+        "answer": 0,
+        "explain": "6 semitonos: cuerda siguiente +1 traste."
+      }
+    },
+    {
+      "id": "ex_intervals_inversions_01_3",
+      "title": "Reto: el intervalo y su inversión",
+      "description": "Cada compás toca un intervalo y luego su inversión hasta la octava: Do→Mi (3ªM) y Mi→Do' (6ªm). Comprueba con el oído la regla de la suma 9 — y que la calidad se voltea.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_intervals_inversions_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_intervals_inversions_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "D",
+            "fret": 1
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "D",
+            "fret": 1
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "D",
+            "fret": 4
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "G",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "G",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          }
+        ]
+      },
+      "check": {
+        "question": "Do→Fa y luego Fa→Do'. ¿Qué par de inversión formaste?",
+        "options": [
+          "4ªJ → 5ªJ",
+          "3ª → 6ª",
+          "2ª → 7ª"
+        ],
+        "answer": 0,
+        "explain": "4+5=9 y la justa quedó justa."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  }
+}
