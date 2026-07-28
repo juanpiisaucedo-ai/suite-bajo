@@ -13,6 +13,7 @@ const Sync = (() => {
 
   return {
     disponible: () => !!sb,
+    cliente: () => sb,
     async session() {
       if (!sb) return null;
       return (await sb.auth.getSession()).data.session;
@@ -101,6 +102,56 @@ const Sync = (() => {
         cont.querySelector('#sy-in').onclick = () => intento((e, p) => this.entrar(e, p));
         cont.querySelector('#sy-up').onclick = () => intento((e, p) => this.crear(e, p));
       }
+    },
+  };
+})();
+
+/* ---------- Show en vivo: líder transmite, la banda sigue por código ---------- */
+const ShowVivo = (() => {
+  const sb = () => Sync.cliente();
+  let canal = null, poll = null;
+  const CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  return {
+    codigoDe(slId) {
+      let c = store.get(`show_code_${slId}`, null);
+      if (!c) {
+        c = Array.from({ length: 4 }, () => CHARS[Math.floor(Math.random() * CHARS.length)]).join('');
+        store.set(`show_code_${slId}`, c);
+      }
+      return c;
+    },
+    async transmitir(codigo, nombre, cancionesLista, idx) {
+      const cli = sb(); if (!cli) return 'sin conexión';
+      const { error } = await cli.from('shows_en_vivo').upsert({
+        codigo, nombre,
+        canciones: cancionesLista.map(c => ({ titulo: c.titulo, cuerpo: c.cuerpo })),
+        idx, updated_at: new Date().toISOString(),
+      });
+      return error ? error.message : null;
+    },
+    async avanzar(codigo, idx) {
+      const cli = sb(); if (!cli) return;
+      await cli.from('shows_en_vivo').update({ idx, updated_at: new Date().toISOString() }).eq('codigo', codigo);
+    },
+    async unirse(codigo) {
+      const cli = sb(); if (!cli) return { error: 'sin conexión' };
+      const { data, error } = await cli.from('shows_en_vivo').select('*').eq('codigo', codigo).single();
+      return error ? { error: 'No encontré un show con ese código.' } : { show: data };
+    },
+    seguir(codigo, cb) {
+      this.dejarDeSeguir();
+      const cli = sb(); if (!cli) return;
+      canal = cli.channel('show-' + codigo).on('postgres_changes',
+        { event: 'UPDATE', schema: 'public', table: 'shows_en_vivo', filter: `codigo=eq.${codigo}` },
+        p => cb(p.new)).subscribe();
+      poll = setInterval(async () => { // respaldo por si el realtime se cae en el escenario
+        const r = await this.unirse(codigo);
+        if (r.show) cb(r.show);
+      }, 5000);
+    },
+    dejarDeSeguir() {
+      if (canal) { canal.unsubscribe(); canal = null; }
+      if (poll) { clearInterval(poll); poll = null; }
     },
   };
 })();
