@@ -113,9 +113,17 @@ App.route(/^#\/cancion\/(\w+)$/, (view, id) => {
   };
   $('#song-del').onclick = () => { if (confirm('¿Borrar esta canción?')) { canciones.borrar(id); location.hash = '#/ensayo'; } };
   let timer = null;
-  $('#sc-play').onclick = () => {
-    if (timer) { clearInterval(timer); timer = null; $('#sc-play').textContent = '▶ Autoscroll'; return; }
-    $('#sc-play').textContent = '⏸ Pausa';
+  const toggle = () => {
+    if (timer) { clearInterval(timer); timer = null; $('#sc-play').textContent = '▶ Auto'; return; }
+    $('#sc-play').textContent = '⏸';
     timer = setInterval(() => $('#view').scrollBy(0, 1), 1000 / (+$('#sc-speed').value / 10));
+  };
+  $('#sc-play').onclick = toggle;
+  $('#song-body').onclick = toggle; // tap en la letra = play/pausa
+  window.onkeydown = e => { // pedal bluetooth
+    const k = e.key;
+    if (['ArrowDown', 'PageDown'].includes(k)) { e.preventDefault(); $('#view').scrollBy({ top: innerHeight * 0.4, behavior: 'smooth' }); }
+    else if (['ArrowUp', 'PageUp'].includes(k)) { e.preventDefault(); $('#view').scrollBy({ top: -innerHeight * 0.4, behavior: 'smooth' }); }
+    else if (k === ' ' || k === 'Enter') { e.preventDefault(); toggle(); }
   };
 });

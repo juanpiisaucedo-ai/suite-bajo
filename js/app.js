@@ -44,6 +44,7 @@ const App = {
   routes: [],
   route(re, fn) { this.routes.push([re, fn]); },
   async render() {
+    window.onkeydown = null; // cada vista registra sus teclas (pedal bluetooth)
     const hash = location.hash || '#/entrenar';
     const tab = hash.split('/')[1] || 'entrenar';
     $$('#tabbar a').forEach(a => a.classList.toggle('active',

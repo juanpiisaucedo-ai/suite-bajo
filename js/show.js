@@ -87,20 +87,43 @@ function pintarEnVivo(view, sl) {
       <div class="song-body" style="font-size:${store.get('song_fs', 15)}px">${esc(actual.cuerpo)}</div>
       <div style="height:70px"></div>
       <div class="scroll-ctl">
+        <button class="btn mini ghost" id="lv-fsm">A−</button>
+        <button class="btn mini ghost" id="lv-fsp">A+</button>
         <button class="btn mini ghost" id="lv-prev" ${i === 0 ? 'disabled' : ''}>⏮</button>
-        <button class="btn mini" id="lv-play">▶ Auto</button>
+        <button class="btn mini" id="lv-play">▶</button>
         <input type="range" id="lv-speed" min="10" max="120" value="${store.get('scroll_v', 40)}">
-        <button class="btn" id="lv-next" ${sig ? '' : 'disabled'} style="padding:8px 18px">${sig ? 'Sigue ⏭' : 'Fin'}</button>
+        <button class="btn" id="lv-next" ${sig ? '' : 'disabled'} style="padding:8px 18px">${sig ? '⏭' : 'Fin'}</button>
       </div>`;
     $('#view').scrollTop = 0;
+    const toggle = () => {
+      if (timer) { paraScroll(); $('#lv-play').textContent = '▶'; }
+      else {
+        $('#lv-play').textContent = '⏸';
+        timer = setInterval(() => $('#view').scrollBy(0, 1), 1000 / (+$('#lv-speed').value / 10));
+      }
+    };
+    const ajustaFS = d => {
+      const fs = Math.min(19, Math.max(11, store.get('song_fs', 15) + d));
+      store.set('song_fs', fs);
+      view.querySelector('.song-body').style.fontSize = fs + 'px';
+    };
+    $('#lv-fsm').onclick = () => ajustaFS(-1);
+    $('#lv-fsp').onclick = () => ajustaFS(1);
     $('#lv-prev').onclick = () => { i--; pinta(); };
     $('#lv-next').onclick = () => { if (sig) { i++; pinta(); } };
-    $('#lv-play').onclick = () => {
-      if (timer) { paraScroll(); $('#lv-play').textContent = '▶ Auto'; return; }
-      $('#lv-play').textContent = '⏸';
-      timer = setInterval(() => $('#view').scrollBy(0, 1), 1000 / (+$('#lv-speed').value / 10));
-    };
+    $('#lv-play').onclick = toggle;
+    view.querySelector('.song-body').onclick = toggle; // tap en la letra = play/pausa
     $('#lv-speed').onchange = () => store.set('scroll_v', +$('#lv-speed').value);
+    /* pedal bluetooth (manda teclas): ↓/AvPág scrollea · ↑/RePág regresa ·
+       →/← cambia canción · espacio/enter = autoscroll on-off */
+    window.onkeydown = e => {
+      const k = e.key;
+      if (['ArrowDown', 'PageDown'].includes(k)) { e.preventDefault(); $('#view').scrollBy({ top: innerHeight * 0.4, behavior: 'smooth' }); }
+      else if (['ArrowUp', 'PageUp'].includes(k)) { e.preventDefault(); $('#view').scrollBy({ top: -innerHeight * 0.4, behavior: 'smooth' }); }
+      else if (k === 'ArrowRight') { e.preventDefault(); if (sig) { i++; pinta(); } }
+      else if (k === 'ArrowLeft') { e.preventDefault(); if (i > 0) { i--; pinta(); } }
+      else if (k === ' ' || k === 'Enter') { e.preventDefault(); toggle(); }
+    };
   };
   pinta();
 }
