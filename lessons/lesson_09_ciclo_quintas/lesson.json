@@ -412,6 +412,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_cycle_of_fifths_01_staff_ej1.png",
       "check": {
         "question": "C→F→Bb→Eb… caminaste el círculo en sentido…",
         "options": [
@@ -919,6 +920,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_cycle_of_fifths_01_staff_ej2.png",
       "check": {
         "question": "Los arpegios de las 12 tonalidades cupieron en…",
         "options": [
@@ -1210,6 +1212,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_cycle_of_fifths_01_staff_ej3.png",
       "check": {
         "question": "La cadena Dm7-G7 · Cm7-F7 · Bbm7-Eb7… baja por…",
         "options": [

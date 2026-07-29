@@ -440,6 +440,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_intervals_inversions_01_staff_ej1.png",
       "check": {
         "question": "En la 1ª inversión (compás 2), la nota más grave fue…",
         "options": [
@@ -722,6 +723,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_intervals_inversions_01_staff_ej2.png",
       "check": {
         "question": "El tritono desde Do lo pisaste en…",
         "options": [
@@ -986,6 +988,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_intervals_inversions_01_staff_ej3.png",
       "check": {
         "question": "Do→Fa y luego Fa→Do'. ¿Qué par de inversión formaste?",
         "options": [

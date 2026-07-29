@@ -581,6 +581,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_groove_syncopation_01_staff_ej1.png",
       "check": {
         "question": "El silencio del beat 2 del groove…",
         "options": [
@@ -941,6 +942,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_groove_syncopation_01_staff_ej2.png",
       "check": {
         "question": "En el tumbao, la nota del \"y de 4\"…",
         "options": [
@@ -1457,6 +1459,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_groove_syncopation_01_staff_ej3.png",
       "check": {
         "question": "Las semicorcheas se cuentan…",
         "options": [

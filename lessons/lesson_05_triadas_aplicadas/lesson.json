@@ -454,6 +454,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_triads_applied_01_staff_ej1.png",
       "check": {
         "question": "Para Am (compás 3) usaste la forma…",
         "options": [
@@ -781,6 +782,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_triads_applied_01_staff_ej2.png",
       "check": {
         "question": "El B° sonó tenso por su…",
         "options": [
@@ -1072,6 +1074,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_triads_applied_01_staff_ej3.png",
       "check": {
         "question": "Empezar Am y F en Do (compases 2-3) funcionó porque…",
         "options": [

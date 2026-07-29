@@ -440,6 +440,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_minor_scale_01_staff_ej1.png",
       "check": {
         "question": "La caja de Am que tocaste abarca…",
         "options": [
@@ -803,6 +804,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_minor_scale_01_staff_ej2.png",
       "check": {
         "question": "Em y Dm los tocaste con…",
         "options": [
@@ -1094,6 +1096,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_minor_scale_01_staff_ej3.png",
       "check": {
         "question": "De C a Cm, los trastes que bajaste fueron…",
         "options": [

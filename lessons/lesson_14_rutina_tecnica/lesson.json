@@ -512,6 +512,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_technique_routine_01_staff_ej1.png",
       "check": {
         "question": "En posición V, el dedo 3 pisó el traste…",
         "options": [
@@ -839,6 +840,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_technique_routine_01_staff_ej2.png",
       "check": {
         "question": "La permutación 1-4-2-3 cuesta más por…",
         "options": [
@@ -1202,6 +1204,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_technique_routine_01_staff_ej3.png",
       "check": {
         "question": "En la diagonal, cada cuerda usó…",
         "options": [

@@ -424,6 +424,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_seventh_chords_01_staff_ej1.png",
       "check": {
         "question": "En el ii-V-I, el acorde \"inquieto\" que pedía resolver fue…",
         "options": [
@@ -715,6 +716,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_seventh_chords_01_staff_ej2.png",
       "check": {
         "question": "De C7 a Cm7 bajaste…",
         "options": [
@@ -979,6 +981,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_seventh_chords_01_staff_ej3.png",
       "check": {
         "question": "Am7→D7→Gmaj7 es el ii-V-I de…",
         "options": [

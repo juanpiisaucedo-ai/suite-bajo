@@ -360,6 +360,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_fretboard_basics_01_staff_ej1.png",
       "check": {
         "question": "Tocaste G-A-B-C# subiendo la cuerda E. ¿En qué trastes?",
         "options": [
@@ -624,6 +625,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_fretboard_basics_01_staff_ej2.png",
       "check": {
         "question": "¿Por qué sonaron igual La al aire y E traste 5?",
         "options": [
@@ -888,6 +890,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_fretboard_basics_01_staff_ej3.png",
       "check": {
         "question": "El traste 8 de la cuerda E (lo dedujiste en el reto) es…",
         "options": [

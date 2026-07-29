@@ -441,6 +441,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_modes_01_staff_ej1.png",
       "check": {
         "question": "En Re dórico, la nota que lo hace dórico (D traste 9) es…",
         "options": [
@@ -729,6 +730,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_modes_01_staff_ej2.png",
       "check": {
         "question": "El gesto Mi-Fa-Mi del compás 7 delata al modo…",
         "options": [
@@ -1134,6 +1136,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_modes_01_staff_ej3.png",
       "check": {
         "question": "En el vamp de Sol mixolidio, la b7 que acentuaste fue…",
         "options": [

@@ -422,6 +422,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_rhythm_reading_01_staff_ej1.png",
       "check": {
         "question": "La blanca con puntillo del compás 7 sumó…",
         "options": [
@@ -716,6 +717,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_rhythm_reading_01_staff_ej2.png",
       "check": {
         "question": "En el compás de puro contratiempo atacaste solo en…",
         "options": [
@@ -1076,6 +1078,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_rhythm_reading_01_staff_ej3.png",
       "check": {
         "question": "La octava de La (al aire) la tocaste en…",
         "options": [

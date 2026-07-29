@@ -516,6 +516,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_pentatonics_blues_01_staff_ej1.png",
       "check": {
         "question": "La caja 1 de Am pentatónica se digita con…",
         "options": [
@@ -888,6 +889,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_pentatonics_blues_01_staff_ej2.png",
       "check": {
         "question": "En Em posición abierta, la cuerda E al aire fue tu…",
         "options": [
@@ -1359,6 +1361,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_pentatonics_blues_01_staff_ej3.png",
       "check": {
         "question": "En tu blues de 12, el compás 9 tocó…",
         "options": [

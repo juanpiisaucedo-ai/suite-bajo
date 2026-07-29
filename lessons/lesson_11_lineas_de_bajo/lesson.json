@@ -440,6 +440,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_bassline_building_01_staff_ej1.png",
       "check": {
         "question": "El Sib del beat 4 (compás 1) apuntaba a…",
         "options": [
@@ -731,6 +732,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_bassline_building_01_staff_ej2.png",
       "check": {
         "question": "Aproximar con la 5ª del acorde destino se llama…",
         "options": [
@@ -1022,6 +1024,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_bassline_building_01_staff_ej3.png",
       "check": {
         "question": "En el walking, el beat 1 de cada compás fue SIEMPRE…",
         "options": [

@@ -511,6 +511,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_major_scale_01_staff_ej1.png",
       "check": {
         "question": "El grado 3 de Do mayor cayó en…",
         "options": [
@@ -802,6 +803,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_major_scale_01_staff_ej2.png",
       "check": {
         "question": "Al mover la forma a Sol, el F# salió…",
         "options": [
@@ -1210,6 +1212,7 @@
           }
         ]
       },
+      "staff_image": "assets/lesson_major_scale_01_staff_ej3.png",
       "check": {
         "question": "1-3, 2-4, 3-5… ¿qué practicaste?",
         "options": [
