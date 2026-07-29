@@ -1,0 +1,1171 @@
+{
+  "lesson_id": "fitness_routines_01",
+  "meta": {
+    "title": "Gimnasio completo: rutinas de técnica",
+    "number": 16,
+    "difficulty": "All levels",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "Bass Fitness (enfoque de rutinas) · Cap cap.12 (técnica y ergonomía)",
+    "tags": [
+      "technique",
+      "fitness",
+      "stretching",
+      "endurance",
+      "string-skipping"
+    ],
+    "estimated_minutes": 20,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "Cómo se progresa de verdad (y cómo no)",
+        "content": "La técnica no mejora tocando más rápido: mejora tocando LIMPIO y subiendo el tempo de a poquito. El método que funciona, y que ya usaste en la lección 14, se llama tempo mínimo viable:\n\n1) Encuentra el BPM donde el ejercicio te sale PERFECTO, aunque sea 50. Ese es tu punto de partida real.\n2) Regla de las 3 limpias: tres repeticiones seguidas sin un solo error. Si fallas una, el contador vuelve a cero.\n3) Cuando cumplas las 3, subes 4 BPM. Ni 20 ni «lo que aguante»: cuatro.\n4) Si en el tempo nuevo no salen las 3 limpias, bajas 4 y te quedas ahí unos días.\n\nQuince minutos diarios así le ganan a dos horas el sábado, sin comparación. El músculo aprende por repetición espaciada, igual que tu memoria: por eso la app te cuenta la racha 🔥.",
+        "tldr": "Tempo mínimo viable: empieza donde salga perfecto, 3 repeticiones limpias, y subes 4 BPM. Nunca más.",
+        "checkpoint": {
+          "question": "Te salen 2 repeticiones limpias y fallas la tercera. ¿Qué haces?",
+          "options": [
+            "Subir el tempo igual",
+            "Volver a empezar el conteo en cero",
+            "Bajar 10 BPM"
+          ],
+          "answer": 1,
+          "explain": "Tres LIMPIAS seguidas. Si fallas una, el contador vuelve a cero."
+        }
+      },
+      {
+        "title": "Estiramientos: abrir la mano sin lastimarla",
+        "content": "Casi todo lo difícil del bajo es abrir la mano izquierda entre el índice y el meñique. Se entrena, pero con reglas:\n\n· El PULGAR va detrás del mástil, a media altura y RELAJADO. Si el pulgar aprieta, la mano se cierra y el estiramiento se vuelve fuerza bruta.\n· La muñeca lo más RECTA posible. Muñeca doblada + estiramiento = camino directo a una lesión.\n· Estira desde el CODO, no desde los dedos: acercar un poco el codo al cuerpo abre la mano sola.\n· Empieza los estiramientos en la zona AGUDA del mástil (trastes 7-12), donde los trastes están más juntos, y ve bajando hacia la zona grave conforme ganes apertura.\n\nY la línea que nunca se cruza: estiramiento leve en el músculo = normal. Dolor punzante, hormigueo o entumecimiento = PARAR de inmediato. La técnica se construye en años; una lesión te quita meses.",
+        "image": "assets/lesson_fitness_routines_01_tabla.png",
+        "tldr": "Estira con el pulgar relajado y la muñeca recta, empezando en trastes agudos. Dolor punzante = parar.",
+        "checkpoint": {
+          "question": "¿Por qué empezar los estiramientos en los trastes agudos?",
+          "options": [
+            "Suenan mejor",
+            "Los trastes están más juntos: menos apertura",
+            "Es más difícil"
+          ],
+          "answer": 1,
+          "explain": "Mismo patrón, menos exigencia de apertura: se avanza sin forzar."
+        }
+      },
+      {
+        "title": "Resistencia y economía de movimiento",
+        "content": "Tocar una hora sin cansarte no es cuestión de fuerza, sino de no desperdiciar movimiento. Tres economías que valen oro:\n\n· Dedos CERCA del diapasón: el dedo que no está pisando se queda a milímetros, listo. Los dedos que vuelan son tiempo perdido y tensión acumulada.\n· Presión MÍNIMA: pisa apenas lo necesario para que la nota suene limpia, justo detrás del traste. Prueba a bajar la presión hasta que zumbe, y luego súbela un pelito: ese es tu punto.\n· MUTEO mientras cruzas: la mano derecha va apagando las cuerdas que dejaste atrás (el pulgar viajando y los dedos apoyando). Sin eso, los saltos de cuerda suenan a lodo.\n\nUn diagnóstico honesto: grábate 30 segundos tocando. La cámara te va a enseñar hombros levantados y dedos volando que tú no sientes.",
+        "tldr": "Resistencia = economía: dedos cerca del diapasón, presión mínima, y muteo con la derecha al cruzar.",
+        "checkpoint": {
+          "question": "¿Cuál es la presión correcta de la mano izquierda?",
+          "options": [
+            "La mínima para que suene limpio",
+            "La máxima que puedas",
+            "Depende de la cuerda"
+          ],
+          "answer": 0,
+          "explain": "Justo detrás del traste, con la presión justa: menos tensión, más aguante."
+        }
+      },
+      {
+        "title": "Arma TU rutina de 15 minutos",
+        "content": "La rutina completa tiene cinco piezas, y no todas caben todos los días. Un molde que funciona:\n\n· 3 min — CALENTAMIENTO: la permutación del día (lección 14), lento.\n· 4 min — ESTIRAMIENTO: el ejercicio 1 de esta lección, subiendo la apertura de a poco.\n· 4 min — CRUCE DE CUERDAS: ejercicio 2, con muteo cuidado.\n· 3 min — VELOCIDAD CONTROLADA: un solo patrón, subiendo de 4 en 4 BPM hasta que se ensucie, y de regreso.\n· 1 min — SOLTAR: sacude las manos, hombros abajo, respira.\n\nRótala por semana: lunes y jueves estiramiento fuerte, martes y viernes cruce, miércoles velocidad, sábado repertorio libre, domingo descanso de verdad. Y sobre todo: aplica PORA (lección 14) — cada pasada con un solo foco (afinación, ritmo, relajación, sonido). Quince minutos con atención valen más que una hora en automático.",
+        "tldr": "Rutina de 15 min: calentamiento, estiramiento, cruce, velocidad controlada y soltar. Rótala por semana.",
+        "checkpoint": {
+          "question": "En la rutina de 15 minutos, ¿con qué se empieza?",
+          "options": [
+            "Velocidad",
+            "Calentamiento lento",
+            "Estiramientos fuertes"
+          ],
+          "answer": 1,
+          "explain": "Nunca se estira ni se corre en frío: primero la permutación del día, lento."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "¿Cuánto subes el tempo cuando un ejercicio ya sale limpio?",
+      "options": [
+        "4 BPM",
+        "20 BPM",
+        "Lo que aguantes"
+      ],
+      "answer": 0,
+      "explain": "De 4 en 4, y solo tras 3 repeticiones seguidas sin errores."
+    },
+    {
+      "question": "¿Dónde conviene EMPEZAR a entrenar los estiramientos?",
+      "options": [
+        "En los trastes graves (1-4)",
+        "En los trastes agudos (7-12)",
+        "Da igual"
+      ],
+      "answer": 1,
+      "explain": "Arriba los trastes están más juntos: menos apertura para el mismo patrón."
+    },
+    {
+      "question": "Sientes hormigueo en los dedos mientras estiras. ¿Qué haces?",
+      "options": [
+        "Parar de inmediato",
+        "Aguantar un poco más",
+        "Cambiar de cuerda"
+      ],
+      "answer": 0,
+      "explain": "Hormigueo, entumecimiento o dolor punzante = alto total. No es entrenamiento."
+    },
+    {
+      "question": "La presión correcta de la mano izquierda es…",
+      "options": [
+        "La máxima que puedas",
+        "La mínima para que suene limpio",
+        "Depende del tempo"
+      ],
+      "answer": 1,
+      "explain": "Justo detrás del traste y con la presión mínima: menos tensión, más resistencia."
+    },
+    {
+      "question": "Al cruzar cuerdas, ¿qué hace la mano derecha además de atacar?",
+      "options": [
+        "Mutear las cuerdas que dejas atrás",
+        "Nada",
+        "Marcar el pulso"
+      ],
+      "answer": 0,
+      "explain": "El pulgar viaja y los dedos apoyan: sin muteo, los saltos suenan a lodo."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha las cuatro notas: ¿parejas o desparejas?",
+      "options": [
+        "Parejas",
+        "Desparejas"
+      ],
+      "answer": 0,
+      "explain": "Cada ataque cayó exacto: así debe sonar tu rutina.",
+      "audio_ref": "assets/lesson_fitness_routines_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y estas?",
+      "options": [
+        "Parejas",
+        "Desparejas"
+      ],
+      "answer": 1,
+      "explain": "Se tambalean: así suena practicar más rápido de lo que la mano puede.",
+      "audio_ref": "assets/lesson_fitness_routines_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_fitness_routines_01_1",
+      "title": "Ejercicio base",
+      "description": "Estiramiento progresivo: el índice se queda clavado en el traste 5 y el otro dedo se va alejando (6, 7, 8, 9). Empieza lento y para en cuanto la mano se tense de más — esto se gana en semanas, no en una sesión.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fitness_routines_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_fitness_routines_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 39,
+            "name": "D#2",
+            "string": "A",
+            "fret": 6
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 42,
+            "name": "F#2",
+            "string": "A",
+            "fret": 9
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 47,
+            "name": "B2",
+            "string": "D",
+            "fret": 9
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_fitness_routines_01_staff_ej1.png",
+      "check": {
+        "question": "En el estiramiento, ¿qué dedo NO se despega del traste 5?",
+        "options": [
+          "El índice",
+          "El meñique",
+          "El pulgar"
+        ],
+        "answer": 0,
+        "explain": "El índice ancla y el otro dedo viaja: así se gana apertura real."
+      }
+    },
+    {
+      "id": "ex_fitness_routines_01_2",
+      "title": "Saltos de cuerda (string skipping)",
+      "description": "Saltar cuerdas NO adyacentes: de Mi a Re y de La a Sol, ida y vuelta. Lo difícil no es llegar, es que la cuerda que dejas atrás no siga sonando: la mano derecha va apagando.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fitness_routines_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_fitness_routines_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 6,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "D",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "A",
+            "fret": 5
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 48,
+            "name": "C3",
+            "string": "G",
+            "fret": 5
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_fitness_routines_01_staff_ej2.png",
+      "check": {
+        "question": "Al saltar de la cuerda Mi a la Re, lo difícil de verdad es…",
+        "options": [
+          "Que la cuerda que dejas no siga sonando",
+          "Alcanzar la cuerda",
+          "El tempo"
+        ],
+        "answer": 0,
+        "explain": "El muteo de la mano derecha es lo que hace limpio el salto."
+      }
+    },
+    {
+      "id": "ex_fitness_routines_01_3",
+      "title": "Reto: recorrer el mástil + independencia 3-4",
+      "description": "Primera mitad: la misma figura desplazándose por todo el mástil (posición I → VII), que es donde de verdad se prueba la mano. Segunda mitad: el par que menos obedece, anular y meñique, aislado en cada cuerda.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_fitness_routines_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_fitness_routines_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 29,
+            "name": "F1",
+            "string": "E",
+            "fret": 1
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 30,
+            "name": "F#1",
+            "string": "E",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 32,
+            "name": "G#1",
+            "string": "E",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 32,
+            "name": "G#1",
+            "string": "E",
+            "fret": 4
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 34,
+            "name": "A#1",
+            "string": "E",
+            "fret": 6
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "E",
+            "fret": 7
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "E",
+            "fret": 8
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 37,
+            "name": "C#2",
+            "string": "E",
+            "fret": 9
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "E",
+            "fret": 10
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "A",
+            "fret": 7
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "A",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "D",
+            "fret": 7
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 46,
+            "name": "A#2",
+            "string": "D",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 1.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 3.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 7,
+            "beat": 4.0,
+            "dur_beats": 0.5,
+            "midi": 50,
+            "name": "D3",
+            "string": "G",
+            "fret": 7
+          },
+          {
+            "bar": 7,
+            "beat": 4.5,
+            "dur_beats": 0.5,
+            "midi": 51,
+            "name": "D#3",
+            "string": "G",
+            "fret": 8
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 33,
+            "name": "A1",
+            "string": "E",
+            "fret": 5
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_fitness_routines_01_staff_ej3.png",
+      "check": {
+        "question": "Para pasar de posición I a III en el reto, la mano debe…",
+        "options": [
+          "Viajar entera",
+          "Estirarse para alcanzar",
+          "Quedarse quieta"
+        ],
+        "answer": 0,
+        "explain": "Desplazamiento, no estiramiento: el pulgar viaja con la mano."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_fitness_routines_01_backing.m4a",
+    "label": "A5 (drone para el gimnasio)",
+    "style": "rock",
+    "bpm": 80,
+    "description": "Power chord neutro y batería constante: metrónomo con groove para tu rutina.",
+    "levels": [
+      "Nivel 1 (el tab): 1-2-3-4 por cuerda, con la batería de metrónomo.",
+      "Nivel 2: el estiramiento del ejercicio 1, sin perder el pulso.",
+      "Nivel 3: los saltos de cuerda del ejercicio 2 en corcheas."
+    ],
+    "tab_image": "assets/lesson_fitness_routines_01_backing_tab.png"
+  }
+}

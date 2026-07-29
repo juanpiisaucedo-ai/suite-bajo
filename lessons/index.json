@@ -110,5 +110,21 @@
   "title": "Rutina de técnica: el gimnasio del bajista",
   "difficulty": "All levels",
   "minutes": 15
+ },
+ {
+  "number": 15,
+  "id": "reading_bass_clef_01",
+  "folder": "lesson_15_lectura_clave_fa",
+  "title": "Lectura en clave de Fa",
+  "difficulty": "Beginner-Intermediate",
+  "minutes": 25
+ },
+ {
+  "number": 16,
+  "id": "fitness_routines_01",
+  "folder": "lesson_16_rutinas_tecnica_avanzada",
+  "title": "Gimnasio completo: rutinas de técnica",
+  "difficulty": "All levels",
+  "minutes": 20
  }
 ]

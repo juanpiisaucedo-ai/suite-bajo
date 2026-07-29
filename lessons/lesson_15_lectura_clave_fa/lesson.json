@@ -1,0 +1,834 @@
+{
+  "lesson_id": "reading_bass_clef_01",
+  "meta": {
+    "title": "Lectura en clave de Fa",
+    "number": 15,
+    "difficulty": "Beginner-Intermediate",
+    "source_books": [
+      "Music Theory for the Bass Player (Ariane Cap)",
+      "Hal Leonard Bass Method (Ed Friedland)",
+      "Bass Fitness (J. Sarubbi)"
+    ],
+    "source_detail": "HL B1 (lectura) · Cap apéndice «Reading SOS»",
+    "tags": [
+      "reading",
+      "bass-clef",
+      "notation"
+    ],
+    "estimated_minutes": 25,
+    "language": "es",
+    "content_note": "Texto original redactado para esta app; los libros se usaron como guía de temario y enfoque pedagógico. Diagramas y audio propios."
+  },
+  "theory": {
+    "sections": [
+      {
+        "title": "El pentagrama y por qué el bajo usa clave de Fa",
+        "content": "Un pentagrama son cinco líneas y los cuatro espacios entre ellas. Qué nota es cada una lo decide la CLAVE que va al principio. La clave de Fa (bass clef) es la de los instrumentos graves: sus dos puntos abrazan la cuarta línea, y esa línea es Fa.\n\nDe abajo hacia arriba, las LÍNEAS son: Sol · Si · Re · Fa · La (G-B-D-F-A). Los ESPACIOS, también de abajo hacia arriba: La · Do · Mi · Sol (A-C-E-G).\n\nDos frases para memorizar rápido: en las líneas, «Sol Bien Regado Florece Al sol»; en los espacios, «A-C-E-G» se lee casi como una palabra. En un par de días dejas de recitar y empiezas a VER.",
+        "image": "assets/lesson_reading_bass_clef_01_pentagrama_ref.png",
+        "tldr": "Líneas (abajo→arriba): Sol·Si·Re·Fa·La. Espacios: La·Do·Mi·Sol. Los dos puntos de la clave marcan Fa.",
+        "checkpoint": {
+          "question": "¿Qué nota es la línea del medio en clave de Fa?",
+          "options": [
+            "Si",
+            "Re",
+            "Fa"
+          ],
+          "answer": 1,
+          "explain": "Sol-Si-RE-Fa-La: la tercera línea es Re."
+        }
+      },
+      {
+        "title": "El dato que casi nadie te explica: el bajo suena una octava abajo",
+        "content": "El bajo eléctrico es un instrumento TRANSPOSITOR: se ESCRIBE una octava más arriba de como suena. No es capricho — si se escribiera donde realmente suena, casi todo viviría en un mar de líneas adicionales debajo del pentagrama, ilegible.\n\nLa consecuencia práctica que te importa: tu cuerda Mi al aire se escribe en la PRIMERA LÍNEA ADICIONAL debajo del pentagrama. No dos octavas abajo, no en el sótano: justo ahí.\n\nEsto también significa que si lees una parte de bajo y la tocas en un piano tal cual está escrita, sonará una octava más aguda que tu bajo. Todo normal: así se escribe para bajo en todo el mundo.",
+        "tldr": "El bajo se ESCRIBE una octava arriba de como suena: el mi al aire va en la 1ª línea adicional de abajo.",
+        "checkpoint": {
+          "question": "Si el bajo se escribe una octava arriba, una nota escrita en la línea del medio suena…",
+          "options": [
+            "Como Re2 (tu cuerda Re al aire)",
+            "Como Re3",
+            "Igual que escrita"
+          ],
+          "answer": 0,
+          "explain": "Escrito Re3, suena Re2: exactamente tu cuerda Re al aire."
+        }
+      },
+      {
+        "title": "Del pentagrama al diapasón: las cuerdas al aire",
+        "content": "El puente entre lo que ves y dónde pones el dedo son tus cuatro cuerdas al aire. Apréndetelas en el pentagrama y ya tienes las anclas (igual que los marcadores del mástil en la lección 1):\n\n· Mi (E) al aire: primera línea adicional DEBAJO del pentagrama.\n· La (A) al aire: el espacio de abajo, justo dentro del pentagrama.\n· Re (D) al aire: la línea del medio.\n· Sol (G) al aire: el espacio de arriba.\n\nFíjate en algo bonito: como las cuerdas van de 4ª en 4ª, en el pentagrama suben de dos en dos posiciones (línea adicional → espacio → línea → espacio). Es un patrón visual, no una lista que memorizar.",
+        "image": "assets/lesson_reading_bass_clef_01_cuerdas.png",
+        "tldr": "Anclas: Mi = línea adicional abajo · La = espacio de abajo · Re = línea del medio · Sol = espacio de arriba.",
+        "checkpoint": {
+          "question": "Tu cuerda La al aire se escribe en…",
+          "options": [
+            "El espacio de abajo",
+            "La línea de abajo",
+            "Una línea adicional"
+          ],
+          "answer": 0,
+          "explain": "La = primer espacio. Mi es la línea adicional de abajo."
+        }
+      },
+      {
+        "title": "Leer de verdad: altura + ritmo, y cómo practicarlo",
+        "content": "Leer partitura son dos preguntas al mismo tiempo: QUÉ nota (la altura, que acabas de ver) y CUÁNDO (el ritmo, que ya trabajaste en la lección 2). La armadura al inicio te avisa qué notas llevan sostenido o bemol en toda la pieza, y el compás te dice cómo se agrupan los pulsos.\n\nTres reglas para practicar lectura a primera vista:\n\n1) NO PARES. Si te equivocas, sigues; el pulso manda. Parar a corregir es el hábito que arruina a los lectores.\n2) Lee un compás POR DELANTE de donde vas tocando: los ojos adelantados, las manos atrás.\n3) Empieza lentísimo. Leer lento y sin errores construye lectura; leer rápido y tropezando construye tropiezos.\n\nY el consejo que más rinde: lee CINCO MINUTOS diarios de algo nuevo. La lectura no se domina practicando la misma pieza, sino leyendo material que nunca has visto.",
+        "tldr": "Leer = altura + ritmo a la vez. No pares, lee un compás por delante, y cinco minutos diarios de material nuevo.",
+        "checkpoint": {
+          "question": "Al leer a primera vista, tus ojos deben ir…",
+          "options": [
+            "Justo en la nota que tocas",
+            "Un compás por delante",
+            "Un compás atrás"
+          ],
+          "answer": 1,
+          "explain": "Ojos adelantados, manos atrás: así no te frena la lectura."
+        }
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "question": "En clave de Fa, las LÍNEAS de abajo hacia arriba son…",
+      "options": [
+        "Sol · Si · Re · Fa · La",
+        "Mi · Sol · Si · Re · Fa",
+        "La · Do · Mi · Sol · Si"
+      ],
+      "answer": 0,
+      "explain": "G-B-D-F-A. Los espacios son A-C-E-G (La-Do-Mi-Sol)."
+    },
+    {
+      "question": "¿Qué marca la clave de Fa con sus dos puntos?",
+      "options": [
+        "La primera línea",
+        "La cuarta línea, que es Fa",
+        "El espacio del medio"
+      ],
+      "answer": 1,
+      "explain": "Los dos puntos abrazan la línea de Fa: de ahí sale todo lo demás."
+    },
+    {
+      "question": "Tu cuerda Mi al aire se escribe…",
+      "options": [
+        "En la primera línea adicional debajo del pentagrama",
+        "En la línea de abajo",
+        "Dos octavas debajo"
+      ],
+      "answer": 0,
+      "explain": "Porque el bajo se escribe una octava arriba de como suena."
+    },
+    {
+      "question": "La cuerda Re al aire cae en…",
+      "options": [
+        "El espacio de abajo",
+        "La línea del medio",
+        "El espacio de arriba"
+      ],
+      "answer": 1,
+      "explain": "Re = línea central. La = espacio de abajo, Sol = espacio de arriba."
+    },
+    {
+      "question": "Te equivocas leyendo a primera vista. ¿Qué haces?",
+      "options": [
+        "Paras y corriges",
+        "Sigues sin perder el pulso",
+        "Empiezas de nuevo"
+      ],
+      "answer": 1,
+      "explain": "El pulso manda. Corregir sobre la marcha es el hábito del buen lector."
+    }
+  ],
+  "ear_quiz": [
+    {
+      "question": "Escucha las dos notas: en el pentagrama, ¿la segunda estaría más arriba o más abajo?",
+      "options": [
+        "Más arriba",
+        "Más abajo"
+      ],
+      "answer": 0,
+      "explain": "Subió: en el papel, la segunda cabeza va más arriba.",
+      "audio_ref": "assets/lesson_reading_bass_clef_01_ear1.m4a"
+    },
+    {
+      "question": "¿Y estas?",
+      "options": [
+        "Más arriba",
+        "Más abajo"
+      ],
+      "answer": 1,
+      "explain": "Bajó: la segunda cabeza va más abajo en el pentagrama.",
+      "audio_ref": "assets/lesson_reading_bass_clef_01_ear2.m4a"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex_reading_bass_clef_01_1",
+      "title": "Ejercicio base",
+      "description": "Las cinco LÍNEAS del pentagrama, en redondas y blancas. Cambia la vista a «Pentagrama» arriba del ejercicio y lee de ahí, no del tab: di el nombre de cada nota en voz alta antes de tocarla.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_reading_bass_clef_01_demo_ej1.m4a",
+      "tab_image": "assets/lesson_reading_bass_clef_01_tab_ej1.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 45,
+            "name": "A2",
+            "string": "G",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 2,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 2,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_reading_bass_clef_01_staff_ej1.png",
+      "check": {
+        "question": "El Re que tocaste en la cuerda D al aire, ¿dónde estaba escrito?",
+        "options": [
+          "En la línea del medio",
+          "En el espacio de abajo",
+          "En una línea adicional"
+        ],
+        "answer": 0,
+        "explain": "Re al aire = tercera línea, justo en medio del pentagrama."
+      }
+    },
+    {
+      "id": "ex_reading_bass_clef_01_2",
+      "title": "Los espacios, y mezclados con las líneas",
+      "description": "Ahora los ESPACIOS (La · Do · Mi · Sol) en negras, y luego alternando línea-espacio para que el ojo brinque como brinca de verdad al leer. Sigue diciendo el nombre en voz alta.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_reading_bass_clef_01_demo_ej2.m4a",
+      "tab_image": "assets/lesson_reading_bass_clef_01_tab_ej2.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 1,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 45,
+            "name": "A2",
+            "string": "G",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 43,
+            "name": "G2",
+            "string": "G",
+            "fret": 0
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 2,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_reading_bass_clef_01_staff_ej2.png",
+      "check": {
+        "question": "Los cuatro espacios, de abajo hacia arriba, son…",
+        "options": [
+          "La · Do · Mi · Sol",
+          "Sol · Si · Re · Fa",
+          "Do · Mi · Sol · Si"
+        ],
+        "answer": 0,
+        "explain": "A-C-E-G. Las líneas son G-B-D-F-A."
+      }
+    },
+    {
+      "id": "ex_reading_bass_clef_01_3",
+      "title": "Reto: una melodía de verdad",
+      "description": "Ocho compases con alturas y ritmos mezclados (negras, blancas, corcheas y un silencio). Léela del pentagrama de corrido, sin parar aunque falles: eso es leer a primera vista.",
+      "bpm": 80,
+      "time_signature": "4/4",
+      "count_in_beats": 4,
+      "audio_ref": "assets/lesson_reading_bass_clef_01_demo_ej3.m4a",
+      "tab_image": "assets/lesson_reading_bass_clef_01_tab_ej3.png",
+      "data": {
+        "tuning": [
+          "E1",
+          "A1",
+          "D2",
+          "G2"
+        ],
+        "notes": [
+          {
+            "bar": 1,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 1,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 1,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 2,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 2,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 3,
+            "beat": 2.0,
+            "dur_beats": 0.5,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 2.5,
+            "dur_beats": 0.5,
+            "midi": 41,
+            "name": "F2",
+            "string": "D",
+            "fret": 3
+          },
+          {
+            "bar": 3,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 3,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 4,
+            "beat": 1.0,
+            "dur_beats": 2,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 4,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "rest": true
+          },
+          {
+            "bar": 4,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 5,
+            "beat": 3.0,
+            "dur_beats": 1,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 5,
+            "beat": 4.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 40,
+            "name": "E2",
+            "string": "D",
+            "fret": 2
+          },
+          {
+            "bar": 6,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 38,
+            "name": "D2",
+            "string": "D",
+            "fret": 0
+          },
+          {
+            "bar": 6,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 36,
+            "name": "C2",
+            "string": "A",
+            "fret": 3
+          },
+          {
+            "bar": 7,
+            "beat": 1.0,
+            "dur_beats": 1,
+            "midi": 35,
+            "name": "B1",
+            "string": "A",
+            "fret": 2
+          },
+          {
+            "bar": 7,
+            "beat": 2.0,
+            "dur_beats": 1,
+            "midi": 33,
+            "name": "A1",
+            "string": "A",
+            "fret": 0
+          },
+          {
+            "bar": 7,
+            "beat": 3.0,
+            "dur_beats": 2,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          },
+          {
+            "bar": 8,
+            "beat": 1.0,
+            "dur_beats": 4,
+            "midi": 31,
+            "name": "G1",
+            "string": "E",
+            "fret": 3
+          }
+        ]
+      },
+      "staff_image": "assets/lesson_reading_bass_clef_01_staff_ej3.png",
+      "check": {
+        "question": "En la melodía, ¿qué hiciste al fallar una nota?",
+        "options": [
+          "Seguir con el pulso",
+          "Parar y corregir",
+          "Empezar de nuevo"
+        ],
+        "answer": 0,
+        "explain": "Leer a primera vista es no soltar el pulso, pase lo que pase."
+      }
+    }
+  ],
+  "scoring": {
+    "pitch_tolerance_cents": 50,
+    "timing_tolerance_ms": 120,
+    "weights": {
+      "note": 0.7,
+      "timing": 0.3
+    },
+    "pass_threshold_pct": 80
+  },
+  "backing": {
+    "audio_ref": "assets/lesson_reading_bass_clef_01_backing.m4a",
+    "label": "G–C–G–D (lectura con banda)",
+    "style": "rock",
+    "bpm": 80,
+    "description": "Lee las fundamentales del pentagrama mientras la banda toca: Sol, Do y Re.",
+    "levels": [
+      "Nivel 1 (el tab): la fundamental de cada acorde en redonda, leyéndola del pentagrama.",
+      "Nivel 2: fundamental y 5ª en blancas, sin ver la tablatura.",
+      "Nivel 3: lee el ejercicio 3 (la melodía) encima de la pista, sin parar."
+    ],
+    "tab_image": "assets/lesson_reading_bass_clef_01_backing_tab.png"
+  }
+}
