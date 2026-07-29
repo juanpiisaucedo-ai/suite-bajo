@@ -223,3 +223,6 @@ const Pitch = (() => {
     },
   };
 })();
+
+/* exponer como global de ventana (const no lo hace solo) */
+window.Pitch = Pitch;

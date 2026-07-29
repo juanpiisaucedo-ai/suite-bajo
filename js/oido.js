@@ -186,3 +186,5 @@ App.route(/^#\/oido\/(\d+)$/, (view, nStr) => {
   arranque();
   window._cleanup = () => { try { SBAudio.metronomo.parar(); } catch {} };
 });
+
+window.Oido = Oido;

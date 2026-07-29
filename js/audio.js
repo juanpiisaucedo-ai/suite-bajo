@@ -76,3 +76,5 @@ const SBAudio = (() => {
     },
   };
 })();
+
+window.SBAudio = SBAudio;
