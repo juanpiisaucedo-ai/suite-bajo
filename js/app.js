@@ -48,10 +48,10 @@ const App = {
     if (window._cleanup) { try { window._cleanup(); } catch {} window._cleanup = null; }
     const hash = location.hash || '#/entrenar';
     const tab = hash.split('/')[1] || 'entrenar';
+    const enTab = { leccion: 'entrenar', afinador: 'entrenar', cancion: 'ensayo',
+                    setlist: 'show', vivo: 'show' };
     $$('#tabbar a').forEach(a => a.classList.toggle('active',
-      tab.startsWith(a.dataset.tab) || (a.dataset.tab === 'entrenar' && tab === 'leccion')
-      || (a.dataset.tab === 'ensayo' && tab === 'cancion')
-      || (a.dataset.tab === 'show' && tab === 'setlist')));
+      tab.startsWith(a.dataset.tab) || enTab[tab] === a.dataset.tab));
     for (const [re, fn] of this.routes) {
       const m = hash.match(re);
       if (m) { await fn($('#view'), ...m.slice(1)); return; }

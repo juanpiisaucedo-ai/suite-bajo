@@ -137,6 +137,10 @@ App.route(/^#\/entrenar$/, async view => {
       <div class="row"><h3>🔁 Repaso de hoy</h3><span class="badge">${nRepaso} pendientes</span></div>
       <div class="dim small">Preguntas de tus lecciones superadas — 3 minutos y a otra cosa.</div>
     </a>` : ''}
+    <a class="card" href="#/afinador">
+      <div class="row"><h3>🎸 Afinador</h3><span class="badge">micrófono</span></div>
+      <div class="dim small">Afina tu bajo antes de practicar — cuerda por cuerda, con aguja de cents.</div>
+    </a>
     <div class="dim small">Progreso: ${hechas}/${lecciones.length} lecciones superadas (quiz ≥ 80%)</div>
     <div class="progressbar"><div style="width:${(hechas / lecciones.length) * 100}%"></div></div>
     ${lecciones.map(l => {
@@ -249,10 +253,24 @@ function pintarQuiz(panel, doc, num, info) {
   pinta();
 }
 
+/* ---------- afinador (usa el micrófono) ---------- */
+App.route(/^#\/afinador$/, view => {
+  if (!window.Pitch || !Pitch.soportado()) {
+    view.innerHTML = `<h1>🎸 Afinador</h1>
+      <p class="dim">Este navegador no deja usar el micrófono. Abre la app instalada o en Chrome/Safari.</p>
+      <a class="btn full" href="#/entrenar">Volver</a>`;
+    return;
+  }
+  view.innerHTML = '<h1>🎸 Afinador</h1><div id="afin"></div>';
+  Pitch.afinador($('#afin'), () => { location.hash = '#/entrenar'; });
+  window._cleanup = () => Pitch.detener();
+});
+
 /* ---------- ejercicios ---------- */
 function pintarEjercicio(panel, doc, base) {
   const lista = doc.exercises || (doc.exercise ? [doc.exercise] : []);
   const bk = doc.backing;
+  const verStaff = store.get('ver_pentagrama', false);
   panel.innerHTML = `<div class="ejercicio">
     ${bk ? `
       <h2>🥁 Backing track — ${esc(bk.label)}</h2>
@@ -266,12 +284,32 @@ function pintarEjercicio(panel, doc, base) {
       <h2>${i + 1}. ${esc(ex.title || 'Ejercicio')}</h2>
       <p>${esc(ex.description)}</p>
       <div class="dim small">♩ = ${ex.bpm} BPM · ${esc(ex.time_signature)} · el audio trae 1 compás de claqueta</div>
-      <img src="${base}/${ex.tab_image}" alt="Tab del ejercicio ${i + 1}">
+      ${ex.staff_image ? `<div class="seg" style="margin:10px 0 6px">
+        <button data-vista="tab" data-ex="${i}" class="${verStaff ? '' : 'active'}">Tablatura</button>
+        <button data-vista="staff" data-ex="${i}" class="${verStaff ? 'active' : ''}">Pentagrama</button>
+      </div>` : ''}
+      <img id="ex-img-${i}" src="${base}/${(verStaff && ex.staff_image) ? ex.staff_image : ex.tab_image}"
+           alt="Ejercicio ${i + 1}">
       <audio controls loop preload="none" src="${base}/${ex.audio_ref}"></audio>
+      <button class="btn full ghost" data-cal="${i}" style="margin:4px 0 10px">🎤 Calificar mi ejecución</button>
+      <div id="cal-${i}"></div>
       ${ex.check ? `<div class="chk-card" data-exc="${i}"></div>` : ''}
     `).join('')}
     <button class="btn full" id="ex-done">Lo practiqué hoy 🎸</button>
   </div>`;
+  /* alternar tablatura / pentagrama (la preferencia se recuerda) */
+  panel.querySelectorAll('[data-vista]').forEach(b => b.onclick = () => {
+    const staff = b.dataset.vista === 'staff';
+    store.set('ver_pentagrama', staff);
+    lista.forEach((ex, k) => {
+      const img = panel.querySelector(`#ex-img-${k}`);
+      if (img && ex.staff_image) img.src = `${base}/${staff ? ex.staff_image : ex.tab_image}`;
+    });
+    panel.querySelectorAll('[data-vista]').forEach(o =>
+      o.classList.toggle('active', o.dataset.vista === b.dataset.vista));
+  });
+  panel.querySelectorAll('[data-cal]').forEach(b => b.onclick = () =>
+    calificarEjecucion(panel.querySelector('#cal-' + b.dataset.cal), lista[+b.dataset.cal]));
   panel.querySelectorAll('.chk-card[data-exc]').forEach(card => {
     const ex = lista[+card.dataset.exc];
     pintarPregunta(card, ex.check, '✋ Checkpoint — ¿qué acabas de tocar?', () => {
@@ -279,4 +317,79 @@ function pintarEjercicio(panel, doc, base) {
     });
   });
   $('#ex-done').onclick = () => { marcarPracticaHoy(); $('#ex-done').textContent = '🔥 Práctica registrada'; };
+}
+
+/* ---------- calificar la ejecución con el micrófono ---------- */
+async function calificarEjecucion(cont, ex) {
+  if (!window.Pitch || !Pitch.soportado() || !window.SBAudio) {
+    cont.innerHTML = '<div class="notice">🎤 Este navegador no deja usar el micrófono aquí. Prueba con la app instalada.</div>';
+    return;
+  }
+  const notas = ex.data && ex.data.notes ? ex.data.notes : [];
+  if (!notas.length) return;
+  const bpm = ex.bpm, beatMs = 60000 / bpm, claqueta = 4;
+  const nBars = Math.max(...notas.map(n => n.bar));
+  const totalSeg = ((claqueta + nBars * 4) * beatMs) / 1000 + 0.7;
+
+  cont.innerHTML = `<div class="chk-card">
+    <div id="cal-estado"><b>Preparando…</b></div>
+    <div class="dim small" id="cal-tip">Usa audífonos si puedes: así el metrónomo no se cuela por el micrófono.</div>
+    <div class="progressbar" style="margin:10px 0"><div id="cal-nivel" style="width:0%"></div></div>
+    <button class="btn mini ghost" id="cal-stop">Cancelar</button>
+  </div>`;
+  const estado = cont.querySelector('#cal-estado');
+  const nivel = cont.querySelector('#cal-nivel');
+  let vivo = true;
+  const cerrar = () => { vivo = false; try { Pitch.detener(); } catch {} try { SBAudio.metronomo.parar(); } catch {} };
+  cont.querySelector('#cal-stop').onclick = () => { cerrar(); cont.innerHTML = ''; };
+  window._cleanup = cerrar;
+
+  try {
+    await SBAudio.listo();
+    await Pitch.iniciar();
+  } catch (e) {
+    cerrar();
+    cont.innerHTML = `<div class="notice">🎤 ${esc(e.message || 'No pude usar el micrófono.')}</div>`;
+    return;
+  }
+  if (!vivo) return;
+
+  estado.innerHTML = '<b>Cuenta de entrada…</b> entra en el compás 1';
+  const grabando = Pitch.grabar({
+    segundos: totalSeg,
+    alNivel: rms => { if (nivel) nivel.style.width = Math.min(100, rms * 900) + '%'; },
+  });
+  SBAudio.metronomo.arrancar(bpm, {
+    compas: 4,
+    alBeat: i => {
+      if (!vivo || !estado) return;
+      if (i < claqueta) estado.innerHTML = `<b>Cuenta de entrada… ${claqueta - i}</b>`;
+      else estado.innerHTML = `🔴 <b>Grabando</b> — compás ${Math.floor((i - claqueta) / 4) + 1} de ${nBars}`;
+    },
+  });
+
+  const detectadas = await grabando;
+  cerrar();
+  if (!document.body.contains(cont)) return;
+
+  const r = Pitch.calificar(notas, detectadas, { bpm, offsetMs: claqueta * beatMs });
+  const porCompas = {};
+  (r.detalle || []).forEach(d => {
+    const b = d.esperada.bar;
+    (porCompas[b] = porCompas[b] || []).push(d.pitchOK && d.timingOK ? '✓' : (d.pitchOK ? '~' : '✗'));
+  });
+  const bien = r.pct >= 80;
+  cont.innerHTML = `<div class="chk-card">
+    <div class="q-score">${bien ? '🎯' : '🎧'} ${r.pct}% — ${r.aciertos}/${r.total} notas</div>
+    <div class="dim small" style="text-align:center;margin-bottom:8px">
+      ✓ bien · ~ nota correcta pero fuera de tiempo · ✗ fallada o no se oyó</div>
+    ${Object.keys(porCompas).sort((a, b) => a - b).map(b =>
+      `<div class="small" style="font-family:ui-monospace,Menlo,monospace">c.${b}  ${porCompas[b].join(' ')}</div>`).join('')}
+    <p class="dim small" style="margin-top:10px">${bien
+      ? 'Limpio. Súbele 4 BPM o pásate al siguiente nivel del backing.'
+      : 'Baja el tempo hasta que salga limpio: la velocidad llega sola, la limpieza no.'}</p>
+    <button class="btn mini ghost" id="cal-otra">Intentar de nuevo</button>
+  </div>`;
+  if (bien) marcarPracticaHoy();
+  cont.querySelector('#cal-otra').onclick = () => calificarEjecucion(cont, ex);
 }
