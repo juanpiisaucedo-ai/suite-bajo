@@ -107,6 +107,11 @@ const Oido = (() => {
 App.route(/^#\/oido$/, view => {
   view.innerHTML = `
     <h1>Entrenamiento auditivo</h1>
+    <a class="card" href="#/segunda" style="border-color:var(--accent)">
+      <div class="row"><h3>🎤 Segunda voz</h3><span class="badge">norteña</span></div>
+      <div class="dim small">Captura la melodía y la app calcula y toca la segunda (3ª diatónica).
+      Luego suena solo la melodía y tú la cantas encima.</div>
+    </a>
     <p class="dim small">Preguntas infinitas: cada ronda son 10, generadas al momento. Ponte
     audífonos si puedes — el bajo grave se pierde en la bocina del teléfono.</p>
     ${Oido.NIVELES.map(l => {

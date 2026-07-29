@@ -34,8 +34,36 @@ const SBAudio = (() => {
     o.start(t); o.stop(t + 0.04);
   }
 
+  /* timbre claro para registro vocal (el de bajo suena opaco arriba de MIDI 50) */
+  function voz(midi, dur = 0.7, t0 = 0, gain = 0.5) {
+    const c = contexto(), t = c.currentTime + t0, f = freq(midi);
+    const o1 = c.createOscillator(), o2 = c.createOscillator();
+    const g = c.createGain(), g2 = c.createGain(), lp = c.createBiquadFilter();
+    o1.type = 'triangle'; o1.frequency.value = f;
+    o2.type = 'sawtooth'; o2.frequency.value = f; g2.gain.value = 0.16;
+    lp.type = 'lowpass'; lp.frequency.value = 2600; lp.Q.value = 0.6;
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(gain, t + 0.03);
+    g.gain.setValueAtTime(gain, t + dur * 0.75);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.08);
+    o1.connect(lp); o2.connect(g2); g2.connect(lp);
+    lp.connect(g); g.connect(c.destination);
+    o1.start(t); o2.start(t); o1.stop(t + dur + 0.1); o2.stop(t + dur + 0.1);
+  }
+
   return {
     ctx: contexto,
+    voz,
+    /* dos voces a la vez (melodía + segunda) */
+    dueto(pares, { dur = 0.7, gap = 0.06, soloArriba = false, soloAbajo = false } = {}) {
+      let t = 0;
+      pares.forEach(([abajo, arriba]) => {
+        if (!soloArriba) voz(abajo, dur, t, 0.45);
+        if (!soloAbajo) voz(arriba, dur, t, 0.45);
+        t += dur + gap;
+      });
+      return t;
+    },
     async listo() {
       const c = contexto();
       if (c.state === 'suspended') await c.resume();
