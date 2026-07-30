@@ -41,22 +41,52 @@ const SBAudio = (() => {
     registrar(o);
   }
 
-  /* timbre claro para registro vocal (el de bajo suena opaco arriba de MIDI 50) */
+  /* Voz sintética con FORMANTES. Un oscilador pelón suena a consola de 8 bits;
+     lo que hace que algo suene "a voz" son los picos de resonancia (formantes) de
+     la garganta, más un vibrato que entra después del ataque y bordes suaves. */
+  const FORMANTES = [[700, 9, 4], [1150, 8, 6], [2550, 6, 8]];   // vocal "ah": [Hz, dB, Q]
   function voz(midi, dur = 0.7, t0 = 0, gain = 0.5) {
     const c = contexto(), t = c.currentTime + t0, f = freq(midi);
-    const o1 = c.createOscillator(), o2 = c.createOscillator();
-    const g = c.createGain(), g2 = c.createGain(), lp = c.createBiquadFilter();
-    o1.type = 'triangle'; o1.frequency.value = f;
-    o2.type = 'sawtooth'; o2.frequency.value = f; g2.gain.value = 0.16;
-    lp.type = 'lowpass'; lp.frequency.value = 2600; lp.Q.value = 0.6;
+    const largo = Math.max(0.18, dur);
+
+    const osc = c.createOscillator();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(f, t);
+    const cuerpo = c.createOscillator(), gCuerpo = c.createGain();
+    cuerpo.type = 'sine'; cuerpo.frequency.setValueAtTime(f, t); gCuerpo.gain.value = 0.35;
+
+    /* vibrato: arranca en cero y entra poco a poco, como un cantante */
+    const lfo = c.createOscillator(), lfoG = c.createGain();
+    lfo.type = 'sine'; lfo.frequency.value = 5.1;
+    lfoG.gain.setValueAtTime(0, t);
+    lfoG.gain.linearRampToValueAtTime(f * 0.007, t + Math.min(0.4, largo * 0.6));
+    lfo.connect(lfoG); lfoG.connect(osc.frequency); lfoG.connect(cuerpo.frequency);
+
+    const lp = c.createBiquadFilter();
+    lp.type = 'lowpass'; lp.frequency.value = Math.min(4000, f * 12); lp.Q.value = 0.4;
+
+    let cadena = lp;
+    const filtros = FORMANTES.map(([hz, db, q]) => {
+      const b = c.createBiquadFilter();
+      b.type = 'peaking'; b.frequency.value = hz; b.gain.value = db; b.Q.value = q;
+      cadena.connect(b); cadena = b;
+      return b;
+    });
+
+    /* envolvente con bordes suaves: sin clicks y con cola natural */
+    const g = c.createGain();
+    const atk = Math.min(0.06, largo * 0.25), rel = Math.min(0.22, largo * 0.4);
     g.gain.setValueAtTime(0.0001, t);
-    g.gain.exponentialRampToValueAtTime(gain, t + 0.03);
-    g.gain.setValueAtTime(gain, t + dur * 0.75);
-    g.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.08);
-    o1.connect(lp); o2.connect(g2); g2.connect(lp);
-    lp.connect(g); g.connect(c.destination);
-    o1.start(t); o2.start(t); o1.stop(t + dur + 0.1); o2.stop(t + dur + 0.1);
-    registrar(o1, o2);
+    g.gain.exponentialRampToValueAtTime(gain, t + atk);
+    g.gain.setValueAtTime(gain, t + largo - rel);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + largo + 0.05);
+
+    osc.connect(lp); cuerpo.connect(gCuerpo); gCuerpo.connect(lp);
+    cadena.connect(g); g.connect(c.destination);
+    const finT = t + largo + 0.08;
+    osc.start(t); cuerpo.start(t); lfo.start(t);
+    osc.stop(finT); cuerpo.stop(finT); lfo.stop(finT);
+    registrar(osc, cuerpo, lfo);
   }
 
   return {

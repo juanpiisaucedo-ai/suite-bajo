@@ -224,6 +224,16 @@ const Pitch = (() => {
           u.dur = +(n.t + n.dur - u.t).toFixed(3);
         } else unidas.push({ ...n });
       }
+      /* 6) La duración detectada es solo el tramo de altura ESTABLE, más corta que la
+            nota real. Cantando se liga: se estira cada nota hasta que entra la siguiente,
+            salvo que haya una pausa de verdad (respiro) — ahí se respeta el silencio. */
+      const PAUSA_REAL = 0.35;
+      unidas.forEach((n, i) => {
+        const sig = unidas[i + 1];
+        if (!sig) { n.dur = +Math.max(n.dur, Math.min(n.dur * 1.6, n.dur + 0.25)).toFixed(3); return; }
+        const hueco = sig.t - (n.t + n.dur);
+        if (hueco > 0 && hueco < PAUSA_REAL) n.dur = +(sig.t - n.t - 0.02).toFixed(3);
+      });
       return unidas;
     },
 
