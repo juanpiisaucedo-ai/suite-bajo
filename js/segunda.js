@@ -129,8 +129,9 @@ App.route(/^#\/segunda$/, view => {
         ${Segunda.nombresEscala(tonica, modo).map(n => esc(Segunda.enEspanol(n))).join(' · ')}</div>
 
       <h2>2. Captura la melodía</h2>
-      <div class="dim small">Pica los grados, o cántala / impórtala: al cantar e importar se
-        guarda también el <b>ritmo</b> (cuánto dura cada nota y las pausas).</div>
+      <div class="dim small">Pica los grados, o cántala / impórtala con su <b>ritmo</b>.
+        Lo más exacto: pasa la voz por <b>Basic Pitch</b> (gratis, de Spotify) y trae aquí
+        el <b>MIDI</b> — ahí las notas ya vienen perfectas.</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0">
         ${[1,2,3,4,5,6,7,8,9,10].map(g => `<button class="btn mini ghost" data-g="${g}"
             style="padding:12px 0;line-height:1.2">${g}<br><span class="dim small">${esc(NG(g))}</span></button>`).join('')}
@@ -142,9 +143,9 @@ App.route(/^#\/segunda$/, view => {
       </div>
       <div style="display:flex;gap:8px;margin:8px 0">
         <button class="btn mini ghost" id="sg-cantar" style="flex:1">🎙️ Cantando</button>
-        <button class="btn mini ghost" id="sg-import" style="flex:1">📁 Importar pista de voz</button>
+        <button class="btn mini ghost" id="sg-import" style="flex:1">📁 Importar voz o MIDI</button>
       </div>
-      <input type="file" id="sg-file" accept="audio/*" style="display:none">
+      <input type="file" id="sg-file" accept="audio/*,.mid,.midi" style="display:none">
       <div id="sg-cap"></div>
       <div style="display:flex;gap:8px;margin:8px 0 16px">
         <button class="btn mini ghost" id="sg-undo" style="flex:1">← Borrar última</button>
@@ -322,6 +323,33 @@ App.route(/^#\/segunda$/, view => {
   async function importar(archivo) {
     const cap = $('#sg-cap');
     cap.innerHTML = '<div class="chk-card">Leyendo el archivo…</div>';
+    /* Un MIDI (por ejemplo el que saca Basic Pitch) ya trae las notas exactas:
+       no hay nada que detectar, se usa tal cual. */
+    if (/\.midi?$/i.test(archivo.name)) {
+      let notas;
+      try { notas = MidiLector.leer(await archivo.arrayBuffer()); }
+      catch (e) { cap.innerHTML = `<div class="notice">${esc(e.message)}</div>`; return; }
+      if (!notas.length) { cap.innerHTML = '<div class="notice">Ese MIDI viene vacío.</div>'; return; }
+      const t0 = notas[0].t;
+      const nuevas = notas.map(n => ({ g: alGrado(n.midi), t: +(n.t - t0).toFixed(3), dur: n.dur }));
+      cap.innerHTML = `<div class="chk-card">
+        <div><b>${esc(archivo.name)}</b> <span class="badge ok">MIDI · notas exactas</span></div>
+        <div class="dim small" style="margin:6px 0">${nuevas.length} notas, ajustadas al tono
+          ${esc(tonica)} ${esc(modo)}:</div>
+        <div class="song-body small" style="margin:6px 0">${nuevas.map(n =>
+          `${n.t.toFixed(2)}s (${n.dur.toFixed(2)}s)  ${esc(NG(n.g))}  →  ${esc(NS(n.g))}`).join('\n')}</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn mini ghost" id="sg-usar-add" style="flex:1">Agregar</button>
+          <button class="btn mini" id="sg-usar" style="flex:1">Usar como frase</button>
+        </div></div>`;
+      $('#sg-usar').onclick = () => { mel = nuevas; pinta(); };
+      $('#sg-usar-add').onclick = () => {
+        const off = siguienteT();
+        mel = mel.concat(nuevas.map(n => ({ ...n, t: n.t + off })));
+        pinta();
+      };
+      return;
+    }
     let buf;
     try {
       buf = await SBAudio.ctx().decodeAudioData(await archivo.arrayBuffer());

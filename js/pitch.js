@@ -353,3 +353,81 @@ const Pitch = (() => {
 
 /* exponer como global de ventana (const no lo hace solo) */
 window.Pitch = Pitch;
+
+/* Lector de archivos MIDI (.mid). Cuando la melodía viene de un transcriptor como
+   Basic Pitch, las notas y el ritmo son EXACTOS: no hay nada que detectar. */
+window.MidiLector = {
+  leer(arrayBuffer) {
+    const dv = new DataView(arrayBuffer);
+    let p = 0;
+    const txt = n => { let s = ''; for (let i = 0; i < n; i++) s += String.fromCharCode(dv.getUint8(p++)); return s; };
+    const u32 = () => { const v = dv.getUint32(p); p += 4; return v; };
+    const u16 = () => { const v = dv.getUint16(p); p += 2; return v; };
+    const varlen = () => { let d = 0, b; do { b = dv.getUint8(p++); d = (d << 7) | (b & 0x7f); } while (b & 0x80); return d; };
+    if (txt(4) !== 'MThd') throw new Error('Ese archivo no es un MIDI.');
+    u32(); u16();
+    const nPistas = u16(), division = u16();
+    if (division & 0x8000) throw new Error('MIDI con división SMPTE: no soportado.');
+
+    const eventos = [], tempos = [{ tick: 0, us: 500000 }];   // 120 bpm por defecto
+    for (let k = 0; k < nPistas && p < dv.byteLength - 8; k++) {
+      if (txt(4) !== 'MTrk') break;
+      const largo = u32(), fin = p + largo;
+      let tick = 0, corriendo = 0;
+      while (p < fin) {
+        tick += varlen();
+        let est = dv.getUint8(p);
+        if (est & 0x80) { p++; corriendo = est; } else est = corriendo;
+        const tipo = est & 0xf0;
+        if (est === 0xff) {
+          const meta = dv.getUint8(p++), l = varlen();
+          if (meta === 0x51 && l === 3) {
+            tempos.push({ tick, us: (dv.getUint8(p) << 16) | (dv.getUint8(p + 1) << 8) | dv.getUint8(p + 2) });
+          }
+          p += l;
+        } else if (est === 0xf0 || est === 0xf7) { p += varlen(); }
+        else if (tipo === 0x90 || tipo === 0x80) {
+          const nota = dv.getUint8(p++), vel = dv.getUint8(p++);
+          eventos.push({ tick, on: tipo === 0x90 && vel > 0, nota });
+        } else if (tipo === 0xa0 || tipo === 0xb0 || tipo === 0xe0) p += 2;
+        else if (tipo === 0xc0 || tipo === 0xd0) p += 1;
+        else p++;
+      }
+      p = fin;
+    }
+    /* ticks -> segundos usando el mapa de tempos */
+    tempos.sort((a, b) => a.tick - b.tick);
+    const segundos = tick => {
+      let s = 0, prev = 0, us = tempos[0].us;
+      for (const t of tempos) {
+        if (t.tick >= tick) break;
+        s += (t.tick - prev) * us / division / 1e6;
+        prev = t.tick; us = t.us;
+      }
+      return s + (tick - prev) * us / division / 1e6;
+    };
+    /* emparejar note-on con su note-off */
+    eventos.sort((a, b) => a.tick - b.tick || (a.on ? 1 : -1));
+    const abiertas = {}, notas = [];
+    for (const e of eventos) {
+      if (e.on) (abiertas[e.nota] = abiertas[e.nota] || []).push(e.tick);
+      else {
+        const ini = (abiertas[e.nota] || []).shift();
+        if (ini != null) {
+          const t = segundos(ini), dur = segundos(e.tick) - t;
+          if (dur > 0.03) notas.push({ t: +t.toFixed(3), dur: +dur.toFixed(3), midi: e.nota, cents: 0 });
+        }
+      }
+    }
+    notas.sort((a, b) => a.t - b.t);
+    /* si viene polifónico, quedarse con la voz de arriba (la melodía) */
+    const mono = [];
+    for (const n of notas) {
+      const u = mono[mono.length - 1];
+      if (u && n.t < u.t + u.dur - 0.02) {
+        if (n.midi > u.midi) { u.dur = +(n.t - u.t).toFixed(3); mono.push(n); }
+      } else mono.push(n);
+    }
+    return mono.filter(n => n.dur > 0.05);
+  },
+};
