@@ -72,17 +72,22 @@ const SBAudio = (() => {
       });
       return t;
     },
-    /* Devuelve el contexto YA sonando. Si quedó suspendido o interrumpido (pasa en
-       iOS después de usar el micrófono) lo revive, y si no revive lo recrea. */
+    /* Pone al teléfono en modo REPRODUCCIÓN. En iOS, tras usar el micrófono la sesión
+       queda en 'play-and-record' y el sonido se va al auricular chico (o se calla con
+       el switch de silencio): esto lo regresa a la bocina. */
+    modoReproducir() {
+      try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch {}
+    },
+    modoGrabar() {
+      try { if (navigator.audioSession) navigator.audioSession.type = 'play-and-record'; } catch {}
+    },
+    estado: () => (ctx ? ctx.state : 'sin iniciar'),
+    /* Devuelve el contexto ya sonando (nunca lo cierra: cerrarlo fuera del gesto del
+       usuario deja la app muda hasta recargar). */
     async listo() {
-      let c = contexto();
+      this.modoReproducir();
+      const c = contexto();
       if (c.state !== 'running') { try { await c.resume(); } catch {} }
-      if (c.state !== 'running') {
-        try { await c.close(); } catch {}
-        ctx = null; activos = [];
-        c = contexto();
-        try { await c.resume(); } catch {}
-      }
       return c;
     },
     nota,

@@ -138,6 +138,7 @@ App.route(/^#\/segunda$/, view => {
         <button class="btn mini" data-play="seg" style="flex:1">▶ Segunda</button>
         <button class="btn" data-play="dos" style="flex:1.4">▶ Las dos</button>
       </div>
+      <div class="dim small" id="sg-diag" style="margin-top:6px"></div>
       <button class="btn full ghost" id="sg-practica" style="margin-top:10px">🎤 Practicar: suena la melodía, canta la segunda</button>
       <div id="sg-zona"></div>
 
@@ -179,6 +180,11 @@ App.route(/^#\/segunda$/, view => {
         if (b.dataset.play === reproduciendo) { reproduciendo = null; return; }
       }
       await SBAudio.listo();
+      const st = SBAudio.estado();
+      const diag = $('#sg-diag');
+      if (diag) diag.textContent = st === 'running'
+        ? `audio: ok · ${pares.length} notas`
+        : `⚠️ audio bloqueado (${st}) · vuelve a tocar el botón`;
       reset();
       b.textContent = b.textContent.replace('▶', '⏹');
       reproduciendo = b.dataset.play;

@@ -110,7 +110,7 @@ const Pitch = (() => {
       }
       /* Reusar el contexto de SBAudio: en iOS abrir uno aparte para el micrófono
          deja mudo al de reproducción cuando se cierra. */
-      if (window.SBAudio) { ctx = await SBAudio.listo(); ctxPropio = false; }
+      if (window.SBAudio) { ctx = await SBAudio.listo(); SBAudio.modoGrabar(); ctxPropio = false; }
       else { ctx = new (window.AudioContext || window.webkitAudioContext)(); ctxPropio = true; }
       if (ctx.state === 'suspended') await ctx.resume();
       fuente = ctx.createMediaStreamSource(stream);
@@ -129,6 +129,7 @@ const Pitch = (() => {
       if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
       try { if (fuente) fuente.disconnect(); if (filtro) filtro.disconnect(); } catch {}
       if (ctxPropio && ctx) { try { ctx.close(); } catch {} }   // el compartido NO se cierra
+      try { if (window.SBAudio) SBAudio.modoReproducir(); } catch {}   // salida de vuelta a la bocina
       ctx = null; fuente = null; filtro = null;
       analyser = null; ultimo = null; escuchas = [];
     },
