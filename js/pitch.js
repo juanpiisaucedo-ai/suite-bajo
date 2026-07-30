@@ -128,6 +128,69 @@ const Pitch = (() => {
     },
     onNota(cb) { escuchas.push(cb); },
 
+    /* ANÁLISIS OFFLINE de un archivo ya decodificado (pista de voz aislada).
+       No usa micrófono: recorre el buffer, detecta la altura marco por marco y
+       agrupa los marcos estables en notas. Devuelve [{t, dur, midi, cents}]. */
+    analizarBuffer(datos, sampleRate, { minDurMs = 90, hopMs = 20, umbralRms = 0.012, agudo = true } = {}) {
+      const techoPrevio = techo;
+      techo = agudo ? 700 : 400;
+      const DECF = Math.max(1, Math.round(sampleRate / 11025));
+      const sr = sampleRate / DECF;
+      const N = 1024, hop = Math.max(64, Math.round(sr * hopMs / 1000));
+      const x = new Float32Array(Math.floor(datos.length / DECF));
+      for (let i = 0; i < x.length; i++) {
+        let s = 0;
+        for (let k = 0; k < DECF; k++) s += datos[i * DECF + k] || 0;
+        x[i] = s / DECF;
+      }
+      const marcos = [], win = new Float32Array(N);
+      for (let p = 0; p + N < x.length; p += hop) {
+        let rms = 0;
+        for (let i = 0; i < N; i++) { win[i] = x[p + i]; rms += win[i] * win[i]; }
+        rms = Math.sqrt(rms / N);
+        let m = null;
+        if (rms >= umbralRms) {
+          const f = yin(win, sr);
+          if (f >= 60 && f <= 700) m = 69 + 12 * Math.log2(f / 440);
+        }
+        marcos.push({ t: p / sr, m, rms });
+      }
+      techo = techoPrevio;
+      /* mediana de 3: mata saltos de octava sueltos y el vibrato */
+      const suave = marcos.map((f, i) => {
+        const v = [marcos[i - 1], f, marcos[i + 1]].filter(z => z && z.m != null).map(z => z.m);
+        if (!v.length) return null;
+        v.sort((a, b) => a - b);
+        return v[Math.floor(v.length / 2)];
+      });
+      /* agrupar marcos con la misma nota (tolera huecos cortos) */
+      const notas = [];
+      let act = null, huecos = 0;
+      const dt = hop / sr;
+      suave.forEach((m, i) => {
+        const t = marcos[i].t;
+        const redondo = m == null ? null : Math.round(m);
+        if (redondo == null) {
+          if (act && ++huecos > 3) { cerrar(t); }
+          return;
+        }
+        if (act && redondo === act.midi) { act.fin = t + dt; act.suma += m; act.n++; huecos = 0; return; }
+        if (act) cerrar(t);
+        act = { midi: redondo, ini: t, fin: t + dt, suma: m, n: 1 };
+        huecos = 0;
+      });
+      if (act) cerrar(marcos.length ? marcos[marcos.length - 1].t + dt : 0);
+      function cerrar() {
+        if (act && (act.fin - act.ini) * 1000 >= minDurMs) {
+          const prom = act.suma / act.n;
+          notas.push({ t: +act.ini.toFixed(3), dur: +(act.fin - act.ini).toFixed(3),
+                       midi: act.midi, cents: Math.round((prom - act.midi) * 100) });
+        }
+        act = null;
+      }
+      return notas;
+    },
+
     /* Graba 'segundos' y devuelve las notas detectadas con su tiempo desde t=0. */
     grabar({ segundos, alOnset, alNivel } = {}) {
       return new Promise(resolve => {

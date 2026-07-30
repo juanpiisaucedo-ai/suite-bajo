@@ -117,7 +117,11 @@ App.route(/^#\/segunda$/, view => {
             ${esc(NG(g))} <span class="dim">+ ${esc(NS(g))}</span></span>`).join('')
           : '<span class="dim small">Aún no capturas nada. Pica los grados de arriba.</span>'}
       </div>
-      <button class="btn full ghost" id="sg-cantar" style="margin:8px 0">🎙️ Capturar cantando (o tocando)</button>
+      <div style="display:flex;gap:8px;margin:8px 0">
+        <button class="btn mini ghost" id="sg-cantar" style="flex:1">🎙️ Cantando</button>
+        <button class="btn mini ghost" id="sg-import" style="flex:1">📁 Importar pista de voz</button>
+      </div>
+      <input type="file" id="sg-file" accept="audio/*" style="display:none">
       <div id="sg-cap"></div>
       <div style="display:flex;gap:8px;margin:8px 0 16px">
         <button class="btn mini ghost" id="sg-undo" style="flex:1">← Borrar última</button>
@@ -196,6 +200,8 @@ App.route(/^#\/segunda$/, view => {
     view.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { Segunda.borrar(+b.dataset.del); pinta(); });
     $('#sg-practica').onclick = () => practicar(pares);
     $('#sg-cantar').onclick = () => capturar();
+    $('#sg-import').onclick = () => $('#sg-file').click();
+    $('#sg-file').onchange = e => { if (e.target.files[0]) importar(e.target.files[0]); };
   };
 
   /* Captura la melodía cantándola o tocándola: cada nota detectada se ajusta al grado
@@ -238,6 +244,84 @@ App.route(/^#\/segunda$/, view => {
       <button class="btn mini" id="sg-capfin">Listo</button></div>`;
     window._cleanup = () => Pitch.detener();
     $('#sg-capfin').onclick = () => { Pitch.detener(); pinta(); };
+  }
+
+  /* Importa una pista de VOZ YA AISLADA (la que separaste con tu IA) y saca la melodía.
+     Se analiza el archivo, sin micrófono: por eso sale mucho más limpio que cantando. */
+  async function importar(archivo) {
+    const cap = $('#sg-cap');
+    cap.innerHTML = '<div class="chk-card">Leyendo el archivo…</div>';
+    let buf;
+    try {
+      const datos = await archivo.arrayBuffer();
+      buf = await SBAudio.ctx().decodeAudioData(datos);
+    } catch {
+      cap.innerHTML = '<div class="notice">No pude leer ese audio. Prueba con MP3, WAV o M4A.</div>';
+      return;
+    }
+    const dur = buf.duration;
+    const pintaPanel = (desde = 0, largo = Math.min(15, Math.round(dur))) => {
+      cap.innerHTML = `<div class="chk-card">
+        <div><b>${esc(archivo.name)}</b> <span class="dim small">· ${dur.toFixed(1)} s</span></div>
+        <div class="dim small" style="margin:6px 0">Elige el pedazo a sacar (una frase a la vez sale
+          mejor que la canción entera). Máximo 25 s por análisis.</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <label class="small dim" style="flex:1">desde (s)
+            <input type="number" id="sg-desde" value="${desde}" min="0" max="${Math.floor(dur)}" step="1"></label>
+          <label class="small dim" style="flex:1">duración (s)
+            <input type="number" id="sg-largo" value="${largo}" min="2" max="25" step="1"></label>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button class="btn mini ghost" id="sg-oir" style="flex:1">▶ Oír pedazo</button>
+          <button class="btn mini" id="sg-analiza" style="flex:1.4">Sacar las notas</button>
+        </div>
+        <div id="sg-res"></div></div>`;
+      $('#sg-oir').onclick = () => {
+        SBAudio.parar();
+        const c = SBAudio.ctx(), src = c.createBufferSource();
+        src.buffer = buf; src.connect(c.destination);
+        src.start(0, +$('#sg-desde').value, +$('#sg-largo').value);
+      };
+      $('#sg-analiza').onclick = async () => {
+        const d0 = Math.max(0, +$('#sg-desde').value);
+        const L = Math.min(25, Math.max(2, +$('#sg-largo').value));
+        $('#sg-res').innerHTML = '<div class="dim small" style="margin-top:8px">Analizando…</div>';
+        await new Promise(r => setTimeout(r, 30));
+        const sr = buf.sampleRate;
+        const ini = Math.floor(d0 * sr), fin = Math.min(buf.length, ini + Math.floor(L * sr));
+        const mono = new Float32Array(fin - ini);
+        for (let ch = 0; ch < buf.numberOfChannels; ch++) {
+          const c = buf.getChannelData(ch);
+          for (let i = 0; i < mono.length; i++) mono[i] += c[ini + i] / buf.numberOfChannels;
+        }
+        const notas = Pitch.analizarBuffer(mono, sr);
+        if (!notas.length) {
+          $('#sg-res').innerHTML = '<div class="notice">No encontré notas claras ahí. Prueba otro pedazo, o sube el volumen de la pista.</div>';
+          return;
+        }
+        const ref = G(1);
+        const grados = notas.map(n => {
+          let m = n.midi;
+          while (m < ref - 6) m += 12;
+          while (m > ref + 18) m -= 12;
+          let mejor = 1, dist = 99;
+          for (let g = 1; g <= 10; g++) { const d = Math.abs(G(g) - m); if (d < dist) { dist = d; mejor = g; } }
+          return mejor;
+        });
+        $('#sg-res').innerHTML = `
+          <div class="dim small" style="margin-top:10px">${notas.length} notas detectadas
+            (ajustadas al tono ${esc(tonica)} ${esc(modo)}):</div>
+          <div class="song-body small" style="margin:6px 0">${grados.map((g, i) =>
+            `${notas[i].t.toFixed(2)}s  ${esc(NG(g))}  →  ${esc(NS(g))}`).join('\n')}</div>
+          <div style="display:flex;gap:8px">
+            <button class="btn mini ghost" id="sg-usar-add" style="flex:1">Agregar a la frase</button>
+            <button class="btn mini" id="sg-usar" style="flex:1">Usar como frase</button>
+          </div>`;
+        $('#sg-usar').onclick = () => { mel = grados; pinta(); };
+        $('#sg-usar-add').onclick = () => { mel = mel.concat(grados); pinta(); };
+      };
+    };
+    pintaPanel();
   }
 
   /* Suena la melodía nota por nota; tú cantas la segunda y el micrófono te dice si le atinas. */
