@@ -62,6 +62,17 @@ const SBAudio = (() => {
   return {
     ctx: contexto,
     voz,
+    /* dos voces respetando el ritmo capturado: cada nota con su tiempo y su duración */
+    duetoTiempos(notas, { soloArriba = false, soloAbajo = false } = {}) {
+      let fin = 0;
+      notas.forEach(({ abajo, arriba, t, dur }) => {
+        const d = Math.max(0.12, dur || 0.5);
+        if (!soloArriba) voz(abajo, d, t, 0.45);
+        if (!soloAbajo) voz(arriba, d, t, 0.45);
+        fin = Math.max(fin, t + d);
+      });
+      return fin + 0.3;
+    },
     /* dos voces a la vez (melodía + segunda) */
     dueto(pares, { dur = 0.7, gap = 0.06, soloArriba = false, soloAbajo = false } = {}) {
       let t = 0;

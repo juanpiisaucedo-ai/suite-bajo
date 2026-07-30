@@ -77,14 +77,36 @@ App.route(/^#\/segunda$/, view => {
   let tonica = store.get('seg_tonica', 'G');
   let modo = store.get('seg_modo', 'mayor');
   let arm = store.get('seg_arm', '3a');
-  let mel = [], reproduciendo = null;
+  let ritmoReal = store.get('seg_ritmo', true);
+  let mel = [], reproduciendo = null;            // mel: [{g, t, dur}]
   const G = g => Segunda.midiDeGrado(g, tonica, modo);
   const S = g => Segunda.midiArmonia(g, tonica, modo, arm);
   const NG = g => Segunda.nombreDeGrado(g, tonica, modo);
   const NS = g => Segunda.nombreDeGrado(Segunda.gradoArmonia(g, arm), tonica, modo);
+  /* frases viejas guardaban solo el grado: se les inventa un ritmo parejo */
+  const norm = n => (typeof n === 'number' ? { g: n, t: null, dur: 0.6 } : n);
+
+  /* Arma lo que se va a tocar. Con ritmo real usa el tiempo y duración capturados;
+     en modo parejo reparte todo con la misma duración. */
+  const secuencia = () => {
+    let t = 0;
+    return mel.map(x => {
+      const n = norm(x);
+      const usaReal = ritmoReal && n.t != null;
+      const dur = usaReal ? Math.max(0.12, n.dur || 0.5) : 0.7;
+      const ini = usaReal ? n.t : t;
+      t = ini + dur + 0.08;
+      return { g: n.g, abajo: G(n.g), arriba: S(n.g), t: ini, dur };
+    });
+  };
+  const siguienteT = () => {                      // dónde cae la próxima nota al picar grados
+    if (!mel.length) return 0;
+    const u = norm(mel[mel.length - 1]);
+    return (u.t == null ? mel.length * 0.68 : u.t + (u.dur || 0.6) + 0.08);
+  };
 
   const pinta = () => {
-    const pares = mel.map(g => [G(g), S(g)]);
+    const seq = secuencia();
     view.innerHTML = `
       <a class="dim small" href="#/oido">← Oído</a>
       <h1>🎤 Segunda voz</h1>
@@ -106,16 +128,17 @@ App.route(/^#\/segunda$/, view => {
       <div class="dim small" style="margin-bottom:12px">Notas del tono:
         ${Segunda.nombresEscala(tonica, modo).map(n => esc(Segunda.enEspanol(n))).join(' · ')}</div>
 
-      <h2>2. Toca la melodía</h2>
-      <div class="dim small">Cada botón es un grado del tono. Ve picando la melodía como la cantas.</div>
+      <h2>2. Captura la melodía</h2>
+      <div class="dim small">Pica los grados, o cántala / impórtala: al cantar e importar se
+        guarda también el <b>ritmo</b> (cuánto dura cada nota y las pausas).</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0">
         ${[1,2,3,4,5,6,7,8,9,10].map(g => `<button class="btn mini ghost" data-g="${g}"
             style="padding:12px 0;line-height:1.2">${g}<br><span class="dim small">${esc(NG(g))}</span></button>`).join('')}
       </div>
       <div class="card" style="min-height:54px">
-        ${mel.length ? mel.map(g => `<span class="badge" style="margin:2px 3px;display:inline-block">
-            ${esc(NG(g))} <span class="dim">+ ${esc(NS(g))}</span></span>`).join('')
-          : '<span class="dim small">Aún no capturas nada. Pica los grados de arriba.</span>'}
+        ${seq.length ? seq.map(n => `<span class="badge" style="margin:2px 3px;display:inline-block">
+            ${esc(NG(n.g))} <span class="dim">+ ${esc(NS(n.g))}</span></span>`).join('')
+          : '<span class="dim small">Aún no capturas nada.</span>'}
       </div>
       <div style="display:flex;gap:8px;margin:8px 0">
         <button class="btn mini ghost" id="sg-cantar" style="flex:1">🎙️ Cantando</button>
@@ -129,9 +152,13 @@ App.route(/^#\/segunda$/, view => {
       </div>
 
       <h2>3. Escucha la armonía</h2>
-      <div class="seg" style="margin-bottom:10px">
+      <div class="seg" style="margin-bottom:8px">
         ${Segunda.ARMONIAS.map(a => `<button data-arm="${a.id}"
           class="${a.id === arm ? 'active' : ''}" style="font-size:13px">${esc(a.label)}</button>`).join('')}
+      </div>
+      <div class="seg" style="margin-bottom:10px">
+        <button data-ritmo="1" class="${ritmoReal ? 'active' : ''}">Ritmo real</button>
+        <button data-ritmo="0" class="${ritmoReal ? '' : 'active'}">Notas parejas</button>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn mini" data-play="mel" style="flex:1">▶ Melodía</button>
@@ -142,10 +169,10 @@ App.route(/^#\/segunda$/, view => {
       <button class="btn full ghost" id="sg-practica" style="margin-top:10px">🎤 Practicar: suena la melodía, canta la segunda</button>
       <div id="sg-zona"></div>
 
-      ${mel.length ? `<h2>Detalle</h2>
-        <div class="song-body small">${mel.map((g, i) =>
-          `${String(i + 1).padStart(2)}.  melodía ${esc(NG(g))}   →   segunda ${esc(NS(g))}` +
-          `   (${esc(Segunda.intervaloDe(g, tonica, modo, arm))})`).join('\n')}</div>
+      ${seq.length ? `<h2>Detalle</h2>
+        <div class="song-body small">${seq.map((n, i) =>
+          `${String(i + 1).padStart(2)}. ${n.t.toFixed(2)}s (${n.dur.toFixed(2)}s)  ` +
+          `${esc(NG(n.g))} → ${esc(NS(n.g))}  (${esc(Segunda.intervaloDe(n.g, tonica, modo, arm))})`).join('\n')}</div>
         <button class="btn full ghost" id="sg-save" style="margin-top:10px">Guardar esta frase</button>` : ''}
 
       ${Segunda.frases().length ? `<h2>Frases guardadas</h2>
@@ -159,11 +186,8 @@ App.route(/^#\/segunda$/, view => {
     $('#sg-modo').onchange = e => { modo = e.target.value; store.set('seg_modo', modo); pinta(); };
     view.querySelectorAll('[data-g]').forEach(b => b.onclick = () => {
       const g = +b.dataset.g;
-      mel.push(g);
-      SBAudio.listo().then(() => {
-        SBAudio.parar();
-        SBAudio.voz(G(g), 0.5); SBAudio.voz(S(g), 0.5, 0, 0.35);
-      });
+      mel.push({ g, t: siguienteT(), dur: 0.6 });
+      SBAudio.listo().then(() => { SBAudio.parar(); SBAudio.voz(G(g), 0.5); SBAudio.voz(S(g), 0.5, 0, 0.35); });
       pinta();
     });
     $('#sg-undo').onclick = () => { mel.pop(); pinta(); };
@@ -171,24 +195,26 @@ App.route(/^#\/segunda$/, view => {
     view.querySelectorAll('[data-arm]').forEach(b => b.onclick = () => {
       arm = b.dataset.arm; store.set('seg_arm', arm); pinta();
     });
+    view.querySelectorAll('[data-ritmo]').forEach(b => b.onclick = () => {
+      ritmoReal = b.dataset.ritmo === '1'; store.set('seg_ritmo', ritmoReal); pinta();
+    });
     view.querySelectorAll('[data-play]').forEach(b => b.onclick = async () => {
-      if (!mel.length) return;
+      if (!seq.length) return;
       const reset = () => view.querySelectorAll('[data-play]').forEach(o =>
         o.textContent = o.textContent.replace('⏹', '▶'));
-      if (SBAudio.sonando()) {                      // segundo clic = detener
+      if (SBAudio.sonando()) {
         SBAudio.parar(); reset();
         if (b.dataset.play === reproduciendo) { reproduciendo = null; return; }
       }
       await SBAudio.listo();
-      const st = SBAudio.estado();
-      const diag = $('#sg-diag');
+      const st = SBAudio.estado(), diag = $('#sg-diag');
       if (diag) diag.textContent = st === 'running'
-        ? `audio: ok · ${pares.length} notas`
+        ? `audio ok · ${seq.length} notas · ${(seq[seq.length - 1].t + seq[seq.length - 1].dur).toFixed(1)}s`
         : `⚠️ audio bloqueado (${st}) · vuelve a tocar el botón`;
       reset();
       b.textContent = b.textContent.replace('▶', '⏹');
       reproduciendo = b.dataset.play;
-      const dur = SBAudio.dueto(pares, {
+      const dur = SBAudio.duetoTiempos(seq, {
         soloAbajo: b.dataset.play === 'mel', soloArriba: b.dataset.play === 'seg' });
       setTimeout(() => { if (reproduciendo === b.dataset.play) { reset(); reproduciendo = null; } }, dur * 1000);
     });
@@ -201,17 +227,27 @@ App.route(/^#\/segunda$/, view => {
     };
     view.querySelectorAll('[data-load]').forEach(b => b.onclick = () => {
       const f = Segunda.frases()[+b.dataset.load];
-      tonica = f.tonica; modo = f.modo; arm = f.arm || '3a'; mel = [...f.mel]; pinta();
+      tonica = f.tonica; modo = f.modo; arm = f.arm || '3a'; mel = f.mel.map(norm); pinta();
     });
     view.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { Segunda.borrar(+b.dataset.del); pinta(); });
-    $('#sg-practica').onclick = () => practicar(pares);
+    $('#sg-practica').onclick = () => practicar(secuencia());
     $('#sg-cantar').onclick = () => capturar();
     $('#sg-import').onclick = () => $('#sg-file').click();
     $('#sg-file').onchange = e => { if (e.target.files[0]) importar(e.target.files[0]); };
   };
 
-  /* Captura la melodía cantándola o tocándola: cada nota detectada se ajusta al grado
-     más cercano del tono (por eso hay que elegir bien el tono antes). */
+  /* lleva una nota detectada al grado más cercano del tono */
+  const alGrado = midi => {
+    const ref = G(1);
+    let m = midi;
+    while (m < ref - 6) m += 12;
+    while (m > ref + 18) m -= 12;
+    let mejor = 1, dist = 99;
+    for (let g = 1; g <= 10; g++) { const d = Math.abs(G(g) - m); if (d < dist) { dist = d; mejor = g; } }
+    return mejor;
+  };
+
+  /* Captura cantando: sigue la altura y mide cuánto dura cada nota (eso es el ritmo). */
   async function capturar() {
     const cap = $('#sg-cap');
     if (!window.Pitch || !Pitch.soportado()) {
@@ -223,152 +259,141 @@ App.route(/^#\/segunda$/, view => {
     try { await Pitch.iniciar({ agudo: true }); }
     catch (e) { cap.innerHTML = `<div class="notice">🎤 ${esc(e.message)}</div>`; return; }
 
-    const ref = G(1);
-    const alGrado = midi => {                 // lleva la nota al registro de referencia
-      let m = midi;
-      while (m < ref - 6) m += 12;
-      while (m > ref + 18) m -= 12;
-      let mejor = 1, dist = 99;
-      for (let g = 1; g <= 10; g++) { const d = Math.abs(G(g) - m); if (d < dist) { dist = d; mejor = g; } }
-      return mejor;
-    };
-
     cap.innerHTML = `<div class="chk-card">
       <div id="sg-vivo" style="font-size:30px;font-weight:800;text-align:center;min-height:40px">–</div>
-      <div class="dim small" style="text-align:center">canta la melodía; cada nota que sostengas
-        un instante se captura sola</div>
+      <div class="dim small" style="text-align:center">canta la melodía: se guarda la nota y
+        cuánto la sostienes</div>
       <div id="sg-capmsg" class="small" style="margin:10px 0;min-height:22px"></div>
-      <button class="btn mini" id="sg-capfin">Listo</button>
-    </div>`;
+      <button class="btn mini" id="sg-capfin">Listo</button></div>`;
     const vivo = $('#sg-vivo'), msg = $('#sg-capmsg');
 
-    /* Cantando NO hay golpe de ataque (la voz liga las notas), así que no sirve
-       detectar ataques: seguimos la altura y cortamos nota cuando cambia y se estabiliza. */
     let ult = null, estable = null, cuenta = 0, silencio = 0;
+    let abierta = null, tBase = null;
+    const cerrar = fin => {
+      if (!abierta) return;
+      const dur = (fin - abierta.tIni) / 1000;
+      if (dur >= 0.12) mel.push({ g: abierta.g, t: (abierta.tIni - tBase) / 1000, dur });
+      abierta = null;
+      if (msg) msg.innerHTML = `<b>${mel.length}</b> notas: ` +
+        mel.slice(-10).map(x => esc(NG(norm(x).g))).join(' · ');
+    };
     const timer = setInterval(() => {
-      const p = Pitch.actual();
+      const p = Pitch.actual(), ahora = performance.now();
       const m = p ? p.midi : null;
       if (vivo) {
         vivo.textContent = p ? Segunda.nombreLibre(p.midi, tonica) : '–';
         vivo.style.color = p ? 'var(--accent)' : 'var(--txt-dim)';
       }
-      if (m == null) {                        // pausa: permite repetir la misma nota
-        if (++silencio >= 4) { ult = null; estable = null; cuenta = 0; }
+      if (m == null) {
+        if (++silencio >= 4) { cerrar(ahora - 100); ult = null; estable = null; cuenta = 0; }
         return;
       }
       silencio = 0;
       if (m === estable) cuenta++; else { estable = m; cuenta = 1; }
-      if (cuenta === 5 && m !== ult) {        // ~125 ms sostenida y distinta de la anterior
+      if (cuenta === 5 && m !== ult) {          // nota nueva confirmada (empezó ~125 ms antes)
+        const tIni = ahora - 125;
+        cerrar(tIni);
+        if (tBase == null) tBase = tIni;
         ult = m;
-        mel.push(alGrado(m));
-        if (msg) msg.innerHTML = `<b>${mel.length}</b> notas: ` +
-          mel.slice(-10).map(x => esc(NG(x))).join(' · ');
+        abierta = { g: alGrado(m), tIni };
       }
     }, 25);
 
-    const cerrar = () => { clearInterval(timer); Pitch.detener(); };
-    window._cleanup = cerrar;
-    $('#sg-capfin').onclick = () => { cerrar(); pinta(); };
+    const fin = () => { clearInterval(timer); cerrar(performance.now()); Pitch.detener(); };
+    window._cleanup = () => { clearInterval(timer); Pitch.detener(); };
+    $('#sg-capfin').onclick = () => { fin(); pinta(); };
   }
 
-  /* Importa una pista de VOZ YA AISLADA (la que separaste con tu IA) y saca la melodía.
-     Se analiza el archivo, sin micrófono: por eso sale mucho más limpio que cantando. */
+  /* Importa una pista de VOZ YA AISLADA y saca melodía + ritmo (sin micrófono). */
   async function importar(archivo) {
     const cap = $('#sg-cap');
     cap.innerHTML = '<div class="chk-card">Leyendo el archivo…</div>';
     let buf;
     try {
-      const datos = await archivo.arrayBuffer();
-      buf = await SBAudio.ctx().decodeAudioData(datos);
+      buf = await SBAudio.ctx().decodeAudioData(await archivo.arrayBuffer());
     } catch {
       cap.innerHTML = '<div class="notice">No pude leer ese audio. Prueba con MP3, WAV o M4A.</div>';
       return;
     }
-    const dur = buf.duration;
-    const pintaPanel = (desde = 0, largo = Math.min(15, Math.round(dur))) => {
-      cap.innerHTML = `<div class="chk-card">
-        <div><b>${esc(archivo.name)}</b> <span class="dim small">· ${dur.toFixed(1)} s</span></div>
-        <div class="dim small" style="margin:6px 0">Elige el pedazo a sacar (una frase a la vez sale
-          mejor que la canción entera). Máximo 25 s por análisis.</div>
-        <div style="display:flex;gap:8px;align-items:center">
-          <label class="small dim" style="flex:1">desde (s)
-            <input type="number" id="sg-desde" value="${desde}" min="0" max="${Math.floor(dur)}" step="1"></label>
-          <label class="small dim" style="flex:1">duración (s)
-            <input type="number" id="sg-largo" value="${largo}" min="2" max="25" step="1"></label>
-        </div>
-        <div style="display:flex;gap:8px;margin-top:8px">
-          <button class="btn mini ghost" id="sg-oir" style="flex:1">▶ Oír pedazo</button>
-          <button class="btn mini" id="sg-analiza" style="flex:1.4">Sacar las notas</button>
-        </div>
-        <div id="sg-res"></div></div>`;
-      $('#sg-oir').onclick = () => {
-        SBAudio.parar();
-        const c = SBAudio.ctx(), src = c.createBufferSource();
-        src.buffer = buf; src.connect(c.destination);
-        src.start(0, +$('#sg-desde').value, +$('#sg-largo').value);
-      };
-      $('#sg-analiza').onclick = async () => {
-        const d0 = Math.max(0, +$('#sg-desde').value);
-        const L = Math.min(25, Math.max(2, +$('#sg-largo').value));
-        $('#sg-res').innerHTML = '<div class="dim small" style="margin-top:8px">Analizando…</div>';
-        await new Promise(r => setTimeout(r, 30));
-        const sr = buf.sampleRate;
-        const ini = Math.floor(d0 * sr), fin = Math.min(buf.length, ini + Math.floor(L * sr));
-        const mono = new Float32Array(fin - ini);
-        for (let ch = 0; ch < buf.numberOfChannels; ch++) {
-          const c = buf.getChannelData(ch);
-          for (let i = 0; i < mono.length; i++) mono[i] += c[ini + i] / buf.numberOfChannels;
-        }
-        const notas = Pitch.analizarBuffer(mono, sr);
-        if (!notas.length) {
-          $('#sg-res').innerHTML = '<div class="notice">No encontré notas claras ahí. Prueba otro pedazo, o sube el volumen de la pista.</div>';
-          return;
-        }
-        const ref = G(1);
-        const grados = notas.map(n => {
-          let m = n.midi;
-          while (m < ref - 6) m += 12;
-          while (m > ref + 18) m -= 12;
-          let mejor = 1, dist = 99;
-          for (let g = 1; g <= 10; g++) { const d = Math.abs(G(g) - m); if (d < dist) { dist = d; mejor = g; } }
-          return mejor;
-        });
-        $('#sg-res').innerHTML = `
-          <div class="dim small" style="margin-top:10px">${notas.length} notas detectadas
-            (ajustadas al tono ${esc(tonica)} ${esc(modo)}):</div>
-          <div class="song-body small" style="margin:6px 0">${grados.map((g, i) =>
-            `${notas[i].t.toFixed(2)}s  ${esc(NG(g))}  →  ${esc(NS(g))}`).join('\n')}</div>
-          <div style="display:flex;gap:8px">
-            <button class="btn mini ghost" id="sg-usar-add" style="flex:1">Agregar a la frase</button>
-            <button class="btn mini" id="sg-usar" style="flex:1">Usar como frase</button>
-          </div>`;
-        $('#sg-usar').onclick = () => { mel = grados; pinta(); };
-        $('#sg-usar-add').onclick = () => { mel = mel.concat(grados); pinta(); };
+    const durTotal = buf.duration;
+    cap.innerHTML = `<div class="chk-card">
+      <div><b>${esc(archivo.name)}</b> <span class="dim small">· ${durTotal.toFixed(1)} s</span></div>
+      <div class="dim small" style="margin:6px 0">Elige el pedazo (una frase a la vez sale mejor).
+        Máximo 25 s.</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <label class="small dim" style="flex:1">desde (s)
+          <input type="number" id="sg-desde" value="0" min="0" max="${Math.floor(durTotal)}" step="1"></label>
+        <label class="small dim" style="flex:1">duración (s)
+          <input type="number" id="sg-largo" value="${Math.min(15, Math.round(durTotal))}" min="2" max="25" step="1"></label>
+      </div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button class="btn mini ghost" id="sg-oir" style="flex:1">▶ Oír pedazo</button>
+        <button class="btn mini" id="sg-analiza" style="flex:1.4">Sacar las notas</button>
+      </div>
+      <div id="sg-res"></div></div>`;
+    $('#sg-oir').onclick = async () => {
+      SBAudio.parar();
+      const c = await SBAudio.listo(), src = c.createBufferSource();
+      src.buffer = buf; src.connect(c.destination);
+      src.start(0, +$('#sg-desde').value, +$('#sg-largo').value);
+    };
+    $('#sg-analiza').onclick = async () => {
+      const d0 = Math.max(0, +$('#sg-desde').value);
+      const L = Math.min(25, Math.max(2, +$('#sg-largo').value));
+      $('#sg-res').innerHTML = '<div class="dim small" style="margin-top:8px">Analizando…</div>';
+      await new Promise(r => setTimeout(r, 30));
+      const sr = buf.sampleRate;
+      const ini = Math.floor(d0 * sr), fin = Math.min(buf.length, ini + Math.floor(L * sr));
+      const mono = new Float32Array(fin - ini);
+      for (let ch = 0; ch < buf.numberOfChannels; ch++) {
+        const c = buf.getChannelData(ch);
+        for (let i = 0; i < mono.length; i++) mono[i] += c[ini + i] / buf.numberOfChannels;
+      }
+      const notas = Pitch.analizarBuffer(mono, sr);
+      if (!notas.length) {
+        $('#sg-res').innerHTML = '<div class="notice">No encontré notas claras ahí. Prueba otro pedazo o sube el volumen de la pista.</div>';
+        return;
+      }
+      const t0 = notas[0].t;
+      const nuevas = notas.map(n => ({ g: alGrado(n.midi), t: +(n.t - t0).toFixed(3), dur: n.dur }));
+      $('#sg-res').innerHTML = `
+        <div class="dim small" style="margin-top:10px">${nuevas.length} notas con su ritmo
+          (tono ${esc(tonica)} ${esc(modo)}):</div>
+        <div class="song-body small" style="margin:6px 0">${nuevas.map(n =>
+          `${n.t.toFixed(2)}s (${n.dur.toFixed(2)}s)  ${esc(NG(n.g))}  →  ${esc(NS(n.g))}`).join('\n')}</div>
+        <div style="display:flex;gap:8px">
+          <button class="btn mini ghost" id="sg-usar-add" style="flex:1">Agregar</button>
+          <button class="btn mini" id="sg-usar" style="flex:1">Usar como frase</button>
+        </div>`;
+      $('#sg-usar').onclick = () => { mel = nuevas; pinta(); };
+      $('#sg-usar-add').onclick = () => {
+        const off = siguienteT();
+        mel = mel.concat(nuevas.map(n => ({ ...n, t: n.t + off })));
+        pinta();
       };
     };
-    pintaPanel();
   }
 
   /* Suena la melodía nota por nota; tú cantas la segunda y el micrófono te dice si le atinas. */
-  async function practicar(pares) {
+  async function practicar(seq) {
     const zona = $('#sg-zona');
-    if (!pares.length) return;
+    if (!seq.length) return;
     if (!window.Pitch || !Pitch.soportado()) {
       zona.innerHTML = '<div class="notice">🎤 Este navegador no deja usar el micrófono.</div>';
       return;
     }
     zona.innerHTML = '<div class="chk-card"><div id="sg-est">Pidiendo micrófono…</div></div>';
-    try { await SBAudio.listo(); await Pitch.iniciar(); }
+    try { await SBAudio.listo(); await Pitch.iniciar({ agudo: true }); }
     catch (e) { zona.innerHTML = `<div class="notice">🎤 ${esc(e.message)}</div>`; return; }
     const est = $('#sg-est');
-    const DUR = 1.6, resultados = [];
+    const resultados = [];
     let vivo = true;
     window._cleanup = () => { vivo = false; Pitch.detener(); };
-    for (let i = 0; i < pares.length && vivo; i++) {
-      const [abajo, arriba] = pares[i];
-      SBAudio.voz(abajo, DUR * 0.8, 0, 0.5);
-      est.innerHTML = `<b>${i + 1}/${pares.length}</b> — melodía ${esc(Segunda.nombreLibre(abajo, tonica))} ·
-        canta <b style="color:var(--accent)">${esc(Segunda.nombreLibre(arriba, tonica))}</b>
+    for (let i = 0; i < seq.length && vivo; i++) {
+      const n = seq[i], DUR = Math.max(1.1, n.dur + 0.4);
+      SBAudio.voz(n.abajo, DUR * 0.8, 0, 0.5);
+      est.innerHTML = `<b>${i + 1}/${seq.length}</b> — melodía ${esc(NG(n.g))} ·
+        canta <b style="color:var(--accent)">${esc(NS(n.g))}</b>
         <div class="dim small" id="sg-oigo">escuchando…</div>`;
       let acerto = false;
       const t0 = performance.now();
@@ -376,7 +401,7 @@ App.route(/^#\/segunda$/, view => {
         await new Promise(r => setTimeout(r, 90));
         const p = Pitch.actual();
         if (p && performance.now() - t0 > 500) {
-          const ok = p.midi % 12 === arriba % 12;
+          const ok = p.midi % 12 === n.arriba % 12;
           if (ok) acerto = true;
           const o = $('#sg-oigo');
           if (o) {
@@ -391,12 +416,12 @@ App.route(/^#\/segunda$/, view => {
     if (!vivo) return;
     const ok = resultados.filter(Boolean).length;
     zona.innerHTML = `<div class="chk-card">
-      <div class="q-score">${ok === pares.length ? '🎯' : '🎤'} ${ok}/${pares.length}</div>
+      <div class="q-score">${ok === seq.length ? '🎯' : '🎤'} ${ok}/${seq.length}</div>
       <div style="font-family:ui-monospace,Menlo,monospace;text-align:center">${resultados.map(r => r ? '✓' : '✗').join(' ')}</div>
       <p class="dim small" style="margin-top:8px">Si te vas a la melodía en vez de la segunda (pasa
       siempre al principio), canta primero la segunda sola varias veces hasta que se te pegue.</p>
       <button class="btn mini ghost" id="sg-otra">Otra vez</button></div>`;
-    $('#sg-otra').onclick = () => practicar(pares);
+    $('#sg-otra').onclick = () => practicar(seq);
   }
 
   pinta();
