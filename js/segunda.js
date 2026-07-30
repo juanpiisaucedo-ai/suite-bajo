@@ -216,34 +216,53 @@ App.route(/^#\/segunda$/, view => {
     cap.innerHTML = '<div class="chk-card"><div id="sg-capmsg">Pidiendo micrófono…</div></div>';
     try { await Pitch.iniciar({ agudo: true }); }
     catch (e) { cap.innerHTML = `<div class="notice">🎤 ${esc(e.message)}</div>`; return; }
-    const msg = $('#sg-capmsg');
+
     const ref = G(1);
     const alGrado = midi => {                 // lleva la nota al registro de referencia
       let m = midi;
       while (m < ref - 6) m += 12;
       while (m > ref + 18) m -= 12;
       let mejor = 1, dist = 99;
-      for (let g = 1; g <= 10; g++) {
-        const d = Math.abs(G(g) - m);
-        if (d < dist) { dist = d; mejor = g; }
-      }
+      for (let g = 1; g <= 10; g++) { const d = Math.abs(G(g) - m); if (d < dist) { dist = d; mejor = g; } }
       return mejor;
     };
-    Pitch.onNota(n => {
-      if (!n.midi) return;
-      const g = alGrado(n.midi);
-      mel.push(g);
-      if (msg) msg.innerHTML = `🔴 <b>Grabando</b> — ${mel.length} nota${mel.length === 1 ? '' : 's'}: ` +
-        mel.slice(-8).map(x => esc(NG(x))).join(' · ');
-    });
+
     cap.innerHTML = `<div class="chk-card">
-      <div id="sg-capmsg">🔴 <b>Grabando</b> — canta o toca la melodía, <b>una nota a la vez</b>
-        y bien separadas.</div>
-      <div class="dim small" style="margin:6px 0">Se ajusta al grado más cercano del tono elegido
-        (${esc(tonica)} ${esc(modo)}). Si sale mal, revisa el tono o bórralas y repite.</div>
-      <button class="btn mini" id="sg-capfin">Listo</button></div>`;
-    window._cleanup = () => Pitch.detener();
-    $('#sg-capfin').onclick = () => { Pitch.detener(); pinta(); };
+      <div id="sg-vivo" style="font-size:30px;font-weight:800;text-align:center;min-height:40px">–</div>
+      <div class="dim small" style="text-align:center">canta la melodía; cada nota que sostengas
+        un instante se captura sola</div>
+      <div id="sg-capmsg" class="small" style="margin:10px 0;min-height:22px"></div>
+      <button class="btn mini" id="sg-capfin">Listo</button>
+    </div>`;
+    const vivo = $('#sg-vivo'), msg = $('#sg-capmsg');
+
+    /* Cantando NO hay golpe de ataque (la voz liga las notas), así que no sirve
+       detectar ataques: seguimos la altura y cortamos nota cuando cambia y se estabiliza. */
+    let ult = null, estable = null, cuenta = 0, silencio = 0;
+    const timer = setInterval(() => {
+      const p = Pitch.actual();
+      const m = p ? p.midi : null;
+      if (vivo) {
+        vivo.textContent = p ? Segunda.nombreLibre(p.midi, tonica) : '–';
+        vivo.style.color = p ? 'var(--accent)' : 'var(--txt-dim)';
+      }
+      if (m == null) {                        // pausa: permite repetir la misma nota
+        if (++silencio >= 4) { ult = null; estable = null; cuenta = 0; }
+        return;
+      }
+      silencio = 0;
+      if (m === estable) cuenta++; else { estable = m; cuenta = 1; }
+      if (cuenta === 5 && m !== ult) {        // ~125 ms sostenida y distinta de la anterior
+        ult = m;
+        mel.push(alGrado(m));
+        if (msg) msg.innerHTML = `<b>${mel.length}</b> notas: ` +
+          mel.slice(-10).map(x => esc(NG(x))).join(' · ');
+      }
+    }, 25);
+
+    const cerrar = () => { clearInterval(timer); Pitch.detener(); };
+    window._cleanup = cerrar;
+    $('#sg-capfin').onclick = () => { cerrar(); pinta(); };
   }
 
   /* Importa una pista de VOZ YA AISLADA (la que separaste con tu IA) y saca la melodía.
