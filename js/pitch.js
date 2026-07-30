@@ -9,6 +9,7 @@ const Pitch = (() => {
   const nombreDe = m => NOMBRES[((m % 12) + 12) % 12] + (Math.floor(m / 12) - 1);
 
   let ctx = null, stream = null, analyser = null, cruda = null, timer = null;
+  let fuente = null, filtro = null, ctxPropio = false;
   let ultimo = null, rmsAct = 0, corriendo = false, techo = 400;
   let escuchas = [];          // callbacks de onset
 
@@ -107,15 +108,18 @@ const Pitch = (() => {
       } catch {
         throw new Error('No me diste permiso del micrófono (o está ocupado por otra app).');
       }
-      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      /* Reusar el contexto de SBAudio: en iOS abrir uno aparte para el micrófono
+         deja mudo al de reproducción cuando se cierra. */
+      if (window.SBAudio) { ctx = await SBAudio.listo(); ctxPropio = false; }
+      else { ctx = new (window.AudioContext || window.webkitAudioContext)(); ctxPropio = true; }
       if (ctx.state === 'suspended') await ctx.resume();
-      const src = ctx.createMediaStreamSource(stream);
-      const lp = ctx.createBiquadFilter();      // deja pasar solo el rango del bajo:
-      lp.type = 'lowpass'; lp.frequency.value = agudo ? 1100 : 500; lp.Q.value = 0.7;  // filtra el metrónomo
+      fuente = ctx.createMediaStreamSource(stream);
+      filtro = ctx.createBiquadFilter();        // deja pasar solo el rango útil:
+      filtro.type = 'lowpass'; filtro.frequency.value = agudo ? 1100 : 500; filtro.Q.value = 0.7;
       analyser = ctx.createAnalyser();
       analyser.fftSize = VENTANA;
       cruda = new Float32Array(analyser.fftSize);
-      src.connect(lp); lp.connect(analyser);
+      fuente.connect(filtro); filtro.connect(analyser);
       corriendo = true;
       bucle();
     },
@@ -123,7 +127,9 @@ const Pitch = (() => {
       corriendo = false;
       if (timer) { clearInterval(timer); timer = null; }
       if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
-      if (ctx) { try { ctx.close(); } catch {} ctx = null; }
+      try { if (fuente) fuente.disconnect(); if (filtro) filtro.disconnect(); } catch {}
+      if (ctxPropio && ctx) { try { ctx.close(); } catch {} }   // el compartido NO se cierra
+      ctx = null; fuente = null; filtro = null;
       analyser = null; ultimo = null; escuchas = [];
     },
     onNota(cb) { escuchas.push(cb); },

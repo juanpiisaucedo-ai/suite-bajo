@@ -72,9 +72,17 @@ const SBAudio = (() => {
       });
       return t;
     },
+    /* Devuelve el contexto YA sonando. Si quedó suspendido o interrumpido (pasa en
+       iOS después de usar el micrófono) lo revive, y si no revive lo recrea. */
     async listo() {
-      const c = contexto();
-      if (c.state === 'suspended') await c.resume();
+      let c = contexto();
+      if (c.state !== 'running') { try { await c.resume(); } catch {} }
+      if (c.state !== 'running') {
+        try { await c.close(); } catch {}
+        ctx = null; activos = [];
+        c = contexto();
+        try { await c.resume(); } catch {}
+      }
       return c;
     },
     nota,
