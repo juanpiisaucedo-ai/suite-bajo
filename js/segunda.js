@@ -326,28 +326,84 @@ App.route(/^#\/segunda$/, view => {
     /* Un MIDI (por ejemplo el que saca Basic Pitch) ya trae las notas exactas:
        no hay nada que detectar, se usa tal cual. */
     if (/\.midi?$/i.test(archivo.name)) {
-      let notas;
-      try { notas = MidiLector.leer(await archivo.arrayBuffer()); }
+      let crudas;
+      try { crudas = MidiLector.leer(await archivo.arrayBuffer()); }
       catch (e) { cap.innerHTML = `<div class="notice">${esc(e.message)}</div>`; return; }
-      if (!notas.length) { cap.innerHTML = '<div class="notice">Ese MIDI viene vacío.</div>'; return; }
-      const t0 = notas[0].t;
-      const nuevas = notas.map(n => ({ g: alGrado(n.midi), t: +(n.t - t0).toFixed(3), dur: n.dur }));
-      cap.innerHTML = `<div class="chk-card">
-        <div><b>${esc(archivo.name)}</b> <span class="badge ok">MIDI · notas exactas</span></div>
-        <div class="dim small" style="margin:6px 0">${nuevas.length} notas, ajustadas al tono
-          ${esc(tonica)} ${esc(modo)}:</div>
-        <div class="song-body small" style="margin:6px 0">${nuevas.map(n =>
-          `${n.t.toFixed(2)}s (${n.dur.toFixed(2)}s)  ${esc(NG(n.g))}  →  ${esc(NS(n.g))}`).join('\n')}</div>
-        <div style="display:flex;gap:8px">
-          <button class="btn mini ghost" id="sg-usar-add" style="flex:1">Agregar</button>
-          <button class="btn mini" id="sg-usar" style="flex:1">Usar como frase</button>
-        </div></div>`;
-      $('#sg-usar').onclick = () => { mel = nuevas; pinta(); };
-      $('#sg-usar-add').onclick = () => {
-        const off = siguienteT();
-        mel = mel.concat(nuevas.map(n => ({ ...n, t: n.t + off })));
-        pinta();
+      if (!crudas.length) { cap.innerHTML = '<div class="notice">Ese MIDI viene vacío.</div>'; return; }
+
+      /* Los transcriptores (Basic Pitch y compañía) pican la voz en fragmentos:
+         notas cortísimas y la misma nota partida en pedazos. Esto lo junta, y los
+         dos números quedan a la mano para ajustarlo sin volver a exportar. */
+      const limpiar = (notas, minDur, unir) => {
+        let r = [];
+        for (const n of notas) {
+          const u = r[r.length - 1];
+          if (u && u.midi === n.midi && n.t - (u.t + u.dur) <= unir) {
+            u.dur = +(n.t + n.dur - u.t).toFixed(3);
+          } else r.push({ ...n });
+        }
+        r = r.filter(n => n.dur >= minDur);
+        const s2 = [];                                  // volver a unir tras el filtro
+        for (const n of r) {
+          const u = s2[s2.length - 1];
+          if (u && u.midi === n.midi && n.t - (u.t + u.dur) <= unir) {
+            u.dur = +(n.t + n.dur - u.t).toFixed(3);
+          } else s2.push({ ...n });
+        }
+        s2.forEach((n, i) => {                          // ligar hasta la siguiente
+          const sig = s2[i + 1];
+          if (sig && sig.t - (n.t + n.dur) > 0 && sig.t - (n.t + n.dur) < 0.35) {
+            n.dur = +(sig.t - n.t - 0.02).toFixed(3);
+          }
+        });
+        return s2;
       };
+
+      const pintaMidi = () => {
+        const minDur = (+$('#mi-min').value || 120) / 1000;
+        const unir = (+$('#mi-unir').value || 120) / 1000;
+        const notas = limpiar(crudas, minDur, unir);
+        const t0 = notas.length ? notas[0].t : 0;
+        const nuevas = notas.map(n => ({ g: alGrado(n.midi), t: +(n.t - t0).toFixed(3), dur: n.dur }));
+        $('#mi-res').innerHTML = `
+          <div class="dim small" style="margin-top:8px">${crudas.length} notas en el MIDI →
+            <b>${nuevas.length}</b> después de limpiar (tono ${esc(tonica)} ${esc(modo)}):</div>
+          <div class="song-body small" style="margin:6px 0">${nuevas.map(n =>
+            `${n.t.toFixed(2)}s (${n.dur.toFixed(2)}s)  ${esc(NG(n.g))}  →  ${esc(NS(n.g))}`).join('\n')}</div>
+          <div style="display:flex;gap:8px">
+            <button class="btn mini ghost" id="mi-oir" style="flex:1">▶ Oír</button>
+            <button class="btn mini ghost" id="mi-add" style="flex:1">Agregar</button>
+            <button class="btn mini" id="mi-usar" style="flex:1">Usar</button>
+          </div>`;
+        $('#mi-oir').onclick = async () => {
+          SBAudio.parar(); await SBAudio.listo();
+          SBAudio.duetoTiempos(nuevas.map(n => ({ abajo: G(n.g), arriba: S(n.g), t: n.t, dur: n.dur })),
+            { soloAbajo: true });
+        };
+        $('#mi-usar').onclick = () => { mel = nuevas; pinta(); };
+        $('#mi-add').onclick = () => {
+          const off = siguienteT();
+          mel = mel.concat(nuevas.map(n => ({ ...n, t: n.t + off })));
+          pinta();
+        };
+      };
+
+      cap.innerHTML = `<div class="chk-card">
+        <div><b>${esc(archivo.name)}</b> <span class="badge ok">MIDI</span></div>
+        <div class="dim small" style="margin:6px 0">Si el transcriptor picó la voz en pedacitos,
+          sube estos dos números hasta que la frase se lea bien:</div>
+        <div style="display:flex;gap:8px">
+          <label class="small dim" style="flex:1">nota mínima (ms)
+            <input type="number" id="mi-min" value="120" min="40" max="600" step="20"></label>
+          <label class="small dim" style="flex:1">unir huecos de (ms)
+            <input type="number" id="mi-unir" value="120" min="0" max="500" step="20"></label>
+        </div>
+        <button class="btn mini ghost" id="mi-rehacer" style="width:100%;margin-top:6px">Volver a limpiar</button>
+        <div id="mi-res"></div></div>`;
+      $('#mi-rehacer').onclick = pintaMidi;
+      $('#mi-min').onchange = pintaMidi;
+      $('#mi-unir').onchange = pintaMidi;
+      pintaMidi();
       return;
     }
     let buf;
