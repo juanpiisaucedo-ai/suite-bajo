@@ -143,7 +143,7 @@ const Pitch = (() => {
        Además hay que corregir octavas (la voz engaña al detector con sus armónicos)
        y aplanar el vibrato para no picar las notas. */
     analizarBuffer(datos, sampleRate, opciones = {}) {
-      const { minDurMs = 100, hopMs = 20, umbralRms = 0.006, claridadMax = 0.45,
+      const { minDurMs = 80, hopMs = 20, umbralRms = 0.004, claridadMax = 0.55,
               fMin = 80, fMax = 500, tolerancia = 0.7 } = opciones;
       const DECF = Math.max(1, Math.round(sampleRate / 11025));
       const sr = sampleRate / DECF;
@@ -154,13 +154,17 @@ const Pitch = (() => {
         for (let k = 0; k < DECF; k++) s += datos[i * DECF + k] || 0;
         x[i] = s / DECF;
       }
-      /* 1) contorno de altura + energía marco a marco */
-      const cont = [], rmsArr = [], win = new Float32Array(N);
+      /* 1) contorno de altura + energía + energía de agudos (consonantes) por marco */
+      const cont = [], rmsArr = [], hfArr = [], win = new Float32Array(N);
       for (let p = 0; p + N < x.length; p += hop) {
-        let rms = 0;
-        for (let i = 0; i < N; i++) { win[i] = x[p + i]; rms += win[i] * win[i]; }
+        let rms = 0, hf = 0;
+        for (let i = 0; i < N; i++) {
+          win[i] = x[p + i]; rms += win[i] * win[i];
+          if (i) { const d = win[i] - win[i - 1]; hf += d * d; }   // diferencia = pasa-altos
+        }
         rms = Math.sqrt(rms / N);
         rmsArr.push(rms);
+        hfArr.push(Math.sqrt(hf / N));
         let m = null;
         if (rms >= umbralRms) {
           const { f, cl } = yin(win, sr, fMin, fMax);
@@ -172,13 +176,26 @@ const Pitch = (() => {
       const mediana = a => { const v = a.filter(z => z != null).sort((p, q) => p - q);
         return v.length ? v[Math.floor(v.length / 2)] : null; };
 
-      /* 2) ATAQUES: subidas de energía = sílaba nueva (aunque la nota sea la misma) */
-      const refract = Math.max(3, Math.round(0.11 / dt));
+      /* 2) ATAQUES = sílaba nueva, aunque la altura no cambie. Se miran dos cosas:
+            la subida de energía y la subida de agudos (las consonantes t, s, ch, r
+            meten ruido agudo justo al empezar la sílaba). Umbral ADAPTATIVO: se
+            compara contra el vecindario, no contra un número fijo. */
+      const refract = Math.max(3, Math.round(0.09 / dt));
+      const flujo = rmsArr.map((r, i) => {
+        if (!i) return 0;
+        const dR = Math.max(0, r - rmsArr[i - 1]) / (rmsArr[i - 1] + 0.004);
+        const dH = Math.max(0, hfArr[i] - hfArr[i - 1]) / (hfArr[i - 1] + 0.002);
+        return dR + dH * 0.8;
+      });
       const ataques = new Set();
       let ultA = -99;
-      for (let i = 2; i < rmsArr.length - 1; i++) {
-        const prev = Math.max(rmsArr[i - 1], rmsArr[i - 2]) + 1e-9;
-        if (rmsArr[i] > umbralRms * 1.6 && rmsArr[i] / prev > 1.45 && i - ultA >= refract) {
+      const vecindad = Math.max(5, Math.round(0.5 / dt));
+      for (let i = 2; i < flujo.length - 1; i++) {
+        if (rmsArr[i] < umbralRms) continue;
+        const alrededor = flujo.slice(Math.max(0, i - vecindad), i + vecindad).slice().sort((a, b) => a - b);
+        const med = alrededor[Math.floor(alrededor.length / 2)];
+        const pico = flujo[i] >= flujo[i - 1] && flujo[i] >= flujo[i + 1];
+        if (pico && flujo[i] > Math.max(0.18, med * 2.2) && i - ultA >= refract) {
           ataques.add(i); ultA = i;
         }
       }
@@ -238,7 +255,7 @@ const Pitch = (() => {
       /* 6) quitar notas muy cortas y aisladas: son el deslizamiento entre dos notas,
             no una nota cantada (si la altura no coincide con ningún vecino, es basura) */
       const limpias = notas.filter((n, i) => {
-        if (n.dur >= 0.16) return true;
+        if (n.dur >= 0.11) return true;
         const a = notas[i - 1], b = notas[i + 1];
         return (a && a.midi === n.midi) || (b && b.midi === n.midi);
       });
