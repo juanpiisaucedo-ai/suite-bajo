@@ -14,10 +14,10 @@ const Pitch = (() => {
   let escuchas = [];          // callbacks de onset
 
   /* --- YIN sobre x (ya decimada), devuelve frecuencia o 0 --- */
-  function yin(x, sr) {
+  function yin(x, sr, fMin = 35, fMax = techo) {
     const N = x.length;
-    const tauMin = Math.max(2, Math.floor(sr / techo));
-    const tauMax = Math.min(N - 2, Math.ceil(sr / 35));
+    const tauMin = Math.max(2, Math.floor(sr / fMax));
+    const tauMax = Math.min(N - 2, Math.ceil(sr / fMin));
     const d = new Float32Array(tauMax + 1);
     for (let tau = tauMin; tau <= tauMax; tau++) {
       let s = 0;
@@ -38,7 +38,7 @@ const Pitch = (() => {
     if (tau < 0) {                              // nada bajo el umbral: mínimo global
       let mejor = tauMin;
       for (let t = tauMin; t <= tauMax; t++) if (dp[t] < dp[mejor]) mejor = t;
-      if (dp[mejor] > 0.5) return 0;            // demasiado sucio: no hay nota
+      if (dp[mejor] > 0.5) return { f: 0, cl: 1 };   // demasiado sucio: no hay nota
       tau = mejor;
     }
     /* Guarda de octava SOLO cuando el candidato es dudoso: si dp[tau] no es
@@ -50,7 +50,7 @@ const Pitch = (() => {
     const y0 = d[tau - 1] ?? d[tau], y1 = d[tau], y2 = d[tau + 1] ?? d[tau];
     const den = 2 * (2 * y1 - y0 - y2);
     const ajuste = den !== 0 ? (y2 - y0) / den : 0;
-    return sr / (tau + ajuste);
+    return { f: sr / (tau + ajuste), cl: dp[tau] };
   }
 
   function analizar() {
@@ -65,7 +65,7 @@ const Pitch = (() => {
     for (let i = 0; i < n; i++) {              // promediar de 4 en 4 = anti-alias simple
       x[i] = (cruda[i * DEC] + cruda[i * DEC + 1] + cruda[i * DEC + 2] + cruda[i * DEC + 3]) / 4;
     }
-    const f = yin(x, ctx.sampleRate / DEC);
+    const { f } = yin(x, ctx.sampleRate / DEC);
     if (!f || f < 35 || f > techo + 30) { ultimo = null; return; }
     const exacto = 69 + 12 * Math.log2(f / 440);
     const midi = Math.round(exacto);
@@ -135,12 +135,13 @@ const Pitch = (() => {
     },
     onNota(cb) { escuchas.push(cb); },
 
-    /* ANÁLISIS OFFLINE de un archivo ya decodificado (pista de voz aislada).
-       No usa micrófono: recorre el buffer, detecta la altura marco por marco y
-       agrupa los marcos estables en notas. Devuelve [{t, dur, midi, cents}]. */
-    analizarBuffer(datos, sampleRate, { minDurMs = 90, hopMs = 20, umbralRms = 0.012, agudo = true } = {}) {
-      const techoPrevio = techo;
-      techo = agudo ? 700 : 400;
+    /* ANÁLISIS OFFLINE de un archivo (pista de voz aislada). Sin micrófono.
+       Cadena: contorno de altura -> corrección de OCTAVA (el error clásico con voz,
+       que se engancha a los armónicos) -> suavizado -> segmentación con histéresis
+       (el vibrato no debe partir la nota) -> unión de fragmentos. */
+    analizarBuffer(datos, sampleRate, opciones = {}) {
+      const { minDurMs = 130, hopMs = 20, umbralRms = 0.010,
+              fMin = 80, fMax = 500, tolerancia = 0.7 } = opciones;
       const DECF = Math.max(1, Math.round(sampleRate / 11025));
       const sr = sampleRate / DECF;
       const N = 1024, hop = Math.max(64, Math.round(sr * hopMs / 1000));
@@ -150,71 +151,80 @@ const Pitch = (() => {
         for (let k = 0; k < DECF; k++) s += datos[i * DECF + k] || 0;
         x[i] = s / DECF;
       }
-      const marcos = [], win = new Float32Array(N);
+      /* 1) contorno crudo */
+      const cont = [], win = new Float32Array(N);
       for (let p = 0; p + N < x.length; p += hop) {
         let rms = 0;
         for (let i = 0; i < N; i++) { win[i] = x[p + i]; rms += win[i] * win[i]; }
         rms = Math.sqrt(rms / N);
         let m = null;
         if (rms >= umbralRms) {
-          const f = yin(win, sr);
-          if (f >= 60 && f <= 700) m = 69 + 12 * Math.log2(f / 440);
+          const { f, cl } = yin(win, sr, fMin, fMax);
+          if (f >= fMin && f <= fMax && cl < 0.35) m = 69 + 12 * Math.log2(f / 440);
         }
-        marcos.push({ t: p / sr, m, rms });
+        cont.push(m);
       }
-      techo = techoPrevio;
-      /* mediana de 3: mata saltos de octava sueltos y el vibrato */
-      const suave = marcos.map((f, i) => {
-        const v = [marcos[i - 1], f, marcos[i + 1]].filter(z => z && z.m != null).map(z => z.m);
-        if (!v.length) return null;
-        v.sort((a, b) => a - b);
-        return v[Math.floor(v.length / 2)];
-      });
-      /* agrupar marcos con la misma nota (tolera huecos cortos) */
-      const notas = [];
-      let act = null, huecos = 0;
       const dt = hop / sr;
-      suave.forEach((m, i) => {
-        const t = marcos[i].t;
-        const redondo = m == null ? null : Math.round(m);
-        if (redondo == null) {
-          if (act && ++huecos > 3) { cerrar(t); }
-          return;
-        }
-        if (act && redondo === act.midi) { act.fin = t + dt; act.suma += m; act.n++; huecos = 0; return; }
-        if (act) cerrar(t);
-        act = { midi: redondo, ini: t, fin: t + dt, suma: m, n: 1 };
-        huecos = 0;
+      const mediana = a => { const v = a.filter(z => z != null).sort((p, q) => p - q);
+        return v.length ? v[Math.floor(v.length / 2)] : null; };
+
+      /* 2) corregir octavas: primero contra el centro global, luego contra el local */
+      const centro = mediana(cont);
+      if (centro == null) return [];
+      const ajusta = (m, ref) => {
+        while (m - ref > 6) m -= 12;
+        while (ref - m > 6) m += 12;
+        return m;
+      };
+      let c1 = cont.map(m => (m == null ? null : ajusta(m, centro)));
+      const vent = Math.max(3, Math.round(0.75 / dt));
+      const c2 = c1.map((m, i) => {
+        if (m == null) return null;
+        const loc = mediana(c1.slice(Math.max(0, i - vent), i + vent));
+        return loc == null ? m : ajusta(m, loc);
       });
-      if (act) cerrar(marcos.length ? marcos[marcos.length - 1].t + dt : 0);
-      function cerrar() {
-        if (act && (act.fin - act.ini) * 1000 >= minDurMs) {
+      /* 3) mediana móvil de 7 marcos: aplana el vibrato */
+      const suave = c2.map((m, i) => (m == null ? null : mediana(c2.slice(Math.max(0, i - 3), i + 4))));
+
+      /* 4) segmentar con histéresis: solo es nota nueva si se aleja >tolerancia
+            semitonos y se sostiene ahí varios marcos seguidos */
+      const notas = [];
+      let act = null, fuera = 0, huecos = 0;
+      const cerrar = fin => {
+        if (act && (fin - act.ini) * 1000 >= minDurMs) {
           const prom = act.suma / act.n;
-          notas.push({ t: +act.ini.toFixed(3), dur: +(act.fin - act.ini).toFixed(3),
-                       midi: act.midi, cents: Math.round((prom - act.midi) * 100) });
+          notas.push({ t: +act.ini.toFixed(3), dur: +(fin - act.ini).toFixed(3),
+                       midi: Math.round(prom), cents: Math.round((prom - Math.round(prom)) * 100) });
         }
         act = null;
-      }
-      return notas;
-    },
-
-    /* Graba 'segundos' y devuelve las notas detectadas con su tiempo desde t=0. */
-    grabar({ segundos, alOnset, alNivel } = {}) {
-      return new Promise(resolve => {
-        const t0 = performance.now(), salida = [];
-        const cb = n => {
-          const nota = { ...n, t_ms: n.t_ms - t0 };
-          salida.push(nota);
-          if (alOnset) alOnset(nota);
-        };
-        escuchas.push(cb);
-        const medidor = alNivel ? setInterval(() => alNivel(rmsAct), 80) : null;
-        setTimeout(() => {
-          escuchas = escuchas.filter(f => f !== cb);
-          if (medidor) clearInterval(medidor);
-          resolve(salida);
-        }, segundos * 1000);
+      };
+      suave.forEach((m, i) => {
+        const t = i * dt;
+        if (m == null) {
+          if (act && ++huecos >= 5) cerrar(t - 5 * dt);
+          return;
+        }
+        huecos = 0;
+        if (!act) { act = { ini: t, suma: m, n: 1, centro: m }; fuera = 0; return; }
+        if (Math.abs(m - act.centro) <= tolerancia) {
+          act.suma += m; act.n++; act.centro = act.suma / act.n; fuera = 0;
+        } else if (++fuera >= 4) {                 // ~80 ms fuera: es otra nota
+          cerrar(t - 4 * dt);
+          act = { ini: t - 4 * dt, suma: m, n: 1, centro: m };
+          fuera = 0;
+        }
       });
+      cerrar(suave.length * dt);
+
+      /* 5) unir fragmentos vecinos de la misma nota separados por un respiro corto */
+      const unidas = [];
+      for (const n of notas) {
+        const u = unidas[unidas.length - 1];
+        if (u && u.midi === n.midi && n.t - (u.t + u.dur) < 0.14) {
+          u.dur = +(n.t + n.dur - u.t).toFixed(3);
+        } else unidas.push({ ...n });
+      }
+      return unidas;
     },
 
     /* Función PURA: compara lo esperado con lo tocado. */

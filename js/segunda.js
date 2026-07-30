@@ -267,35 +267,49 @@ App.route(/^#\/segunda$/, view => {
       <button class="btn mini" id="sg-capfin">Listo</button></div>`;
     const vivo = $('#sg-vivo'), msg = $('#sg-capmsg');
 
-    let ult = null, estable = null, cuenta = 0, silencio = 0;
-    let abierta = null, tBase = null;
+    /* Misma lógica que el análisis de archivo: corregir octava contra el centro de lo
+       que llevas cantado, y cortar nota solo si la altura se aleja y se sostiene ahí
+       (si no, el vibrato picaría cada nota en pedacitos). */
+    let centro = null, act = null, fuera = 0, silencio = 0, tBase = null;
     const cerrar = fin => {
-      if (!abierta) return;
-      const dur = (fin - abierta.tIni) / 1000;
-      if (dur >= 0.12) mel.push({ g: abierta.g, t: (abierta.tIni - tBase) / 1000, dur });
-      abierta = null;
-      if (msg) msg.innerHTML = `<b>${mel.length}</b> notas: ` +
-        mel.slice(-10).map(x => esc(NG(norm(x).g))).join(' · ');
+      if (!act) return;
+      const dur = (fin - act.ini) / 1000;
+      if (dur >= 0.13) {
+        const g = alGrado(Math.round(act.suma / act.n));
+        mel.push({ g, t: (act.ini - tBase) / 1000, dur });
+        if (msg) msg.innerHTML = `<b>${mel.length}</b> notas: ` +
+          mel.slice(-10).map(x => esc(NG(norm(x).g))).join(' · ');
+      }
+      act = null;
     };
     const timer = setInterval(() => {
       const p = Pitch.actual(), ahora = performance.now();
-      const m = p ? p.midi : null;
       if (vivo) {
         vivo.textContent = p ? Segunda.nombreLibre(p.midi, tonica) : '–';
         vivo.style.color = p ? 'var(--accent)' : 'var(--txt-dim)';
       }
-      if (m == null) {
-        if (++silencio >= 4) { cerrar(ahora - 100); ult = null; estable = null; cuenta = 0; }
+      if (!p) {
+        if (++silencio >= 5) { cerrar(ahora - 125); centro = centro; fuera = 0; }
         return;
       }
       silencio = 0;
-      if (m === estable) cuenta++; else { estable = m; cuenta = 1; }
-      if (cuenta === 5 && m !== ult) {          // nota nueva confirmada (empezó ~125 ms antes)
-        const tIni = ahora - 125;
-        cerrar(tIni);
-        if (tBase == null) tBase = tIni;
-        ult = m;
-        abierta = { g: alGrado(m), tIni };
+      let f = p.midi + (p.cents || 0) / 100;
+      if (centro != null) {                    // corrección de octava
+        while (f - centro > 6) f -= 12;
+        while (centro - f > 6) f += 12;
+      }
+      centro = centro == null ? f : centro * 0.97 + f * 0.03;
+      if (!act) {
+        if (tBase == null) tBase = ahora;
+        act = { ini: ahora, suma: f, n: 1, centro: f }; fuera = 0;
+        return;
+      }
+      if (Math.abs(f - act.centro) <= 0.7) {
+        act.suma += f; act.n++; act.centro = act.suma / act.n; fuera = 0;
+      } else if (++fuera >= 4) {               // ~100 ms en otra altura: nota nueva
+        cerrar(ahora - 100);
+        act = { ini: ahora - 100, suma: f, n: 1, centro: f };
+        fuera = 0;
       }
     }, 25);
 
