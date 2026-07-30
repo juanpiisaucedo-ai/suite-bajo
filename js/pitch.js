@@ -135,12 +135,15 @@ const Pitch = (() => {
     },
     onNota(cb) { escuchas.push(cb); },
 
-    /* ANÁLISIS OFFLINE de un archivo (pista de voz aislada). Sin micrófono.
-       Cadena: contorno de altura -> corrección de OCTAVA (el error clásico con voz,
-       que se engancha a los armónicos) -> suavizado -> segmentación con histéresis
-       (el vibrato no debe partir la nota) -> unión de fragmentos. */
+    /* ANÁLISIS OFFLINE de una pista de voz aislada.
+       Dos fuentes de información, porque ninguna basta sola:
+       · la ALTURA dice qué nota es (pero liga las sílabas seguidas en la misma nota),
+       · los ATAQUES (sílabas: las consonantes cortan la energía) dicen cuándo entra
+         cada nota aunque la altura no cambie.
+       Además hay que corregir octavas (la voz engaña al detector con sus armónicos)
+       y aplanar el vibrato para no picar las notas. */
     analizarBuffer(datos, sampleRate, opciones = {}) {
-      const { minDurMs = 130, hopMs = 20, umbralRms = 0.010,
+      const { minDurMs = 100, hopMs = 20, umbralRms = 0.006, claridadMax = 0.45,
               fMin = 80, fMax = 500, tolerancia = 0.7 } = opciones;
       const DECF = Math.max(1, Math.round(sampleRate / 11025));
       const sr = sampleRate / DECF;
@@ -151,16 +154,17 @@ const Pitch = (() => {
         for (let k = 0; k < DECF; k++) s += datos[i * DECF + k] || 0;
         x[i] = s / DECF;
       }
-      /* 1) contorno crudo */
-      const cont = [], win = new Float32Array(N);
+      /* 1) contorno de altura + energía marco a marco */
+      const cont = [], rmsArr = [], win = new Float32Array(N);
       for (let p = 0; p + N < x.length; p += hop) {
         let rms = 0;
         for (let i = 0; i < N; i++) { win[i] = x[p + i]; rms += win[i] * win[i]; }
         rms = Math.sqrt(rms / N);
+        rmsArr.push(rms);
         let m = null;
         if (rms >= umbralRms) {
           const { f, cl } = yin(win, sr, fMin, fMax);
-          if (f >= fMin && f <= fMax && cl < 0.35) m = 69 + 12 * Math.log2(f / 440);
+          if (f >= fMin && f <= fMax && cl < claridadMax) m = 69 + 12 * Math.log2(f / 440);
         }
         cont.push(m);
       }
@@ -168,7 +172,18 @@ const Pitch = (() => {
       const mediana = a => { const v = a.filter(z => z != null).sort((p, q) => p - q);
         return v.length ? v[Math.floor(v.length / 2)] : null; };
 
-      /* 2) corregir octavas: primero contra el centro global, luego contra el local */
+      /* 2) ATAQUES: subidas de energía = sílaba nueva (aunque la nota sea la misma) */
+      const refract = Math.max(3, Math.round(0.11 / dt));
+      const ataques = new Set();
+      let ultA = -99;
+      for (let i = 2; i < rmsArr.length - 1; i++) {
+        const prev = Math.max(rmsArr[i - 1], rmsArr[i - 2]) + 1e-9;
+        if (rmsArr[i] > umbralRms * 1.6 && rmsArr[i] / prev > 1.45 && i - ultA >= refract) {
+          ataques.add(i); ultA = i;
+        }
+      }
+
+      /* 3) corregir octavas: contra el centro global y luego el local */
       const centro = mediana(cont);
       if (centro == null) return [];
       const ajusta = (m, ref) => {
@@ -176,18 +191,17 @@ const Pitch = (() => {
         while (ref - m > 6) m += 12;
         return m;
       };
-      let c1 = cont.map(m => (m == null ? null : ajusta(m, centro)));
+      const c1 = cont.map(m => (m == null ? null : ajusta(m, centro)));
       const vent = Math.max(3, Math.round(0.75 / dt));
       const c2 = c1.map((m, i) => {
         if (m == null) return null;
         const loc = mediana(c1.slice(Math.max(0, i - vent), i + vent));
         return loc == null ? m : ajusta(m, loc);
       });
-      /* 3) mediana móvil de 7 marcos: aplana el vibrato */
+      /* 4) mediana móvil: aplana el vibrato sin borrar los saltos reales */
       const suave = c2.map((m, i) => (m == null ? null : mediana(c2.slice(Math.max(0, i - 3), i + 4))));
 
-      /* 4) segmentar con histéresis: solo es nota nueva si se aleja >tolerancia
-            semitonos y se sostiene ahí varios marcos seguidos */
+      /* 5) segmentar: corta por ataque, por cambio de altura sostenido o por silencio */
       const notas = [];
       let act = null, fuera = 0, huecos = 0;
       const cerrar = fin => {
@@ -205,10 +219,15 @@ const Pitch = (() => {
           return;
         }
         huecos = 0;
+        if (act && ataques.has(i) && (t - act.ini) * 1000 >= minDurMs) {
+          cerrar(t);                                  // sílaba nueva sobre la misma nota
+          act = { ini: t, suma: m, n: 1, centro: m }; fuera = 0;
+          return;
+        }
         if (!act) { act = { ini: t, suma: m, n: 1, centro: m }; fuera = 0; return; }
         if (Math.abs(m - act.centro) <= tolerancia) {
           act.suma += m; act.n++; act.centro = act.suma / act.n; fuera = 0;
-        } else if (++fuera >= 4) {                 // ~80 ms fuera: es otra nota
+        } else if (++fuera >= 4) {
           cerrar(t - 4 * dt);
           act = { ini: t - 4 * dt, suma: m, n: 1, centro: m };
           fuera = 0;
@@ -216,25 +235,25 @@ const Pitch = (() => {
       });
       cerrar(suave.length * dt);
 
-      /* 5) unir fragmentos vecinos de la misma nota separados por un respiro corto */
-      const unidas = [];
-      for (const n of notas) {
-        const u = unidas[unidas.length - 1];
-        if (u && u.midi === n.midi && n.t - (u.t + u.dur) < 0.14) {
-          u.dur = +(n.t + n.dur - u.t).toFixed(3);
-        } else unidas.push({ ...n });
-      }
-      /* 6) La duración detectada es solo el tramo de altura ESTABLE, más corta que la
-            nota real. Cantando se liga: se estira cada nota hasta que entra la siguiente,
-            salvo que haya una pausa de verdad (respiro) — ahí se respeta el silencio. */
+      /* 6) quitar notas muy cortas y aisladas: son el deslizamiento entre dos notas,
+            no una nota cantada (si la altura no coincide con ningún vecino, es basura) */
+      const limpias = notas.filter((n, i) => {
+        if (n.dur >= 0.16) return true;
+        const a = notas[i - 1], b = notas[i + 1];
+        return (a && a.midi === n.midi) || (b && b.midi === n.midi);
+      });
+      notas.length = 0;
+      notas.push(...limpias);
+
+      /* 7) estirar cada nota hasta la siguiente (cantando se liga), salvo pausa real */
       const PAUSA_REAL = 0.35;
-      unidas.forEach((n, i) => {
-        const sig = unidas[i + 1];
-        if (!sig) { n.dur = +Math.max(n.dur, Math.min(n.dur * 1.6, n.dur + 0.25)).toFixed(3); return; }
+      notas.forEach((n, i) => {
+        const sig = notas[i + 1];
+        if (!sig) { n.dur = +(n.dur + 0.2).toFixed(3); return; }
         const hueco = sig.t - (n.t + n.dur);
         if (hueco > 0 && hueco < PAUSA_REAL) n.dur = +(sig.t - n.t - 0.02).toFixed(3);
       });
-      return unidas;
+      return notas;
     },
 
     /* Función PURA: compara lo esperado con lo tocado. */
