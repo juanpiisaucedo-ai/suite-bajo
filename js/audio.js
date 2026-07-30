@@ -1,6 +1,11 @@
 /* Sintetizador de bajo y metrónomo (Web Audio). Sin samples ni librerías. */
 const SBAudio = (() => {
   let ctx = null, metro = null;
+  let activos = [];                    // osciladores programados, para poder cortarlos
+  const registrar = (...osc) => osc.forEach(o => {
+    activos.push(o);
+    o.onended = () => { activos = activos.filter(x => x !== o); };
+  });
   const freq = m => 440 * Math.pow(2, (m - 69) / 12);
 
   const contexto = () => (ctx = ctx || new (window.AudioContext || window.webkitAudioContext)());
@@ -22,6 +27,7 @@ const SBAudio = (() => {
     lp.connect(g); g.connect(c.destination);
     saw.start(t); sub.start(t);
     saw.stop(t + dur + 0.7); sub.stop(t + dur + 0.7);
+    registrar(saw, sub);
   }
 
   function click(fuerte = false, t0 = 0) {
@@ -32,6 +38,7 @@ const SBAudio = (() => {
     g.gain.exponentialRampToValueAtTime(0.0001, t + 0.03);
     o.connect(g); g.connect(c.destination);
     o.start(t); o.stop(t + 0.04);
+    registrar(o);
   }
 
   /* timbre claro para registro vocal (el de bajo suena opaco arriba de MIDI 50) */
@@ -49,6 +56,7 @@ const SBAudio = (() => {
     o1.connect(lp); o2.connect(g2); g2.connect(lp);
     lp.connect(g); g.connect(c.destination);
     o1.start(t); o2.start(t); o1.stop(t + dur + 0.1); o2.stop(t + dur + 0.1);
+    registrar(o1, o2);
   }
 
   return {
@@ -83,6 +91,13 @@ const SBAudio = (() => {
       });
       return t + 0.4;
     },
+    /* corta todo lo que esté sonando o programado */
+    parar() {
+      this.metronomo.parar();
+      activos.forEach(o => { try { o.stop(); } catch {} try { o.disconnect(); } catch {} });
+      activos = [];
+    },
+    sonando: () => activos.length > 0,
     metronomo: {
       /* programa los clicks con antelación sobre el reloj de audio: no se desfasa */
       arrancar(bpm, { compas = 4, alBeat } = {}) {

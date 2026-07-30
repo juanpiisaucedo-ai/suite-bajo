@@ -77,7 +77,7 @@ App.route(/^#\/segunda$/, view => {
   let tonica = store.get('seg_tonica', 'G');
   let modo = store.get('seg_modo', 'mayor');
   let arm = store.get('seg_arm', '3a');
-  let mel = [];
+  let mel = [], reproduciendo = null;
   const G = g => Segunda.midiDeGrado(g, tonica, modo);
   const S = g => Segunda.midiArmonia(g, tonica, modo, arm);
   const NG = g => Segunda.nombreDeGrado(g, tonica, modo);
@@ -117,6 +117,8 @@ App.route(/^#\/segunda$/, view => {
             ${esc(NG(g))} <span class="dim">+ ${esc(NS(g))}</span></span>`).join('')
           : '<span class="dim small">Aún no capturas nada. Pica los grados de arriba.</span>'}
       </div>
+      <button class="btn full ghost" id="sg-cantar" style="margin:8px 0">🎙️ Capturar cantando (o tocando)</button>
+      <div id="sg-cap"></div>
       <div style="display:flex;gap:8px;margin:8px 0 16px">
         <button class="btn mini ghost" id="sg-undo" style="flex:1">← Borrar última</button>
         <button class="btn mini ghost" id="sg-clear" style="flex:1">Limpiar</button>
@@ -153,7 +155,10 @@ App.route(/^#\/segunda$/, view => {
     view.querySelectorAll('[data-g]').forEach(b => b.onclick = () => {
       const g = +b.dataset.g;
       mel.push(g);
-      SBAudio.listo().then(() => { SBAudio.voz(G(g), 0.5); SBAudio.voz(S(g), 0.5, 0, 0.35); });
+      SBAudio.listo().then(() => {
+        SBAudio.parar();
+        SBAudio.voz(G(g), 0.5); SBAudio.voz(S(g), 0.5, 0, 0.35);
+      });
       pinta();
     });
     $('#sg-undo').onclick = () => { mel.pop(); pinta(); };
@@ -163,8 +168,19 @@ App.route(/^#\/segunda$/, view => {
     });
     view.querySelectorAll('[data-play]').forEach(b => b.onclick = async () => {
       if (!mel.length) return;
+      const reset = () => view.querySelectorAll('[data-play]').forEach(o =>
+        o.textContent = o.textContent.replace('⏹', '▶'));
+      if (SBAudio.sonando()) {                      // segundo clic = detener
+        SBAudio.parar(); reset();
+        if (b.dataset.play === reproduciendo) { reproduciendo = null; return; }
+      }
       await SBAudio.listo();
-      SBAudio.dueto(pares, { soloAbajo: b.dataset.play === 'mel', soloArriba: b.dataset.play === 'seg' });
+      reset();
+      b.textContent = b.textContent.replace('▶', '⏹');
+      reproduciendo = b.dataset.play;
+      const dur = SBAudio.dueto(pares, {
+        soloAbajo: b.dataset.play === 'mel', soloArriba: b.dataset.play === 'seg' });
+      setTimeout(() => { if (reproduciendo === b.dataset.play) { reset(); reproduciendo = null; } }, dur * 1000);
     });
     const sv = $('#sg-save');
     if (sv) sv.onclick = () => {
@@ -179,7 +195,50 @@ App.route(/^#\/segunda$/, view => {
     });
     view.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { Segunda.borrar(+b.dataset.del); pinta(); });
     $('#sg-practica').onclick = () => practicar(pares);
+    $('#sg-cantar').onclick = () => capturar();
   };
+
+  /* Captura la melodía cantándola o tocándola: cada nota detectada se ajusta al grado
+     más cercano del tono (por eso hay que elegir bien el tono antes). */
+  async function capturar() {
+    const cap = $('#sg-cap');
+    if (!window.Pitch || !Pitch.soportado()) {
+      cap.innerHTML = '<div class="notice">🎤 Este navegador no deja usar el micrófono.</div>';
+      return;
+    }
+    SBAudio.parar();
+    cap.innerHTML = '<div class="chk-card"><div id="sg-capmsg">Pidiendo micrófono…</div></div>';
+    try { await Pitch.iniciar({ agudo: true }); }
+    catch (e) { cap.innerHTML = `<div class="notice">🎤 ${esc(e.message)}</div>`; return; }
+    const msg = $('#sg-capmsg');
+    const ref = G(1);
+    const alGrado = midi => {                 // lleva la nota al registro de referencia
+      let m = midi;
+      while (m < ref - 6) m += 12;
+      while (m > ref + 18) m -= 12;
+      let mejor = 1, dist = 99;
+      for (let g = 1; g <= 10; g++) {
+        const d = Math.abs(G(g) - m);
+        if (d < dist) { dist = d; mejor = g; }
+      }
+      return mejor;
+    };
+    Pitch.onNota(n => {
+      if (!n.midi) return;
+      const g = alGrado(n.midi);
+      mel.push(g);
+      if (msg) msg.innerHTML = `🔴 <b>Grabando</b> — ${mel.length} nota${mel.length === 1 ? '' : 's'}: ` +
+        mel.slice(-8).map(x => esc(NG(x))).join(' · ');
+    });
+    cap.innerHTML = `<div class="chk-card">
+      <div id="sg-capmsg">🔴 <b>Grabando</b> — canta o toca la melodía, <b>una nota a la vez</b>
+        y bien separadas.</div>
+      <div class="dim small" style="margin:6px 0">Se ajusta al grado más cercano del tono elegido
+        (${esc(tonica)} ${esc(modo)}). Si sale mal, revisa el tono o bórralas y repite.</div>
+      <button class="btn mini" id="sg-capfin">Listo</button></div>`;
+    window._cleanup = () => Pitch.detener();
+    $('#sg-capfin').onclick = () => { Pitch.detener(); pinta(); };
+  }
 
   /* Suena la melodía nota por nota; tú cantas la segunda y el micrófono te dice si le atinas. */
   async function practicar(pares) {

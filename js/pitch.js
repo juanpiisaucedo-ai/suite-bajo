@@ -9,13 +9,13 @@ const Pitch = (() => {
   const nombreDe = m => NOMBRES[((m % 12) + 12) % 12] + (Math.floor(m / 12) - 1);
 
   let ctx = null, stream = null, analyser = null, cruda = null, timer = null;
-  let ultimo = null, rmsAct = 0, corriendo = false;
+  let ultimo = null, rmsAct = 0, corriendo = false, techo = 400;
   let escuchas = [];          // callbacks de onset
 
   /* --- YIN sobre x (ya decimada), devuelve frecuencia o 0 --- */
   function yin(x, sr) {
     const N = x.length;
-    const tauMin = Math.max(2, Math.floor(sr / 400));
+    const tauMin = Math.max(2, Math.floor(sr / techo));
     const tauMax = Math.min(N - 2, Math.ceil(sr / 35));
     const d = new Float32Array(tauMax + 1);
     for (let tau = tauMin; tau <= tauMax; tau++) {
@@ -65,7 +65,7 @@ const Pitch = (() => {
       x[i] = (cruda[i * DEC] + cruda[i * DEC + 1] + cruda[i * DEC + 2] + cruda[i * DEC + 3]) / 4;
     }
     const f = yin(x, ctx.sampleRate / DEC);
-    if (!f || f < 35 || f > 420) { ultimo = null; return; }
+    if (!f || f < 35 || f > techo + 30) { ultimo = null; return; }
     const exacto = 69 + 12 * Math.log2(f / 440);
     const midi = Math.round(exacto);
     ultimo = { freq: f, midi, nombre: nombreDe(midi), cents: Math.round((exacto - midi) * 100), rms: rmsAct };
@@ -96,7 +96,8 @@ const Pitch = (() => {
     soportado: () => !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia &&
                         (window.AudioContext || window.webkitAudioContext)),
     actual: () => ultimo,
-    async iniciar() {
+    async iniciar({ agudo = false } = {}) {
+      techo = agudo ? 700 : 400;   // voz cantada llega más arriba que el bajo
       if (corriendo) return;
       if (!this.soportado()) throw new Error('Este navegador no permite usar el micrófono.');
       try {
@@ -110,7 +111,7 @@ const Pitch = (() => {
       if (ctx.state === 'suspended') await ctx.resume();
       const src = ctx.createMediaStreamSource(stream);
       const lp = ctx.createBiquadFilter();      // deja pasar solo el rango del bajo:
-      lp.type = 'lowpass'; lp.frequency.value = 500; lp.Q.value = 0.7;  // filtra el metrónomo
+      lp.type = 'lowpass'; lp.frequency.value = agudo ? 1100 : 500; lp.Q.value = 0.7;  // filtra el metrónomo
       analyser = ctx.createAnalyser();
       analyser.fftSize = VENTANA;
       cruda = new Float32Array(analyser.fftSize);
